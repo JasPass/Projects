@@ -1,0 +1,299 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10091,        291]
+NotebookOptionsPosition[      8745,        259]
+NotebookOutlinePosition[      9164,        276]
+CellTagsIndexPosition[      9121,        273]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"<<", "LieART`"}]], "Input",
+ CellChangeTimes->{{3.8182774299107513`*^9, 3.8182774895202837`*^9}, {
+  3.818277560765069*^9, 3.818277564239356*^9}, {3.818277680614835*^9, 
+  3.818277693469185*^9}},
+ CellLabel->"In[8]:=",ExpressionUUID->"e884504a-fa7b-4ce1-8b7b-00913dac13ac"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"LieART 2.0.2\"\>"], "Print",
+ CellChangeTimes->{3.818277694860898*^9},
+ CellLabel->
+  "During evaluation of \
+In[8]:=",ExpressionUUID->"88da2588-bc7e-49b4-b9de-13728dda3c64"],
+
+Cell[BoxData["\<\"last revised 21 August 2020\"\>"], "Print",
+ CellChangeTimes->{3.818277694867504*^9},
+ CellLabel->
+  "During evaluation of \
+In[8]:=",ExpressionUUID->"cb7b4ac8-f95f-41b5-bcbb-8998dfc0af9f"]
+}, Open  ]],
+
+Cell[BoxData[
+ TemplateBox[{
+  "A","shdw",
+   "\"Symbol \\!\\(\\*RowBox[{\\\"\\\\\\\"A\\\\\\\"\\\"}]\\) appears in \
+multiple contexts \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"\\\\\\\"LieART`\\\\\
+\\\"\\\", \\\",\\\", \\\"\\\\\\\"Global`\\\\\\\"\\\"}], \\\"}\\\"}]\\); \
+definitions in context \\!\\(\\*RowBox[{\\\"\\\\\\\"LieART`\\\\\\\"\\\"}]\\) \
+may shadow or be shadowed by other definitions.\"",2,8,6,28611778437351216908,
+   "Local","LieART`A"},
+  "MessageTemplate2"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.81827748990694*^9, {3.818277561348338*^9, 3.8182775645770807`*^9}, 
+   3.818277607635455*^9, {3.818277682108235*^9, 3.8182776948698463`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[8]:=",ExpressionUUID->"cafc4ba4-0a99-42ca-a649-d4f0bcde7c4c"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Irrep","shdw",
+   "\"Symbol \\!\\(\\*RowBox[{\\\"\\\\\\\"Irrep\\\\\\\"\\\"}]\\) appears in \
+multiple contexts \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"\\\\\\\"LieART`\\\\\
+\\\"\\\", \\\",\\\", \\\"\\\\\\\"Global`\\\\\\\"\\\"}], \\\"}\\\"}]\\); \
+definitions in context \\!\\(\\*RowBox[{\\\"\\\\\\\"LieART`\\\\\\\"\\\"}]\\) \
+may shadow or be shadowed by other definitions.\"",2,8,7,28611778437351216908,
+   "Local","LieART`Irrep"},
+  "MessageTemplate2"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.81827748990694*^9, {3.818277561348338*^9, 3.8182775645770807`*^9}, 
+   3.818277607635455*^9, {3.818277682108235*^9, 3.8182776948930387`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[8]:=",ExpressionUUID->"182bf34e-aff0-4f5e-8f10-1b58269c16e9"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"WeightSystemWithMul", "[", 
+  RowBox[{
+   RowBox[{"Irrep", "[", "SO5", "]"}], "[", "10", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.818277216816099*^9, 3.818277277863234*^9}, {
+  3.818277723622348*^9, 3.818277724729398*^9}, {3.8182777888372307`*^9, 
+  3.8182778135007677`*^9}, {3.8182778501496553`*^9, 3.818277851469201*^9}, {
+  3.818280080476081*^9, 3.818280108699407*^9}, {3.818280243252527*^9, 
+  3.8182802605864*^9}, {3.818280359112432*^9, 3.818280360568965*^9}, {
+  3.8186003932457867`*^9, 3.818600393642827*^9}},
+ CellLabel->"In[28]:=",ExpressionUUID->"3070f12e-4224-4415-acbf-408e7772b8a8"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {
+      FormBox[
+       TagBox[GridBox[{
+          {"0", "2"}
+         },
+         AutoDelete->False,
+         GridBoxFrame->{"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Grid"],
+       TraditionalForm], "1"},
+     {
+      FormBox[
+       TagBox[GridBox[{
+          {"2", 
+           RowBox[{"-", "2"}]}
+         },
+         AutoDelete->False,
+         GridBoxFrame->{"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Grid"],
+       TraditionalForm], "1"},
+     {
+      FormBox[
+       TagBox[GridBox[{
+          {
+           RowBox[{"-", "2"}], "2"}
+         },
+         AutoDelete->False,
+         GridBoxFrame->{"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Grid"],
+       TraditionalForm], "1"},
+     {
+      FormBox[
+       TagBox[GridBox[{
+          {"0", 
+           RowBox[{"-", "2"}]}
+         },
+         AutoDelete->False,
+         GridBoxFrame->{"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Grid"],
+       TraditionalForm], "1"},
+     {
+      FormBox[
+       TagBox[GridBox[{
+          {"1", "0"}
+         },
+         AutoDelete->False,
+         GridBoxFrame->{"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Grid"],
+       TraditionalForm], "1"},
+     {
+      FormBox[
+       TagBox[GridBox[{
+          {
+           RowBox[{"-", "1"}], "2"}
+         },
+         AutoDelete->False,
+         GridBoxFrame->{"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Grid"],
+       TraditionalForm], "1"},
+     {
+      FormBox[
+       TagBox[GridBox[{
+          {"1", 
+           RowBox[{"-", "2"}]}
+         },
+         AutoDelete->False,
+         GridBoxFrame->{"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Grid"],
+       TraditionalForm], "1"},
+     {
+      FormBox[
+       TagBox[GridBox[{
+          {
+           RowBox[{"-", "1"}], "0"}
+         },
+         AutoDelete->False,
+         GridBoxFrame->{"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Grid"],
+       TraditionalForm], "1"},
+     {
+      FormBox[
+       TagBox[GridBox[{
+          {"0", "0"}
+         },
+         AutoDelete->False,
+         GridBoxFrame->{"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Grid"],
+       TraditionalForm], "2"}
+    },
+    GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}}], "\[NoBreak]", ")"}], TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.81827740363445*^9, 3.81827761641289*^9, {3.818277711867012*^9, 
+   3.8182777253457108`*^9}, {3.818277792839118*^9, 3.818277814023863*^9}, 
+   3.818277851845758*^9, {3.818280089454925*^9, 3.818280109536201*^9}, 
+   3.8182802611254673`*^9, 3.8182803614391537`*^9, 3.8186003952857103`*^9},
+ CellLabel->"Out[28]=",ExpressionUUID->"f5ac14d7-54a2-473a-83c7-92b70d458e3f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DecomposeProduct", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Irrep", "[", "SO5", "]"}], "[", "5", "]"}], ",", 
+   RowBox[{
+    RowBox[{"Irrep", "[", "SO5", "]"}], "[", "5", "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.8182779444161577`*^9, 3.818277944419265*^9}, {
+  3.818277974646984*^9, 3.818277979710454*^9}, {3.818278074199256*^9, 
+  3.818278097734376*^9}, {3.818278194580536*^9, 3.818278197317781*^9}, {
+  3.818279814444592*^9, 3.8182798251603727`*^9}, {3.818280403470319*^9, 
+  3.818280406478971*^9}},
+ CellLabel->"In[27]:=",ExpressionUUID->"d8589d48-22f8-4d9f-ba77-4bcf6624f649"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   FormBox[
+    StyleBox["1",
+     FontWeight->Bold],
+    TraditionalForm], "+", 
+   FormBox[
+    StyleBox["10",
+     FontWeight->Bold],
+    TraditionalForm], "+", 
+   FormBox[
+    StyleBox["14",
+     FontWeight->Bold],
+    TraditionalForm]}], TraditionalForm]], "Output",
+ CellChangeTimes->{{3.818278070196433*^9, 3.818278098677102*^9}, 
+   3.818278199113285*^9, 3.818279825892995*^9, 3.818280407328188*^9},
+ CellLabel->"Out[27]=",ExpressionUUID->"b5271324-baba-45ad-88a2-d05656b504f2"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.818277933237442*^9, 
+  3.8182779356447163`*^9}},ExpressionUUID->"6eb5d704-3e6e-49fe-a028-\
+7a749ca99263"]
+},
+WindowSize->{1845, 1053},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+CommonDefaultFormatTypes->{"Output"->TraditionalForm},
+Magnification:>1.7 Inherited,
+FrontEndVersion->"12.0 for Linux x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 297, 5, 54, "Input",ExpressionUUID->"e884504a-fa7b-4ce1-8b7b-00913dac13ac"],
+Cell[CellGroupData[{
+Cell[902, 31, 192, 4, 42, "Print",ExpressionUUID->"88da2588-bc7e-49b4-b9de-13728dda3c64"],
+Cell[1097, 37, 207, 4, 42, "Print",ExpressionUUID->"cb7b4ac8-f95f-41b5-bcbb-8998dfc0af9f"]
+}, Open  ]],
+Cell[1319, 44, 763, 15, 38, "Message",ExpressionUUID->"cafc4ba4-0a99-42ca-a649-d4f0bcde7c4c"],
+Cell[2085, 61, 775, 15, 38, "Message",ExpressionUUID->"182bf34e-aff0-4f5e-8f10-1b58269c16e9"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2897, 81, 624, 10, 54, "Input",ExpressionUUID->"3070f12e-4224-4415-acbf-408e7772b8a8"],
+Cell[3524, 93, 3873, 122, 528, "Output",ExpressionUUID->"f5ac14d7-54a2-473a-83c7-92b70d458e3f"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7434, 220, 613, 12, 54, "Input",ExpressionUUID->"d8589d48-22f8-4d9f-ba77-4bcf6624f649"],
+Cell[8050, 234, 522, 17, 83, "Output",ExpressionUUID->"b5271324-baba-45ad-88a2-d05656b504f2"]
+}, Open  ]],
+Cell[8587, 254, 154, 3, 54, "Input",ExpressionUUID->"6eb5d704-3e6e-49fe-a028-7a749ca99263"]
+}
+]
+*)
+
