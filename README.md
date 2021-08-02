@@ -4,5 +4,6 @@ This is my main GitHub repository for the various coding projects I have involve
 
 - Simulations of physical systems
 - Projects Euler scripts
+- Bachelor project files
 - Master project files
 - Research related material
