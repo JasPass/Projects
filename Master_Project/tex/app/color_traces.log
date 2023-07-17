@@ -1,0 +1,578 @@
+This is LuaTeX, Version beta-0.80.0 (TeX Live 2015/Debian) (rev 5238)  (format=lualatex 2019.11.15)  17 JUL 2020 14:44
+ restricted \write18 enabled.
+**color_traces.tex
+(./color_traces.tex
+LaTeX2e <2016/02/01>
+Babel <3.9q> and hyphenation patterns for 1 language(s) loaded.
+! Undefined control sequence.
+l.1 \newgeometry
+              {top=2cm,left=2cm,right=2cm,bottom=2cm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \newgeometry{t
+                op=2cm,left=2cm,right=2cm,bottom=2cm}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+l.3 \section
+          {Trace relations for Lie algebra generators}\label{app:trace_relat...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<write> ... Warning: Reference `sec:CPO' on page \thepage 
+                                                  \space undefined\on@line .
+l.4 ... two-point functions of section \ref{sec:CPO}
+                                                  , the following results fr...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `sec:CPO' on page  undefined on input line 4.
+
+\citation{Two-point functions in D5-D3}
+! Undefined control sequence.
+<write> ... Warning: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.4 ...ults from \cite{Two-point functions in D5-D3}
+                                                   was of instrumental impor...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `Two-point functions in D5-D3' on page  undefined on inp
+ut line 4.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--7
+[][]top=2cm,left=2cm,right=2cm,bottom=2cm
+ []
+
+
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 1--7
+[],
+ []
+
+
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 1--7
+[[]]
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 7.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 7.
+! Undefined control sequence.
+l.8 \tr
+     [ t_3^L \hat{Y}^m_{\ell} ] = \alpha^L_\ell \, \delta^{m,0}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (76.97691pt too wide) detected at line 9
+\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 t[][]\OT1/cmr/m/n/10 ] = \OML/cmm/m/it/10 []
+ []
+ []
+
+! Undefined control sequence.
+l.13 \tr
+      [ t_1^L \hat{Y}^m_{\ell} ]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (244.83559pt too wide) detected at line 23
+\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 t[][]\OT1/cmr/m/n/10 ] = [][][]\OML/cmm/m/it/
+10 []
+ []
+
+! Undefined control sequence.
+l.28 \subsection
+              [$\mathfrak{so}(3)$ trace relations]{$\mathbf{\mathfrak{so}(3)...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 \subsection[
+               $\mathfrak{so}(3)$ trace relations]{$\mathbf{\mathfrak{so}(3)...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+<recently read> \mathfrak 
+          
+l.28 \subsection[$\mathfrak
+                         {so}(3)$ trace relations]{$\mathbf{\mathfrak{so}(3)...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \mathfrak 
+          {so}(3)
+l.28 ... trace relations]{$\mathbf{\mathfrak{so}(3)}
+                                                  $ trace relations}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (42.31255pt too wide) in paragraph at lines 28--32
+[][][$[]\OT1/cmr/m/n/10 (3)$
+ []
+
+
+Overfull \hbox (23.81381pt too wide) in paragraph at lines 28--32
+relations]$[]$
+ []
+
+! Undefined control sequence.
+l.33 \tr
+      [ t_3^L \hat{Y}_\ell^m ]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (30.77673pt too wide) detected at line 34
+\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 t[][]\OT1/cmr/m/n/10 ]
+ []
+
+
+Overfull \hbox (15.6239pt too wide) in paragraph at lines 34--40
+[]$
+ []
+
+
+Overfull \hbox (111.70721pt too wide) detected at line 42
+\OML/cmm/m/it/10 L[][] \OT1/cmr/m/n/10 = [\OML/cmm/m/it/10 t[]; []\OT1/cmr/m/n/
+10 ] = \OML/cmm/m/it/10 m[]
+ []
+
+! Undefined control sequence.
+l.49 \tr
+      [ t_3^L L_3 \hat{Y}_\ell^m ]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.51 \tr
+      [ t_3^L [t_3, \hat{Y}_\ell^m] ]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.53 \tr
+      [ [t_3^L, t_3] \hat{Y}_\ell^m ]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (184.81604pt too wide) detected at line 56
+\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 t[]L[][]\OT1/cmr/m/n/10 ] = [\OML/cmm/m/it/10
+ t[]\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 t[]; []\OT1/cmr/m/n/10 ]] = [[\OML/cmm/m/
+it/10 t[]; t[]\OT1/cmr/m/n/10 ][]] = 0
+ []
+
+! Undefined control sequence.
+l.63 \tr
+      [ t_3^L L_3 \hat{Y}_\ell^m ]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.65 m \tr
+        [ t_3^L \hat{Y}_\ell^m ]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (94.95853pt too wide) detected at line 66
+\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 t[]L[][]\OT1/cmr/m/n/10 ] = \OML/cmm/m/it/10 
+m\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 t[][]\OT1/cmr/m/n/10 ]
+ []
+
+! Undefined control sequence.
+l.73 \tr
+      [ t_3^L \hat{Y}_\ell^m ] = 0
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.75 \quad \text
+              {for} \quad
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (173.02994pt too wide) detected at line 82
+\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 t[][]\OT1/cmr/m/n/10 ] = 0 [] \OML/cmm/m/it/1
+0 m \OMS/cmsy/m/n/10 6\OT1/cmr/m/n/10 = 0  \OMS/cmsy/m/n/10 )  \OML/cmm/m/it/10
+ t[] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 [] []
+ []
+
+
+Overfull \hbox (15.6239pt too wide) in paragraph at lines 82--88
+[]$
+ []
+
+
+Overfull \hbox (147.59961pt too wide) detected at line 90
+\OML/cmm/m/it/10 L[][] \OT1/cmr/m/n/10 = [\OML/cmm/m/it/10 t[]; \OT1/cmr/m/n/10
+ [\OML/cmm/m/it/10 t[]; []\OT1/cmr/m/n/10 ]] = \OML/cmm/m/it/10 `\OT1/cmr/m/n/1
+0 (\OML/cmm/m/it/10 ` \OT1/cmr/m/n/10 + 1)[]
+ []
+
+
+Overfull \hbox (11.2917pt too wide) in paragraph at lines 90--96
+\OML/cmm/m/it/10 L[]$
+ []
+
+
+Overfull \hbox (89.764pt too wide) detected at line 98
+\OML/cmm/m/it/10 L[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 L[]L[] \OT1/cmr/m/n/10 
++ \OML/cmm/m/it/10 L[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 L[]
+ []
+
+! Undefined control sequence.
+l.105 \tr
+       [ t_3^L L^2 \hat{Y}_\ell^m ]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (42.06844pt too wide) detected at line 106
+\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 t[]L[][]\OT1/cmr/m/n/10 ]
+ []
+
+! Undefined control sequence.
+l.113 \tr
+       [ t_3^L L_3^2 \hat{Y}_\ell^m ]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.115 \tr
+       [ t_3^L [t_3, [t_3, \hat{Y}_\ell^m]] ]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.117 \tr
+       [ [t_3^L, t_3] [t_3, \hat{Y}_\ell^m] ]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (221.0105pt too wide) detected at line 120
+\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 t[]L[][]\OT1/cmr/m/n/10 ] = [\OML/cmm/m/it/10
+ t[]\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 t[]; \OT1/cmr/m/n/10 [\OML/cmm/m/it/10 t[
+]; []\OT1/cmr/m/n/10 ]]] = [[\OML/cmm/m/it/10 t[]; t[]\OT1/cmr/m/n/10 ][\OML/cm
+m/m/it/10 t[]; []\OT1/cmr/m/n/10 ]] = 0
+ []
+
+! Undefined control sequence.
+l.127 \tr
+       [ t_3^L L_- L_+ \hat{Y}_\ell^m ]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.129 \tr
+       [ t_3^L [t_-, [t_+, \hat{Y}_\ell^m]] ]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.131 \tr
+       [ [t_3^L, t_-] [t_+, \hat{Y}_\ell^m] ]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.133 \tr
+       [ [[t_3^L, t_-], t_+] \hat{Y}_\ell^m ]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (311.94006pt too wide) detected at line 134
+\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 t[]L[]L[][]\OT1/cmr/m/n/10 ] = [\OML/cmm/m/it
+/10 t[]\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 t[]; \OT1/cmr/m/n/10 [\OML/cmm/m/it/10
+ t[]; []\OT1/cmr/m/n/10 ]]] = [[\OML/cmm/m/it/10 t[]; t[]\OT1/cmr/m/n/10 ][\OML
+/cmm/m/it/10 t[]; []\OT1/cmr/m/n/10 ]] = [[[\OML/cmm/m/it/10 t[]; t[]\OT1/cmr/m
+/n/10 ]\OML/cmm/m/it/10 ; t[]\OT1/cmr/m/n/10 ][]]
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.140 \begin{equation}
+                    
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 140--140
+[][] 
+ []
+
+
+Overfull \hbox (183.77898pt too wide) detected at line 147
+[] \OT1/cmr/m/n/10 = [] [] \OML/cmm/m/it/10 C[][][]
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.153 \begin{equation}
+                    
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 153--153
+[][] 
+ []
+
+
+Overfull \hbox (159.275pt too wide) detected at line 160
+[][] \OT1/cmr/m/n/10 = [] [] \OML/cmm/m/it/10 F[][]
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.166 \begin{equation}
+                    
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 166--166
+[][] 
+ []
+
+
+Overfull \hbox (147.42368pt too wide) detected at line 172
+\OML/cmm/m/it/10 m[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 m[] \OT1/cmr/m/n/10 = \
+OML/cmm/m/it/10 m ;  \OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 `[] \OMS/cmsy/m/n/10   
+\OML/cmm/m/it/10 `[]\OMS/cmsy/m/n/10 j  \OML/cmm/m/it/10 ` \OMS/cmsy/m/n/10  
+\OML/cmm/m/it/10 `[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 `[]
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.178 \begin{equation}
+                    
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 178--178
+[][] 
+ []
+
+
+Overfull \hbox (215.60864pt too wide) detected at line 195
+[] \OT1/cmr/m/n/10 = [] []
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.201 \begin{equation}
+                    
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 201--201
+[][] 
+ []
+
+
+Overfull \hbox (181.12534pt too wide) detected at line 209
+[][] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 F[][] \OT1/cmr/m/n/10 + \OML/cmm/m/it/1
+0 F[][] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 F[][]
+ []
+
+! Undefined control sequence.
+l.214 \subsection
+               [$\mathfrak{so}(5)$ trace relations]{$\mathbf{\mathfrak{so}(5...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.214 \subsection[
+                $\mathfrak{so}(5)$ trace relations]{$\mathbf{\mathfrak{so}(5...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+<recently read> \mathfrak 
+          
+l.214 \subsection[$\mathfrak
+                          {so}(5)$ trace relations]{$\mathbf{\mathfrak{so}(5...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \mathfrak 
+          {so}(5)
+l.214 ...trace relations]{$\mathbf{\mathfrak{so}(5)}
+                                                  $ trace relations}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (42.31255pt too wide) in paragraph at lines 214--216
+[][][$[]\OT1/cmr/m/n/10 (5)$
+ []
+
+
+Overfull \hbox (23.81381pt too wide) in paragraph at lines 214--216
+relations]$[]$
+ []
+
+)
+! Emergency stop.
+<*> color_traces.tex
+                 
+*** (job aborted, no legal \end found)
+
+
+
+Here is how much of LuaTeX's memory you used:
+ 30 strings out of 495004
+ 100000,89155 words of node,token memory allocated 19714 words of node memory still in use:
+   526 hlist, 149 vlist, 15 rule, 59 math, 493 glue, 165 kern, 81 penalty, 1552 
+glyph, 187 glue_spec, 1 write, 18 local_par, 1 dir nodes
+   avail lists: 2:12,3:58,4:1,5:5,6:1,7:21,10:25
+ 3704 multiletter control sequences out of 65536+600000
+ 28 fonts using 1112167 bytes
+ 19i,7n,21p,264b,95s stack positions out of 5000i,500n,10000p,200000b,100000s
+!  ==> Fatal error occurred, no output PDF file produced!

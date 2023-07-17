@@ -1,0 +1,782 @@
+% \newgeometry{top=2cm,left=2cm,right=2cm,bottom=2cm} 
+%
+\section{Propagators of the complex scalar fields}\label{app:complex propagators}
+In the evaluation of two-point functions between chiral primary operators from section \ref{sec:CPO}, and likewise in the evaluation of two-point functions between Bethe state operators and scalar operators of length two from section \ref{sec:NPO}, we made repeated use of the propagators between the complex scalar operators.
+%
+%
+\begin{equation}\label{complex scalars}
+X = \phi_1 + i \phi_4
+%
+\quad , \quad
+%
+Y = \phi_2 + i \phi_5
+%
+\quad , \quad
+%
+Z = \phi_3 + i \phi_6
+\end{equation}
+%
+%
+In this appendix, we will discuss how to obtain all of these propagators, for the case of $SO(3) \times SO(3)$ symmetric vevs. A similar discussion for the $SO(5)$ symmetric case will be delegated to future work. Just as when we derived the $\expval{Z_{\boldsymbol{\ell}} \, Z_{\boldsymbol{\ell}'}}$, $\langle Z_{\boldsymbol{\ell}} \, Z^\dagger_{\boldsymbol{\ell}'} \rangle$ and $\expval{X_{\boldsymbol{\ell}} \, Z_{\boldsymbol{\ell}'}}$ propargators back in section \ref{sec:CPO}, we write out the remaining complex scalars propergators in terms of the $\langle [\phi_i] \, [\phi_j]^\dagger \rangle$ propagators. As also mentioned in section \ref{sec:CPO}, the $\langle [\phi_i] \, [\phi_j]^\dagger \rangle$ propagators can be obtained by writting out the $\phi_i$ fields in terms of the mass matrix eigen-fields \ref{tab:boson_masses_complicated} for the defect setup in question. For the $SO(3) \times SO(3)$ and $SO(5)$ symmetric setups, we respectively refer to \cite{One-point functions in D3-D7} and \cite{One-point functions in D3-D7 SO(5)} for further details. 
+
+\subsection[Propagators for $SO(3) \times SO(3)$ symmetric vevs]{Propagators for $\mathbf{SO(3) \times SO(3)}$ symmetric vevs}
+For the case of $SO(3) \times SO(3)$ symmetric vevs, the $\langle [\phi_i] \, [\phi_j]^\dagger \rangle$ propagators takes one of two forms, depending on wether the $\phi_i$ fields in question are in the same sector. The $(1)$ sector  contains the fields $\phi_1, \phi_2, \phi_3$, and the $(2)$ sector contains the fields $\phi_4, \phi_5, \phi_6$. We write out the propagators using the notation $\phi_i^{(1)} \equiv \phi_i$ and $\phi_i^{(2)} \equiv \phi_{i+3}$, with $i=1,2,3$. The two kinds of propagators looks as follow \cite{One-point functions in D3-D7}.
+%
+%
+\begin{equation}
+\langle [\phi_i^{(1)}]_{\ell_1,m_1;\ell_2,m_2} [\phi_j^{(2)}]_{\ell_1',m_1';\ell_2',m_2'}^\dagger \rangle
+=
+\delta_{\ell_1,\ell_1'} \delta_{\ell_2, \ell_2'}
+[t_i^{(\ell_1)}]_{m_1,m_1'} [t_j^{(\ell_2)}]_{m_2,m_2'}
+K^{\phi}_{\text{opp}}
+\end{equation}
+%
+%
+\begin{equation*}
+\langle [\phi_i^{(1)}]_{\ell_1,m_1;\ell_2,m_2} [\phi_j^{(1)}]_{\ell_1',m_1';\ell_2',m_2'}^\dagger \rangle
+=
+\delta_{\ell_1,\ell_1'} \delta_{\ell_2, \ell_2'} \delta_{m_2,m_2'}
+\end{equation*}
+%
+%
+
+%
+%
+\begin{equation}
+\times
+\left[
+\delta_{ij} \delta_{m_1,m_1'} K^{\phi,(1)}_{\text{sing}}
+- i \varepsilon_{ijk} [t_k^{\ell_1}]_{m_1,m_1'} K^{\phi,(1)}_{\text{anti}}
+- [t_i^{\ell_1} t_i^{\ell_1}]_{m_1,m_1'} K^{\phi,(1)}_{\text{sym}}
+\right]
+\end{equation}
+%
+%
+The propagators between the $\phi_i$ fields in the $(2)$, $(1)$ and $(2)$, $(2)$ sectors are simply related to the propagators above by letting $1 \leftrightarrow 2$ as follow. 
+%
+%
+\begin{equation}\label{phi propagators 12}
+\langle [\phi_i^{(2)}]_{\ell_1,m_1;\ell_2,m_2} [\phi_j^{(1)}]_{\ell_1',m_1';\ell_2',m_2'}^\dagger \rangle
+=
+\langle [\phi_i^{(1)}]_{\ell_2,m_2;\ell_1,m_1} [\phi_j^{(2)}]_{\ell_2',m_2';\ell_1',m_1'}^\dagger \rangle
+\end{equation}
+%
+%
+\begin{equation}\label{phi propagators 11}
+\langle [\phi_i^{(2)}]_{\ell_1,m_1;\ell_2,m_2} [\phi_j^{(2)}]_{\ell_1',m_1';\ell_2',m_2'}^\dagger \rangle
+=
+\langle [\phi_i^{(1)}]_{\ell_2,m_2;\ell_1,m_1} [\phi_j^{(1)}]_{\ell_2',m_2';\ell_1',m_1'}^\dagger \rangle
+\end{equation}
+%
+%
+The propagators $K^{\phi}_{\text{opp}}$, $K^{\phi,(1)}_{\text{sing}}$, $K^{\phi,(1)}_{\text{anti}}$ and $K^{\phi,(1)}_{\text{sym}}$ in the above expressions, are given by the following.
+%
+%
+\begin{equation}
+K^{\phi}_{\text{opp}}
+=
+\frac{K^{m^2_{-}}}{N_{-}}
++
+\frac{K^{m^2_{+}}}{N_{+}}
+-
+\frac{K^{m^2_{0}}}{N_{0}}
+%
+\quad , \quad
+%
+K^{\phi,(1)}_{\mathrm{anti}}
+=
+\frac{K^{m^2_{(1),+}}}{2 \ell_1 + 1}
+-
+\frac{K^{m^2_{(1),-}}}{2 \ell_1 + 1}
+\end{equation}
+%
+%
+\begin{equation}
+K^{\phi,(1)}_{\mathrm{sing}}
+=
+\frac{\ell_1 + 1}{2 \ell_1 + 1} K^{m^2_{(1),+}}
++
+\frac{\ell_1}{2 \ell_1 + 1} K^{m^2_{(1),-}}
+\end{equation}
+%
+%
+\begin{equation}
+K^{\phi,(1)}_{\mathrm{sym}}
+=
+\frac{K^{m^2_{(1),+}}}{(2 \ell_1 + 1) (\ell_1 + 1)}
++
+\frac{K^{m^2_{(1),-}}}{(2 \ell_1 + 1) \ell_1}
+-
+\frac{\ell_2 (\ell_2 + 1)}{\ell_1 (\ell_1 + 1)}
+\frac{K^{m^2_0}}{N_0}
+-
+\frac{K^{m^2_{-}}}{N_{-}}
+-
+\frac{K^{m^2_{+}}}{N_{+}}
+\end{equation}
+%
+%
+And finally, the quantities $N_{0}$ and $N_{\pm}$, which appear in the mass-matrix diagonalization process, are given by the following expressions. 
+%
+%
+\begin{equation}
+N_0 = -\lambda_{+} \lambda_{-}
+%
+\quad , \quad
+%
+N_{\pm} = \lambda_{\mp} (\lambda_{\mp} - \lambda_{\pm})
+\end{equation}
+%
+%
+\begin{equation}
+\lambda_0 = -1
+%
+\quad , \quad
+%
+\lambda_{\pm}
+=
+-\frac{1}{2} \pm \sqrt{\ell_1 (\ell_1 + 1) + \ell_2 (\ell_2 + 1) + \frac{1}{4}}
+\end{equation}
+%
+%
+As also explained back in section \ref{sec:dCFT}, because the matrix valued scalar fields $\phi_i = [\phi_i]_{\ell_1,m_1;\ell_2,m_2} \hat{Y}^{m_1}_{\ell_1} \otimes \hat{Y}^{m_2}_{\ell_2}$, needs to be Hermitian, the conjugation properties of the fuzzy harmonics $\hat{Y}^{m}_{\ell}$ implies the following.
+%
+%
+\begin{equation*}
+(\hat{Y}^{m}_{\ell})^\dagger
+=
+(-1)^m \, \hat{Y}^{m}_{\ell}
+\end{equation*}
+%
+%
+\begin{equation}
+\Rightarrow \quad
+%
+\langle [\phi_i]_{\ell_1,m_1;\ell_2,m_2}^\dagger \rangle
+=
+(-1)^{m_1 + m_2} \, \expval{[\phi_i]_{\ell_1,-m_1;\ell_2,-m_2}}
+\end{equation}
+%
+%
+We can now use the propagators (\ref{phi propagators 12}, \ref{phi propagators 11}), together with the above conjugation property of the $[\phi_i]_{\ell_1,m_1;\ell_2,m_2}$ coefficient fields, to construct the propagators between the complex scalars $X$, $Y$, $Z$. As an example, take the $\expval{Z_{\boldsymbol{\ell}} \, Z_{\boldsymbol{\ell}'}}$ propagator. To construct this propagator, we simply expand it out in terms of $\phi_i$ propagators as follow.
+%
+%
+\begin{equation*}
+\expval{Z_{\boldsymbol{\ell}} \, Z_{\boldsymbol{\ell}'}}
+=
+\expval{\left([\phi_3]_{\boldsymbol{\ell}} + i [\phi_6]_{\boldsymbol{\ell}} \right) \, \left([\phi_3]_{\boldsymbol{\ell}'} + i [\phi_6]_{\boldsymbol{\ell}'}\right)}
+\end{equation*}
+%
+%
+\begin{equation}\label{ZZ propagator expansion}
+=
+\expval{[\phi_3]_{\boldsymbol{\ell}} \, [\phi_3]_{\boldsymbol{\ell}'}}
+-
+\expval{[\phi_3]_{\boldsymbol{\ell}} \, [\phi_3]_{\boldsymbol{\ell}'}}
++
+i \expval{[\phi_3]_{\boldsymbol{\ell}} \, [\phi_6]_{\boldsymbol{\ell}'}}
++
+i \expval{[\phi_6]_{\boldsymbol{\ell}} \, [\phi_3]_{\boldsymbol{\ell}'}}
+\end{equation}
+%
+%
+If we now work in terms of the following representation of the $\mathfrak{so}(3)$ generators $t_i$.
+%
+%
+\begin{equation}\label{t1 rep}
+[t^{(\ell)}_1]_{m,m'}
+=
+\frac{1}{2} \left(
+C^\ell_{m,m'} \delta_{m',m-1}
++ 
+C^\ell_{m',m} \delta_{m',m+1}
+\right)
+\end{equation}
+%
+%
+\begin{equation}\label{t2 rep}
+[t^{(\ell)}_2]_{m,m'}
+=
+\frac{1}{2 i} \left(
+C^\ell_{m,m'} \delta_{m',m-1}
+- 
+C^\ell_{m',m} \delta_{m',m+1}
+\right)
+\end{equation}
+%
+%
+\begin{equation}\label{t3 rep}
+[t^{(\ell)}_3]_{m,m'}
+=
+m \, \delta_{m',m}
+%
+\quad , \quad
+%
+C^\ell_{m,m'} = \sqrt{(\ell+m)(\ell-m')}
+\end{equation}
+%
+%
+
+\newpage
+We find that the $\expval{Z_{\boldsymbol{\ell}} \, Z_{\boldsymbol{\ell}'}}$ propagator takes the particullarly simple form presented below.
+%
+%
+\begin{equation*}
+\expval{
+Z_{\ell_1,m_1;\ell_2,m_2}
+Z_{\ell_1',m_1';\ell_2',m_2'}
+}
+=
+(-1)^{m_1' + m_2'}
+\delta_{\ell_1 \ell_1'} \delta_{\ell_2 \ell_2'}
+\delta_{m_1+m_1',0} \delta_{m_2 + m_2',0} 
+\end{equation*}
+%
+%
+\begin{equation}
+\times
+\Bigg[
+\left(
+K^{\phi,(1)}_{\mathrm{sing}} - m_1^2 \, K^{\phi,(1)}_{\mathrm{sym}}
+\right)
+-
+\left(
+K^{\phi,(2)}_{\mathrm{sing}} - m_2^2 \, K^{\phi,(2)}_{\mathrm{sym}}
+\right)
++
+2i \,
+m_1 m_2 \, K^{\phi}_{\mathrm{opp}}
+\Bigg]
+\end{equation}
+%
+%
+Likewsise, the $\expval{Z_{\boldsymbol{\ell}} \, \bar{Z}_{\boldsymbol{\ell}'}}$ propagator is exceptionally simple when using the representations (\ref{t1 rep}), (\ref{t2 rep}), (\ref{t3 rep}) of the $\mathfrak{so}(3)$ generators, as can be seen below.
+%
+%
+\begin{equation*}
+\expval{
+Z_{\ell_1,m_1;\ell_2,m_2}
+\bar{Z}_{\ell_1',m_1';\ell_2',m_2'}
+}
+=
+\delta_{\ell_1 \ell_1'} \delta_{\ell_2 \ell_2'}
+\delta_{m_1,m_1'} \delta_{m_2,m_2'}
+\end{equation*}
+%
+%
+\begin{equation}
+\times
+\Bigg[
+\left(
+K^{\phi,(1)}_{\mathrm{sing}} - m_1^2 \, K^{\phi,(1)}_{\mathrm{sym}}
+\right)
++
+\left(
+K^{\phi,(2)}_{\mathrm{sing}} - m_2^2 \, K^{\phi,(2)}_{\mathrm{sym}}
+\right)
+\Bigg]
+\end{equation}
+%
+%
+For propagators between other complex scalars, the resulting expressions are unsurprisingly not as simple looking (\textit{at least not when using the given representation of the $t_i$ generators}). Take now the $\expval{X_{\boldsymbol{\ell}} \, Z_{\boldsymbol{\ell}'}}$ and $\expval{X_{\boldsymbol{\ell}} \, \bar{Z}_{\boldsymbol{\ell}'}}$ as examples.
+%
+%
+\begin{equation*}
+\expval{
+X_{\ell_1,m_1;\ell_2,m_2}
+Z_{\ell_1',m_1';\ell_2',m_2'}
+}
+=
+(-1)^{m_1' + m_2'} \delta_{\ell_1 \ell_1'} \delta_{\ell_2 \ell_2'}
+\end{equation*}
+%
+%
+\begin{equation*}
+\times
+\Bigg[
+\delta_{m_2 + m_2',0}
+\left(
+i [t_2^{\ell_1}]_{m_1,-m_1'} K^{\phi,(1)}_{\text{anti}}
+- [t_1^{\ell_1} t_3^{\ell_1}]_{m_1,-m_1'} K^{\phi,(1)}_{\text{sym}}
+\right)
+\end{equation*}
+%
+%
+\begin{equation*}
+-
+\delta_{m_1 + m_1',0}
+\left(
+i [t_2^{\ell_2}]_{m_2,-m_2'} K^{\phi,(2)}_{\text{anti}}
+- [t_1^{\ell_2} t_3^{\ell_2}]_{m_2,-m_2'} K^{\phi,(2)}_{\text{sym}}
+\right)
+\end{equation*}
+%
+%
+\begin{equation}
++ i \left(
+[t_1^{\ell_2}]_{m_2,-m_2'} [t_3^{\ell_1}]_{m_1,-m_1'}
++
+[t_1^{\ell_1}]_{m_1,-m_1'} [t_3^{\ell_2}]_{m_2,-m_2'}
+\right)
+K^{\phi}_{\text{opp}}
+\Bigg]
+\end{equation}
+%
+%
+
+%
+%
+\begin{equation*}
+\expval{
+X_{\ell_1,m_1;\ell_2,m_2}
+\bar{Z}_{\ell_1',m_1';\ell_2',m_2'}
+}
+=
+\delta_{\ell_1 \ell_1'} \delta_{\ell_2 \ell_2'}
+\end{equation*}
+%
+%
+\begin{equation*}
+\times
+\Bigg[
+\delta_{m_2, m_2',0}
+\left(
+i [t_2^{\ell_1}]_{m_1,m_1'} K^{\phi,(1)}_{\text{anti}}
+- [t_1^{\ell_1} t_3^{\ell_1}]_{m_1,m_1'} K^{\phi,(1)}_{\text{sym}}
+\right)
+\end{equation*}
+%
+%
+\begin{equation*}
+\delta_{m_1, m_1',0}
+\left(
+i [t_2^{\ell_2}]_{m_2,m_2'} K^{\phi,(2)}_{\text{anti}}
+- [t_1^{\ell_2} t_3^{\ell_2}]_{m_2,m_2'} K^{\phi,(2)}_{\text{sym}}
+\right)
+\end{equation*}
+%
+%
+\begin{equation}
++ i \left(
+[t_1^{\ell_2}]_{m_2,m_2'} [t_3^{\ell_1}]_{m_1,m_1'}
+-
+[t_1^{\ell_1}]_{m_1,m_1'} [t_3^{\ell_2}]_{m_2,m_2'}
+\right)
+K^{\phi}_{\text{opp}}
+\Bigg]
+\end{equation}
+%
+%
+The rest of the propagators between the scalar fields can now be obtained in complete analogy with the examples presented above.
+
+%\subsection{Propagators for $\mathfrak{so}(5)$ symmetric vevs}
+%For the case of $SO(5)$ symmetric vevs, the structure of the propagators is quite a bit more complicated compared to the $SO(3) \times SO(3)$ symmetric case. For the $\phi_i$ coefficient fields in the adjoint block (\textit{upper diagonal block}), the propagators take the following forms \cite{One-point functions in D3-D7 SO(5)} .
+%%
+%%
+%\begin{equation}\label{so(5) easy propagator}
+%\langle [\phi_6]_{\mathbf{L}} \, [\phi_6]_{\mathbf{L}'}^\dagger \rangle
+%=
+%\delta_{\mathbf{L}, \mathbf{L}'}
+%K^{\hat{m}^2_{easy}}
+%\end{equation}
+%%
+%%
+%\begin{equation*}
+%\langle [\phi_i]_{\mathbf{L}} \, [\phi_j]_{\mathbf{L}'}^\dagger \rangle
+%=
+%\delta_{ij} \, \delta_{\mathbf{L}, \mathbf{L}'} \, \hat{f}^{\text{sing}}
+%+
+%\bra{\mathbf{L}} L_{ij} \ket{\mathbf{L}'} \, \hat{f}^{\text{lin}}
+%+
+%\bra{\mathbf{L}} \{L_{ik}, L_{jl} \} L_{kl} \ket{\mathbf{L}'} \, \hat{f}^{\text{cubic}}
+%\end{equation*}
+%%
+%%
+%\begin{equation}\label{so(5) complicated propagator}
+%+
+%\bra{\mathbf{L}} \{L_{ik}, L_{kj} \} \ket{\mathbf{L}'} \, \hat{f}^{\text{sym}}_5
+%+
+%\bra{\mathbf{L}} \{L_{i6}, L_{6j} \} \ket{\mathbf{L}'} \, \left[
+%\delta_{L_1,L_1'} \, \delta_{L_2,L_2'} \, \hat{f}^{\text{sym}}_6
+%+
+%\delta_{L_1',L_1\pm1} \, \delta_{L_2',L_2\mp1} \, \hat{f}^{\text{opp}}
+%\right]
+%\end{equation}
+%%
+%%
+%Where $i=1,2,3,4,5$. The matrix elements appearing in the above propagators can in principle be computed using the $S^4$ fuzzy harmonics $\hat{Y}_{\mathbf{L}}$ and the $d_n$-dimensional representations of the $\mathfrak{so}(6)$ generators.
+%%
+%%
+%\begin{equation}
+%\bra{\mathbf{L}} L_{ij} \ket{\mathbf{L}'}
+%=
+%\tr[\hat{Y}_{\mathbf{L}}^\dagger L_{ij} \hat{Y}_{\mathbf{L'}}]
+%=
+%\tr[\hat{Y}_{\mathbf{L}}^\dagger \, [G_{ij}, \hat{Y}_{\mathbf{L'}}]]
+%\end{equation}
+%%
+%%
+%Analogously to the case with $SO(3) \times SO(3)$ symmetric vevs, the conjugation properties of the $S^4$ fuzzy harmonics $\hat{Y}_{\mathbf{L}}$ implies the same conjugation properties for the coefficient fields. It has been shown in \cite{Grau Volk thesis}, that the $S^4$ fuzzy harmonics can be chosen such that.
+%%
+%%
+%\begin{equation*}\label{S^4 fuzzy harmonics conjugation property}
+%(\hat{Y}_{L_1,L_2;\ell_1,m_1;\ell_2,m_2})^\dagger
+%=
+%-(-1)^{L_1 - L_2 + \ell_1 +\ell_2 + m_1 + m_2} \, 
+%\hat{Y}_{L_1,L_2;\ell_1,-m_1;\ell_2,-m_2}
+%\end{equation*}
+%%
+%%
+%\begin{equation}
+%\Rightarrow \quad
+%%
+%\langle \phi_{L_1,L_2;\ell_1,m_1;\ell_2,m_2}^\dagger \rangle
+%=
+%-(-1)^{L_1 - L_2 + \ell_1 +\ell_2 + m_1 + m_2} \, 
+%\expval{\phi_{L_1,L_2;\ell_1,-m_1;\ell_2,-m_2}}
+%\end{equation}
+%%
+%%
+%We can now use the propagators (\ref{so(5) easy propagator}, \ref{so(5) complicated propagator}), as well as the conjugation property (\ref{S^4 fuzzy harmonics conjugation property}), to find expressions for the complex scalar propagators. Take again the $\expval{Z_{\boldsymbol{\ell}} \, Z_{\boldsymbol{\ell}'}}$ propagator as an example. After inserting the (\ref{so(5) easy propagator}, \ref{so(5) complicated propagator}) propagators into the expansion (\ref{ZZ propagator expansion}), we find that.
+%%
+%%
+%\begin{equation*}
+%\expval{
+%Z_{L_1,L_2;\ell_1,m_1;\ell_2,m_2}
+%Z_{L_1',L_2';\ell_1',m_1';\ell_2',m_2'}
+%}
+%=
+%\end{equation*}
+%%
+%%
+%\begin{equation*}
+%-(-1)^{L_1 - L_2 + \ell_1 +\ell_2 + m_1 + m_2} \,
+%\delta_{L_1,L_1'}
+%\delta_{L_2,L_2'}
+%\delta_{\ell_1,\ell_1'}
+%\delta_{\ell_2,\ell_2'}
+%\delta_{m_1+m_1',0}
+%\delta_{m_2+m_2',0} \, 
+%K^{\hat{m}_{\text{easy}}^2}
+%\end{equation*}
+%%
+%%
+%\begin{equation*}
+%-(-1)^{L_1 - L_2 + \ell_1 +\ell_2 + m_1 + m_2} \,
+%\delta_{L_1,L_1'}
+%\delta_{L_2,L_2'}
+%\delta_{\ell_1,\ell_1'}
+%\delta_{\ell_2,\ell_2'}
+%\delta_{m_1+m_1',0}
+%\delta_{m_2+m_2',0} \, 
+%\hat{f}^{\text{sing}}
+%\end{equation*}
+%%
+%%
+%\begin{equation*}
+%-(-1)^{L_1 - L_2 + \ell_1 +\ell_2 + m_1 + m_2} \,
+%\bra{\mathbf{L}} \{ L_{3k}, L_{3l} \} L_{kl} \ket{\mathbf{L}'} \,
+%\hat{f}^{\text{cubic}}
+%\end{equation*}
+%%
+%%
+%\begin{equation*}
+%-(-1)^{L_1 - L_2 + \ell_1 +\ell_2 + m_1 + m_2} \,
+%\bra{\mathbf{L}} \{ L_{3k}, L_{k3} \} \ket{\mathbf{L}'} \,
+%\hat{f}^{\text{sym}}_5
+%\end{equation*}
+%%
+%%
+%\begin{equation}
+%-(-1)^{L_1 - L_2 + \ell_1 +\ell_2 + m_1 + m_2} \,
+%\bra{\mathbf{L}} \{ L_{36}, L_{63} \} \ket{\mathbf{L}'} \,
+%\left[
+%\delta_{L_1,L_1'} \delta_{L_2,L_2'} \hat{f}^{\text{sym}}_6
+%+
+%\delta_{L_1',L_1\pm1} \delta_{L_2',L_2\mp1} \hat{f}^{\text{opp}}
+%\right]
+%\end{equation}
+%%
+%%
+%In order for the above expression to be of any practical use, we need to find explicit expressions for the matrix elements of the appearing $\mathfrak{so}(6)$ generator products. We start by considering the term quadratic in the generators. First we write out the anti-commutator as follow.
+%%
+%%
+%\begin{equation}\label{quadratic in L}
+%\{ L_{3k}, L_{k3} \}
+%=
+%-2 \, \left( L_{13}^2 + L_{23}^2 + L_{43}^2 + L_{53}^2 \right)
+%\end{equation}
+%%
+%%
+%The $\mathfrak{so}(6)$ generators appearing in the above anti-commutator can now be related to the following linear combinations of $\mathfrak{so}(6)$ tensor operators \cite{One-point functions in D3-D7 SO(5)}.
+%%
+%%
+%\begin{equation}
+%L_{13} = i \left(
+%T_{(1,0),\frac{1}{2},\frac{1}{2},\frac{1}{2},\frac{1}{2}}
+%+
+%T_{(1,0),\frac{1}{2},\frac{1}{2},-\frac{1}{2},-\frac{1}{2}}
+%\right)
+%\end{equation}
+%%
+%%
+%Using the above relations, we can now evaluate the matrix elements $\bra{\mathbf{L}} \{ L_{3k}, L_{k3} \} \ket{\mathbf{L}'}$, by making use of the \textit{generalized Wigner-Eckart theorem} together with (\ref{quadratic in L}).
+%%
+%%
+%\begin{equation}
+%L_{43} = \left(
+%T_{(1,0),\frac{1}{2},\frac{1}{2},\frac{1}{2},\frac{1}{2}}
+%-
+%T_{(1,0),\frac{1}{2},\frac{1}{2},-\frac{1}{2},-\frac{1}{2}}
+%\right)
+%\end{equation}
+%%
+%%
+%
+%%
+%%
+%\begin{equation}
+%L_{23} = i \left(
+%T_{(\frac{1}{2},\frac{1}{2}),\frac{1}{2},\frac{1}{2},\frac{1}{2},-\frac{1}{2}}
+%-
+%T_{(\frac{1}{2},\frac{1}{2}),\frac{1}{2},\frac{1}{2},-\frac{1}{2},\frac{1}{2}}
+%\right)
+%\end{equation}
+%%
+%%
+%
+%%
+%%
+%\begin{equation}
+%L_{53} = \left(
+%T_{(\frac{1}{2},\frac{1}{2}),\frac{1}{2},\frac{1}{2},\frac{1}{2},\frac{1}{2}}
+%+
+%T_{(\frac{1}{2},\frac{1}{2}),\frac{1}{2},\frac{1}{2},-\frac{1}{2},-\frac{1}{2}}
+%\right)
+%\end{equation}
+%%
+%%
+%
+%%
+%%
+%\begin{equation}
+%L_{36} = -T_{(\frac{1}{2},\frac{1}{2}),0,0,0,0}
+%\end{equation}
+%%
+%%
+%
+%
+%%
+%%
+%\begin{equation}
+%\bra{\mathbf{L}} L_{13}^2 \ket{\mathbf{L}'}
+%=
+%\sum_{\mathbf{S}}
+%\bra{\mathbf{L}} L_{13}
+%\ketbra{\mathbf{S}}{\mathbf{S}}
+%L_{13} \ket{\mathbf{L}'}
+%\end{equation}
+%%
+%%
+%
+%%
+%%
+%\begin{equation*}
+%\bra{\mathbf{L}'}
+%L_{13}
+%\ket{\mathbf{L}}
+%=
+%i \delta_{L_1,L_1'} \delta_{L_2,L_2'}
+%\sqrt{L_1 (L_1 + 2) + L_2 (L_2 + 1)}
+%\end{equation*}
+%%
+%%
+%\begin{equation}
+%\times
+%\left(
+%\braket{\mathbf{L}; (1,0), \tfrac{1}{2}, \tfrac{1}{2}, \tfrac{1}{2}, \tfrac{1}{2}}{\mathbf{L}'}
+%+
+%\braket{\mathbf{L}; (1,0), \tfrac{1}{2}, \tfrac{1}{2}, -\tfrac{1}{2}, -\tfrac{1}{2}}{\mathbf{L}'}
+%\right)
+%\end{equation}
+%%
+%%
+%
+%%
+%%
+%\begin{equation*}
+%\braket{\mathbf{L}; (1,0), \tfrac{1}{2}, \tfrac{1}{2}, \tfrac{1}{2}, \tfrac{1}{2}}{\mathbf{L}'}
+%=
+%\langle (L_1, L_2), \ell_1, \ell_2; (1,0), \tfrac{1}{2}, \tfrac{1}{2} || (L_1', L_2'), \ell_1', \ell_2' \rangle
+%\end{equation*}
+%%
+%%
+%\begin{equation}
+%\times
+%\braket{\ell_1, m_1; \tfrac{1}{2}, \tfrac{1}{2}}{\ell_1', m_1'}
+%\braket{\ell_2, m_2; \tfrac{1}{2}, \tfrac{1}{2}}{\ell_2', m_2'}
+%\end{equation}
+%%
+%%
+%
+%%
+%%
+%\begin{equation*}
+%\braket{\mathbf{L}; (1,0), \tfrac{1}{2}, \tfrac{1}{2}, -\tfrac{1}{2}, -\tfrac{1}{2}}{\mathbf{L}'}
+%=
+%\langle (L_1, L_2), \ell_1, \ell_2; (1,0), \tfrac{1}{2}, \tfrac{1}{2} || (L_1', L_2'), \ell_1', \ell_2' \rangle
+%\end{equation*}
+%%
+%%
+%\begin{equation}
+%\times
+%\braket{\ell_1, m_1; \tfrac{1}{2}, -\tfrac{1}{2}}{\ell_1', m_1'}
+%\braket{\ell_2, m_2; \tfrac{1}{2}, -\tfrac{1}{2}}{\ell_2', m_2'}
+%\end{equation}
+%%
+%%
+%
+%%
+%%
+%\begin{equation}
+%\langle (L_1, L_2), \ell_1, \ell_2; (1,0), \tfrac{1}{2}, \tfrac{1}{2} || (L_1, L_2), \ell_1', \ell_2' \rangle
+%=
+%\begin{cases}
+%		\mathcal{F}_{++}(\ell_1,\ell_2)
+%		& \quad \text{for } \ell_1 = \ell_1' + \tfrac{1}{2}, 
+%		\ell_2 = \ell_2' + \tfrac{1}{2} \\
+%		
+%    	\mathcal{F}_{--}(\ell_1,\ell_2)
+%    	& \quad \text{for } \ell_1 = \ell_1' - \tfrac{1}{2}, 
+%		\ell_2 = \ell_2' - \tfrac{1}{2} \\
+%		
+%		\mathcal{F}_{+-}(\ell_1,\ell_2)
+%    	& \quad \text{for } \ell_1 = \ell_1' + \tfrac{1}{2}, 
+%		\ell_2 = \ell_2' - \tfrac{1}{2} \\
+%		
+%		\mathcal{F}_{-+}(\ell_1,\ell_2)
+%    	& \quad \text{for } \ell_1 = \ell_1' - \tfrac{1}{2}, 
+%		\ell_2 = \ell_2' + \tfrac{1}{2} \\
+%		
+%		0
+%    	& \quad \text{otherwise} \\
+%  \end{cases}
+%\end{equation}
+%%
+%%
+%
+%%
+%%
+%\begin{equation}
+%\langle (L_1, L_2), \ell_1, \ell_2; (1,0), \tfrac{1}{2}, \tfrac{1}{2} || (L_1+1, L_2), \ell_1', \ell_2' \rangle
+%=
+%\begin{cases}
+%		\mathcal{G}_{++}(\ell_1,\ell_2)
+%		& \quad \text{for } \ell_1 = \ell_1' + \tfrac{1}{2}, 
+%		\ell_2 = \ell_2' + \tfrac{1}{2} \\
+%		
+%    	\mathcal{G}_{--}(\ell_1,\ell_2)
+%    	& \quad \text{for } \ell_1 = \ell_1' - \tfrac{1}{2}, 
+%		\ell_2 = \ell_2' - \tfrac{1}{2} \\
+%		
+%		\mathcal{G}_{+-}(\ell_1,\ell_2)
+%    	& \quad \text{for } \ell_1 = \ell_1' + \tfrac{1}{2}, 
+%		\ell_2 = \ell_2' - \tfrac{1}{2} \\
+%		
+%		\mathcal{G}_{-+}(\ell_1,\ell_2)
+%    	& \quad \text{for } \ell_1 = \ell_1' - \tfrac{1}{2}, 
+%		\ell_2 = \ell_2' + \tfrac{1}{2} \\
+%		
+%		0
+%    	& \quad \text{otherwise} \\
+%  \end{cases}
+%\end{equation}
+%%
+%%
+%
+%%
+%%
+%\begin{equation}
+%\langle (L_1, L_2), \ell_1, \ell_2; (1,0), \tfrac{1}{2}, \tfrac{1}{2} || (L_1, L_2+1), \ell_1', \ell_2' \rangle
+%=
+%\begin{cases}
+%		\mathcal{H}_{++}(\ell_1,\ell_2)
+%		& \quad \text{for } \ell_1 = \ell_1' + \tfrac{1}{2}, 
+%		\ell_2 = \ell_2' + \tfrac{1}{2} \\
+%		
+%    	\mathcal{H}_{--}(\ell_1,\ell_2)
+%    	& \quad \text{for } \ell_1 = \ell_1' - \tfrac{1}{2}, 
+%		\ell_2 = \ell_2' - \tfrac{1}{2} \\
+%		
+%		\mathcal{H}_{+-}(\ell_1,\ell_2)
+%    	& \quad \text{for } \ell_1 = \ell_1' + \tfrac{1}{2}, 
+%		\ell_2 = \ell_2' - \tfrac{1}{2} \\
+%		
+%		\mathcal{H}_{-+}(\ell_1,\ell_2)
+%    	& \quad \text{for } \ell_1 = \ell_1' - \tfrac{1}{2}, 
+%		\ell_2 = \ell_2' + \tfrac{1}{2} \\
+%		
+%		0
+%    	& \quad \text{otherwise} \\
+%  \end{cases}
+%\end{equation}
+%%
+%%
+%
+%%
+%%
+%\begin{equation}
+%\langle (L_1, L_2), \ell_1, \ell_2; (1,0), \tfrac{1}{2}, \tfrac{1}{2} || (L_1+\tfrac{1}{2}, L_2+\tfrac{1}{2}), \ell_1', \ell_2' \rangle
+%=
+%\begin{cases}
+%		\mathcal{I}_{++}(\ell_1,\ell_2)
+%		& \quad \text{for } \ell_1 = \ell_1' + \tfrac{1}{2}, 
+%		\ell_2 = \ell_2' + \tfrac{1}{2} \\
+%		
+%    	\mathcal{I}_{--}(\ell_1,\ell_2)
+%    	& \quad \text{for } \ell_1 = \ell_1' - \tfrac{1}{2}, 
+%		\ell_2 = \ell_2' - \tfrac{1}{2} \\
+%		
+%		\mathcal{I}_{+-}(\ell_1,\ell_2)
+%    	& \quad \text{for } \ell_1 = \ell_1' + \tfrac{1}{2}, 
+%		\ell_2 = \ell_2' - \tfrac{1}{2} \\
+%		
+%		\mathcal{I}_{-+}(\ell_1,\ell_2)
+%    	& \quad \text{for } \ell_1 = \ell_1' - \tfrac{1}{2}, 
+%		\ell_2 = \ell_2' + \tfrac{1}{2} \\
+%		
+%		0
+%    	& \quad \text{otherwise} \\
+%  \end{cases}
+%\end{equation}
+%%
+%%
+%
+%%
+%%
+%\begin{equation}
+%\langle (L_1, L_2), \ell_1, \ell_2; (1,0), \tfrac{1}{2}, \tfrac{1}{2} || (L_1+\tfrac{1}{2}, L_2-\tfrac{1}{2}), \ell_1', \ell_2' \rangle
+%=
+%\begin{cases}
+%		\mathcal{J}_{++}(\ell_1,\ell_2)
+%		& \quad \text{for } \ell_1 = \ell_1' + \tfrac{1}{2}, 
+%		\ell_2 = \ell_2' + \tfrac{1}{2} \\
+%		
+%    	\mathcal{J}_{--}(\ell_1,\ell_2)
+%    	& \quad \text{for } \ell_1 = \ell_1' - \tfrac{1}{2}, 
+%		\ell_2 = \ell_2' - \tfrac{1}{2} \\
+%		
+%		\mathcal{J}_{+-}(\ell_1,\ell_2)
+%    	& \quad \text{for } \ell_1 = \ell_1' + \tfrac{1}{2}, 
+%		\ell_2 = \ell_2' - \tfrac{1}{2} \\
+%		
+%		\mathcal{J}_{-+}(\ell_1,\ell_2)
+%    	& \quad \text{for } \ell_1 = \ell_1' - \tfrac{1}{2}, 
+%		\ell_2 = \ell_2' + \tfrac{1}{2} \\
+%		
+%		0
+%    	& \quad \text{otherwise} \\
+%  \end{cases}
+%\end{equation}
+%%
+%%

@@ -1,0 +1,3104 @@
+% \newgeometry{top=4cm,left=4cm,right=4cm,bottom=4cm} 
+%
+\section{Defect conformal field theory setup}\label{sec:dCFT}
+In this section, we go through the ground work necessary for subsequent pertubative calculations in the dCFT setups under consideration. This is essentially a matter of finding the propagators of all fields in the theory, such that they can be used in computing Feynmann diagrams. However, this seemingly straight forward task is vastly complicated by the appearance of a completely scrambled mass-matrix (\textit{this mass-matrix is non diagonal in both color and flavor indices, as we will see later on}). We first look at the particular non trivial solutions of the scalar equations of motion (\textit{EOM's}) in $\mathcal{N} = 4$ SYM theory (\textit{SYM}), that will server as the vacua for our defect conformal field theory setups. The fields of the theory will then acquire masses in the usual Higgs-like manner. After gauge-fixing the $\mathcal{N} = 4$ action and reducing the 10D Majorana-Weyl fermions, we expand around the classical scalar field solutions and find the form of the mass-matrix. Seeing as the procedure of diagonalizing the mass-matrix is a rather long and complicated one, we will not go through all the details in this thesis, but instead refer the reader to the original paper in which this was done \cite{One-point functions in D3-D7}. We conclude this section by finding the propagators of the diagonal fields, which is slightly complicated by the fact that the mass eigenvalues are spacetime dependent.
+
+\subsection{Non zero classical scalar field solutions}\label{cl scalar solutions}
+Our starting point for the entire proceeding analysis is the $\mathcal{N}=4$ SYM action, which looks as follow.
+%
+%
+\begin{equation*}
+S_{\mathcal{N}=4} = \frac{2}{g^2} \int_{\mathbb{R}^4} \text{d}^4 x
+\tr \left[
+-\frac{1}{4} (F_{\mu \nu})^2
+-\frac{1}{2} (D_\mu \boldsymbol{\phi}_i)^2
++ \frac{i}{2} \bar{\Psi} \Gamma^\mu D_{\mu} \Psi
+\right.
+\end{equation*}
+%
+%
+\begin{equation}\label{SYM action}
+\left.
++ \frac{1}{2} \bar{\Psi} \tilde{\Gamma}^i [\boldsymbol{\phi}_i, \Psi]
++ \frac{1}{4} [\boldsymbol{\phi}_i, \boldsymbol{\phi}_j]^2
+\right]
+\end{equation}
+%
+%
+%Potential function to be considered:
+%%
+%%
+%\begin{equation}
+%V(\{ \phi_i \})
+%%
+%=
+%%
+%\tr \left[
+%-\partial_\mu \phi_i \partial^\mu \phi^i
+%+ \frac{1}{2} [\phi_i, \phi_j] [\phi^i, \phi^j]
+%\right]
+%\end{equation}
+%%
+%%
+%Where $\mu = 1,...,3$ label coordinates over spacetime, and $i = 1,...,6$ label coordinates in the R-symmetry space. We now decompose the $\phi$ fields in a $U(N)$ basis $\{ T^1, T^a \}$, satisfying:
+%%
+%%
+%\begin{equation}
+%\tr \left[ T^a, T^b \right] = \delta^{ab}
+%\end{equation}
+%%
+%%
+%\begin{equation}
+%\tr \left[ T^1, T^a \right] = 0
+%\end{equation}
+%%
+%%
+%\begin{equation}
+%\tr \left[ T^1, T^1 \right] = 1
+%\end{equation}
+%%
+%%
+%Where $a=2,...,N^2$ and $T^1 = \mathbb{1} / \sqrt{N}$.
+%%
+%%
+%\begin{equation}
+%V(\{ \phi_i^1, \phi_i^a \})
+%%
+%=
+%%
+%-\partial_\mu \phi_i^1 \partial^\mu \phi^i_1
+%-\partial_\mu \phi_i^a \partial^\mu \phi^i_a
+%+ ...
+%\end{equation}
+%%
+%%
+The field content of the theory is: one $U(N)$ gauge field $A_\mu$, six Lorentz scalars $\boldsymbol{\phi}_i$ and one 10D Majorana-Weyl spinor $\Psi$ (\textit{in section \ref{fermion redution} we explain how to reduce this 10D spinor to four 4D spinors}). The set of matrices $\{\Gamma^\mu , \tilde{\Gamma}^i \}$ constitute 10D gamma matrices. All fields transform in the same representation of $U(N)$ (\textit{as is necessary for the theory to be super symmetric}), namely the adjoint representation\footnote{As for all guage theories, it is not the guage field $A_\mu$ which transforms as an adjoint field, but rather the field strength $F_{\mu\nu}$.}. We use the following conventions for the field strength $F_{\mu\nu}$ and the adjoint covariant derivative $D_\mu$.
+
+\newpage
+%
+%
+\begin{equation}
+D_\mu \chi = \partial_\mu \chi - i [A_\mu, \chi]
+%
+\quad , \quad
+%
+\chi \in \{F_{\mu\nu}, \Psi, \boldsymbol{\phi}_i \}
+\end{equation}
+%
+%
+
+%
+%
+\begin{equation}
+F_{\mu\nu} = \partial_\mu A_\nu - \partial_\nu A_\mu -i [A_\mu, A_\nu]
+\end{equation}
+%
+%
+We now look for solutions to the EOM's of this action, such that the scalar fields $\boldsymbol{\phi}_i$, are non-zero while all other fields vanish. We can now vary the action with respect to the scalars, and assuming all other fields vanish we find that.
+%
+%
+\begin{equation}\label{Scalar Field EOMS}
+\frac{\delta S_{\mathcal{N} = 4}}{\delta \boldsymbol{\phi}_i} = 0
+%
+\quad \Rightarrow \quad
+%
+\partial_\mu \partial^\mu \boldsymbol{\phi}_i
+=
+[\boldsymbol{\phi}_j, [\boldsymbol{\phi}_j, \boldsymbol{\phi}_i]]
+\end{equation}
+%
+%
+%A solution to these equations are given by the following.
+%%
+%%
+%\[ \Phi^i_R(x) = -\frac{1}{x_3} t_R^i = -\frac{1}{x_3}
+%	\begin{cases}
+%		t_1^i \oplus 0_{N-k_1}
+%		& \quad \text{for } i = 1,2,3 \\
+%		
+%    	0_{N-k_2} \oplus t_2^{i-3}
+%    	& \quad \text{for } i = 4,5,6
+%  \end{cases}
+%\]
+%%
+%%
+%Where $t_1^i$ and $t_2^i$ are $k_1$ and $k_2$ dimensional representations of the $\mathfrak{su}(2)$ generators respectivly, and $k_1 + k_2 \leq N$.
+A non-zero solution to these equations was presented in \cite{One-point functions in D3-D7}. The solution has the following form.
+%
+%
+\begin{equation*}
+\mathfrak{so}(3) \times \mathfrak{so}(3) :
+%
+\quad
+%
+\Phi_i(x)
+=
+-\frac{1}{x_3}
+	\begin{cases}
+		t_i^{(1)} \oplus 0_{N-k_1 k_2}
+		& \quad \text{for } i = 1,2,3 \\
+		
+    	t_{i-3}^{(2)} \oplus 0_{N-k_1 k_2}
+    	& \quad \text{for } i = 4,5,6
+  \end{cases}
+\quad ,
+\end{equation*}
+%
+%
+\begin{equation}\label{cl solution a}
+t_i^{(1)} \equiv t_i^{k_1} \otimes \mathbb{1}_{k_2}
+%
+\quad , \quad
+t_i^{(2)} \equiv \mathbb{1}_{k_1} \otimes t_i^{k_2}
+\end{equation}
+%
+%
+Here, $t_i^{k_1}$ and $t_i^{k_2}$ are $k_1$ and $k_2$ dimensional representations of the $\mathfrak{so}(3)$ generators respectively, and $k_1 k_2 \leq N$. It is easy to verify that this is indeed a solution of equ. (\ref{Scalar Field EOMS}) using the $\mathfrak{so}(3)$ commutation relations: $[t_i, t_j] = i \varepsilon_{ijk} t_k$, and the identity: $\varepsilon_{jkl} \varepsilon_{jik} = -2 \delta_{li}$.
+%
+%
+\begin{equation}\label{double commutator so(3)}
+[t_j, [t_j, t_i]] = i \varepsilon_{jik} [t_j, t_k]
+=
+-\varepsilon_{jik} \varepsilon_{jkl} t_l
+=
+2 t_i
+%
+\quad , \quad
+%
+i,j,k,l = 1,2,3
+\end{equation}
+%
+%
+Using the result in (\ref{double commutator so(3)}) and the fact that $t_i^{k_1} \otimes \mathbb{1}_{k_2}$ and $\mathbb{1}_{k_1} \otimes t_{j}^{k_2}$ commute, it should be clear that (\ref{cl solution a}) is indeed a solution to (\ref{Scalar Field EOMS}). It should be noted at this point, that a certain limit of this solution (\textit{$k_1 = 1$ or $k_2 = 1$}) is dual to the so called fuzzy-funnel solution of the probe D5-D3 brane setup with $AdS_4 \times S^2$ geometry \cite{fuzzy-funnel solution}.\\
+% Certainly, something similar must exist for the general case
+In addition to the above classical field solution, another non-zero solution also exists \cite{One-point functions in D3-D7 SO(5)}, and it is given by the following similar looking expression.
+%
+%
+\begin{equation}\label{cl solution b}
+\mathfrak{so}(5) :
+%
+\quad
+%
+\Phi_i(x)
+=
+\frac{1}{\sqrt{2} x_3}
+	\begin{cases}
+		G_{i6}^{d_n} \oplus 0_{N-d_n}
+		& \quad \text{for } i = 1,2,3,4,5 \\
+		
+    	0_{N}
+    	& \quad \text{for } i = 6
+  \end{cases}
+\end{equation}
+%
+%
+Where $G_{i6}^{d_n}$ are a subset of the $d_n = d_6 \left(\frac{n}{2},\frac{n}{2},\frac{n}{2} \right)$ dimensional representations of $\mathfrak{so}(6)$ generators. It is again easy to verify that the above is indeed a solution of (\ref{Scalar Field EOMS}), this time using the commutation relations of $\mathfrak{so}(6)$ and the fact that $G_{ij} = -G_{ji}$.
+
+\newpage
+%
+%
+\begin{equation*}
+[G_{ij}, G_{kl}] = i \left(
+\delta_{ik} G_{jl}
++ \delta_{jl} G_{ik}
+- \delta_{il} G_{jk}
+- \delta_{jk} G_{il}
+\right)
+%
+\quad ,
+\end{equation*}
+%
+%
+\begin{equation}
+i,j,k,l = 1, \ldots 6
+\end{equation}
+%
+%
+\begin{equation}
+[G_{j6}, G_{i6}] = i G_{ji}
+%
+\quad , \quad
+%
+i,j,k,l = 1, \ldots 5
+\end{equation}
+%
+%
+\begin{equation*}
+[G_{j6}, [G_{j6}, G_{i6}]] = i [G_{j6}, G_{ji}]
+=
+-\left(
+\delta_{jj} G_{6i}
+- \delta_{ji} G_{6j}
+\right)
+=
+4 G_{i6}
+%
+\quad ,
+\end{equation*}
+%
+%
+\begin{equation}\label{double commutator so(5)}
+i,j,k,l = 1, \ldots 5
+\end{equation}
+%
+%
+Using the result (\ref{double commutator so(5)}), it should again be clear that (\ref{cl solution b}) is indeed also a solution to equ. (\ref{Scalar Field EOMS}). It should again be noted, that this solution is also dual to a fuzzy-funnel solution, this time of the probe D7-D3 brane setup with $AdS_4 \times S^4$ geometry \cite{fuzzy-funnel solution D7}.
+
+\subsection{Reducing the 10D Majorana-Weyl fermion}\label{fermion redution}
+When we presented the fields of $\mathcal{N} = 4$ SYM back in section \ref{cl scalar solutions}, one field might have seemed a bit out of place; namely the $10D$ Majorana-Weyl fermion. This $10D$ fermion is in fact a remnant of the $10D$ $\mathcal{N} = 1$ SYM action, from which we can obtain the $4D$ $\mathcal{N} = 4$ action by dimensional reduction. For the sake of completness, we present here the $\mathcal{N} = 1$ SYM action.
+%
+%
+\begin{equation}
+S_{\mathcal{N}=1} = \frac{2}{\tilde{g}^2} \int_{\mathbb{R}^{10}} \text{d}^{10} x
+\tr \left[
+-\frac{1}{4} (F_{M N})^2
++ \frac{i}{2} \bar{\Psi} \Gamma^M D_{M} \Psi
+\right]
+%
+\quad , \quad
+%
+M,N = 0,...,9
+\end{equation}
+%
+%
+Where $\bar{\Psi} \equiv \Psi^\dagger \Gamma^0$. We now move on to the task of decomposing the $10D$ Majorana-Weyl fermion into a set of $4D$ fermions. To do this, we need to take into account both the Majorana and Weyl constraints for the $10D$ Majorana-Weyl fermion.
+%
+%
+\begin{equation}\label{10 Weyl-Majorana}
+\Psi = \Psi^C \equiv \mathcal{C}_{10} \Gamma^0  \Psi^{*}
+%
+\quad , \quad
+%
+\Gamma^{11} \Psi = -\Psi
+\end{equation}
+%
+%
+Where $\Gamma^M$, $\Gamma^{11}$ are $10D$ gamma matrices, which have to obey the Clifford anti-commutator algebra.
+%
+%
+\begin{equation}
+\{ \Gamma^M, \Gamma^N \} = -2 \eta^{MN}
+%
+\quad , \quad
+%
+\Gamma^{11} = i \, \Gamma^0 \cdots \Gamma^9
+\end{equation}
+%
+%
+In the above, $C_{10}$ is the $10D$ charge conjugation matrix, which implicitly defined by the following relation: $-\left( {\Gamma^M} \right)^{*} = \Gamma^0 \, C_{10}^{-1} \, \Gamma^M \, C_{10} \, \Gamma^0$. In what follows, we will employ the representation of $10D$ gamma matrices and the $10D$ charge conjugation matrix given below.
+
+\newpage
+%
+%
+\begin{equation}\label{Gamma_mu}
+\Gamma^\mu = \gamma^\mu \otimes \mathbb{1}_4 \otimes \mathbb{1}_2
+%
+\quad , \quad
+%
+\mu = 0,1,2,3
+\end{equation}
+%
+%
+
+%
+%
+\begin{equation}\label{Gamma_i}
+\tilde{\Gamma}^i \equiv \Gamma^{i+3} =
+	\begin{cases}
+		-i \, \gamma^5 \otimes G^i \otimes \sigma_2
+		& \quad \text{for } i = 1,2,3 \\
+		
+    	\gamma^5 \otimes G^i \otimes \sigma_1
+    	& \quad \text{for } i = 4,5,6
+  \end{cases}
+\end{equation}
+%
+%
+
+%
+%
+\begin{equation}
+\Gamma^{11} = -\gamma^5 \otimes \mathbb{1}_4 \otimes \sigma_3
+\end{equation}
+%
+%
+
+%
+%
+\begin{equation}
+C_{10} = C_4 \otimes \mathbb{1}_4 \otimes \sigma_1
+%
+\quad , \quad
+%
+C_4 = i \, \sigma_2 \otimes \sigma_3
+\end{equation}
+%
+%
+Where the $4 \times 4$ matrices $G^i$ are given by the following expressions.
+%
+%
+\begin{equation*}
+G^1 = \sigma_3 \otimes \sigma_2
+%
+\quad , \quad
+%
+G^2 = -\sigma_2 \otimes \sigma_2 
+%
+\quad , \quad
+%
+G^3 = \sigma_2 \otimes \mathbb{1}_2
+\end{equation*}
+%
+%
+\begin{equation}
+G^4 = -i \, \sigma_2 \otimes \sigma_1
+%
+\quad , \quad
+%
+G^5 = -i \, \mathbb{1}_2 \otimes \sigma_2
+%
+\quad , \quad
+%
+G^6 = i \, \sigma_2 \otimes \sigma_3
+\end{equation}
+%
+%
+And the $4 \times 4$ matrices $\gamma^\mu$, $\gamma^5$ are given by the following expressions.
+%
+%
+\begin{equation*}
+\gamma^\mu = \left( \begin{array}{cc}
+0 & \sigma^\mu \\
+\bar{\sigma}^\mu & 0
+\end{array} \right)
+%
+\quad , \quad
+%
+\gamma^5 = i \, \gamma^0 \cdots \gamma^3
+%
+\quad ,
+\end{equation*}
+%
+%
+\begin{equation}
+\sigma^\mu = (\mathbb{1}_2, \sigma^i)
+%
+\quad , \quad
+%
+\bar{\sigma}^\mu = (\mathbb{1}_2, -\sigma^i)
+\end{equation}
+%
+%
+We start now with an unconstrained $10D$ Dirac fermion. The way we have expressed the $10D$ gamma matrices suggest a decomposition into two blocks of four $4D$ fermions. We therefore write out the $10D$ fermion in the following way.
+%
+%
+\begin{equation}\label{unconstrained spinor}
+\Psi = \left( \begin{array}{c}
+\chi_1 \\
+\vdots \\
+\chi_4 \\
+\chi_5 \\
+\vdots \\
+\chi_8
+\end{array} \right)
+\end{equation}
+%
+%
+Where the $\chi$'s are unconstrained $4D$ Dirac fermions. The Weyl condition in equ. (\ref{10 Weyl-Majorana}) amounts to the following when applied to the $10D$ Dirac spinor (\ref{unconstrained spinor}).
+
+\newpage
+%
+%
+\begin{equation}\label{after Weyl imposed}
+\left( \begin{array}{c}
+\chi_1 \\
+\vdots \\
+\chi_4 \\
+\chi_5 \\
+\vdots \\
+\chi_8
+\end{array} \right)
+%\text{d}^4 x
+=
+%
+\left( \begin{array}{c}
++ \gamma_5 \chi_1 \\
+\vdots \\
++ \gamma_5 \chi_4 \\
+- \gamma_5 \chi_5 \\
+\vdots \\
+- \gamma_5 \chi_8
+\end{array} \right)
+%
+\quad \Rightarrow \quad
+%
+\left( \begin{array}{c}
+\chi_1 \\
+\vdots \\
+\chi_4 \\
+\chi_5 \\
+\vdots \\
+\chi_8
+\end{array} \right)
+%
+=
+%
+\left( \begin{array}{c}
+L \psi_1 \\
+\vdots \\
+L \psi_4 \\
+R \psi_5 \\
+\vdots \\
+R \psi_8
+\end{array} \right)
+\end{equation}
+%
+%
+Where $L = \frac{\mathbb{1}_4 + \gamma_5}{2}$ and $R = \frac{\mathbb{1}_4 - \gamma^5}{2}$ are standard projection operators, and the $\psi$'s are new unconstrained $4D$ Dirac fermions. The Majorana condition in equ. (\ref{10 Weyl-Majorana}) amounts to the following when applied to the result in (\ref{after Weyl imposed}).
+%
+%
+\begin{equation*}
+\left( \begin{array}{c}
+L \psi_1 \\
+\vdots \\
+L \psi_4 \\
+R \psi_5 \\
+\vdots \\
+R \psi_8
+\end{array} \right)
+%
+=
+%
+\left( \begin{array}{c}
+C_4 \gamma^0 R \psi_5^{*} \\
+\vdots \\
+C_4 \gamma^0 R \psi_8^{*} \\
+C_4 \gamma^0 L \psi_1^{*} \\
+\vdots \\
+C_4 \gamma^0 L \psi_4^{*}
+\end{array} \right)
+%
+=
+%
+\left( \begin{array}{c}
+R \psi_5^{C} \\
+\vdots \\
+R \psi_8^{C} \\
+L \psi_1^{C} \\
+\vdots \\
+L \psi_4^{C}
+\end{array} \right)
+%
+\end{equation*}
+%
+%
+\begin{equation}
+\Rightarrow \quad
+%
+\left( \begin{array}{c}
+L \psi_1 \\
+\vdots \\
+L \psi_4 \\
+R \psi_5 \\
+\vdots \\
+R \psi_8
+\end{array} \right)
+%
+=
+%
+\left( \begin{array}{c}
+L \psi_1 \\
+\vdots \\
+L \psi_4 \\
+R \psi_1 \\
+\vdots \\
+R \psi_4
+\end{array} \right)
+\end{equation}
+%
+%
+Where we have used that $C_4 \, \gamma^0 \, \gamma^5 \, \psi_i^{*} = -C_4 \, \gamma^0 \, \gamma^5 \, \gamma^0 \, C_4 \, \psi_i^{C} = -\gamma^5 \, \psi_i^{C}$, and concluded that the $4D$ spinors $\psi_i$ with $a=1,2,3,4$, must be Majorana spinors: $\psi_i = \psi_i^{C} \equiv \mathcal{C}_{4} \, \gamma^0 \, \psi_i^{*}$.\\
+Now that we know how the $10D$ Majorana-Weyl fermion splits into four left-chiral and four right-chiral $4D$ Majorana fermions, we can use this information to figure out how the terms in the $\mathcal{N} = 4$ action (\ref{SYM action}), involving the Majorana-Weyl fermion, reduce. The terms in question are the following.
+%
+%
+\begin{equation}
+\frac{i}{2} \bar{\Psi} \Gamma^M D_M \Psi
+%
+\xlongrightarrow{\makebox[2cm]{ Dim. Red. }}
+%
+\frac{i}{2} \bar{\Psi} \Gamma^\mu D_{\mu} \Psi
++
+\frac{1}{2} \bar{\Psi} \tilde{\Gamma}_i [\boldsymbol{\phi}_i, \Psi]
+\end{equation}
+%
+%
+Because of the simple sctructure of the $\Gamma^\mu$ matrices, given in equ. (\ref{Gamma_mu}), we find that the kinetic term of the Majorana-Weyl spinor reduce in the following simple way.
+%
+%
+\begin{equation}
+\frac{i}{2} \bar{\Psi} \Gamma^\mu D_{\mu} \Psi
+=
+\frac{i}{2} (L \psi_a)^\dagger \gamma^0 \gamma^\mu D_{\mu} L \psi^a
++
+\frac{i}{2} (R \psi_a)^\dagger \gamma^0 \gamma^\mu D_{\mu} R \psi^a
+=
+\frac{i}{2} \bar{\psi_a} \gamma^\mu D_{\mu} \psi^a
+\end{equation}
+%
+%
+Where we have used that $L$, $R$ are Hermitian, $\{ \gamma^5, \gamma^\mu \} = 0$ and the simple property: $L \psi + R \psi = \psi$. We have also made use of the definition: $\bar{\psi} \equiv \psi^\dagger \gamma_0$. In reducing the fermion-scalar interaction term, the simple struture of the gamma matrices, this time  $\tilde{\Gamma}^i$ (\ref{Gamma_i}), again simplify the procedure.
+%
+%
+\begin{equation*}
+\frac{1}{2} \bar{\Psi} \tilde{\Gamma}_i [\boldsymbol{\phi}_i, \Psi]
+=
+\end{equation*}
+%
+%
+\begin{equation*}
+\sum_{i=1}^3 \frac{1}{2} (R \psi_a)^\dagger \gamma^0 \gamma^5 {(G_i)^a}_b [\boldsymbol{\phi}_i, L \psi^b]
+-
+\sum_{i=1}^3 \frac{1}{2} (L \psi_a)^\dagger \gamma^0 \gamma^5 {(G_i)^a}_b [\boldsymbol{\phi}_i, R \psi^b]
+\end{equation*}
+%
+%
+\begin{equation*}
++
+\sum_{i=4}^6 \frac{1}{2} (R \psi_a)^\dagger \gamma^0 \gamma^5 {(G_i)^a}_b [\boldsymbol{\phi}_i, L \psi^b]
++
+\sum_{i=4}^6 \frac{1}{2} (L \psi_a)^\dagger \gamma^0 \gamma^5 {(G_i)^a}_b [\boldsymbol{\phi}_i, R \psi^b]
+\end{equation*}
+%
+%
+\begin{equation}
+=
+\sum_{i=1}^3 \frac{1}{2} \bar{\psi_a} {(G_i)^a}_b [\boldsymbol{\phi}_i, \psi^b]
++
+\sum_{i=4}^6 \frac{1}{2} \bar{\psi_a} {(G_i)^a}_b [\boldsymbol{\phi}_i, \gamma^5 \psi^b]
+\end{equation}
+%
+%
+Where we have used the same properties to simplify as we did for the kinetic term, and additionally $L \, \gamma^5 = L$ and $R \, \gamma^5 = -R$. With both the kinetic and the interaction term reduced, we finally have the spinor terms in a form appropriate for extracting propagators and vertex rules for the fields in our dCFT setups. As a last aside for this section, we note that the ${(G_i)^a}_b$ matrices are related to (\textit{Euclidian}) $6D$ gamma matrices. In our conventions, these gamma matrices would take the forms:
+%
+%
+\begin{equation}
+\gamma^{(6)}_i
+=
+\begin{cases}
+	-i \, G_i \otimes \sigma_2
+	& \quad \text{for } i = 1,2,3 \\
+		
+    G_i \otimes \sigma_1
+    & \quad \text{for } i = 4,5,6 \\
+\end{cases}
+\end{equation}
+%
+%
+
+\subsection{Gauge fixing and ghost fields}\label{gauge-fixing}
+In order to simplify the diagonilazation of the mass matrix of the spontaneously broken theory (\textit{more on that in section \ref{diag mass matrix}}), we want to get rid of the terms in the expanded action (\ref{expanded action}) quadritic in the fields and containing a derivative. We will see in section \ref{fluct cl} that one such term appears, and has the form.
+%
+%
+\begin{equation}\label{unwanted term}
+\tr[i [A_\mu, \Phi_i] \partial^\mu \phi_i]
+%
+\quad \text{ with } \quad
+%
+\boldsymbol{\phi}_i = \Phi_i + \phi_i
+\end{equation}
+%
+%
+It turns out we can get rid of this term by gauge-fixing in a clever way \cite{One-point functions in D5-D3}; effectively killing two birds with one stone. To be more precise, we choose to gauge-fix the action (\ref{SYM action}) using the following gauge-fixing function.
+%
+%
+\begin{equation*}
+G[A_\mu,\boldsymbol{\phi}_i] = \partial_\mu A^\mu + i [\boldsymbol{\phi}_i, \Phi_i]
+%
+\quad ,
+\end{equation*}
+%
+%
+\begin{equation}
+S_{\text{gf}} = \frac{2}{g^2} \int_{\mathbb{R}^4} \text{d}^4 x
+\tr \left[
+-\frac{1}{2 \xi} G[A_\mu, \boldsymbol{\phi}_i]^2
+\right]
+\end{equation}
+%
+%
+Where $S_{\text{gf}}$ is an extra term, which appears in the action after performing the \textit{Faddev-Popov gauge-fixing procedure}. The slightly unusual thing about the gauge-fixing function above, is the fact that it depends also on the scalar fields $\boldsymbol{\phi}_i$ in addition to the gauge fields $A_\mu$. By looking at the form of (\ref{unwanted term}), it should however be fairly obvious that we need the $\boldsymbol{\phi}_i$ dependence in the gauge-fixing function, if there is to be any hope of canceling this unwanted term.\\
+In what follows, we will always work in the gauge for which $\xi = 1$. We can now insert our gauge-fixing function into $S_{\text{gf}}$. The result is the following.
+\begin{equation*}
+S_{\text{gf}} = \frac{2}{g^2} \int_{\mathbb{R}^4} \text{d}^4 x
+\tr \left[
+-\frac{1}{2}
+(\partial_\mu A^\mu)^2
+- [\boldsymbol{\phi}_i, \Phi_i]^2
++ 2 i [\boldsymbol{\phi}_i, \Phi_i] \partial_\mu A^\mu
+\right]
+\end{equation*}
+%
+%
+\begin{equation}
+=
+%
+\frac{2}{g^2} \int_{\mathbb{R}^4} \text{d}^4 x
+\tr \bigg[
+-\frac{1}{2} (\partial_\mu A^\mu)^2
++ \frac{1}{2} [\phi_i, \Phi_i]^2
++ i [\partial_\mu \phi_i, \Phi_i] A^\mu
++ i [\phi_i, \partial_\mu \Phi_i] A^\mu
+\bigg]
+\end{equation}
+%
+%
+Where we have used integration by parts to get the second equality. It can easily be seen (\textit{using the cylic property of the trace operation}) that the third term in the above gauge-fixing action exactly cancels the unwanted term (\ref{unwanted term}). As usual, the first term in the gauge-fixing action cancels the problematic part of the kinetic term for the $A_\mu$ fields, leaving an invertible and diagonal term.\\
+Now we turn our attention to the ghost part of the action. Under a infinitesimal gauge tranformation, $A_\mu$ and $\boldsymbol{\phi}_i$ transform in the following ways.
+%
+%
+\begin{equation}
+\delta A_\mu = D_\mu \varepsilon = \partial_\mu \varepsilon - i [A_\mu, \varepsilon]
+%
+\quad , \quad
+%
+\delta \boldsymbol{\phi}_i = -i [\boldsymbol{\phi}_i, \varepsilon]
+\end{equation}
+%
+%
+The ghost part of the action $S_{\text{gh}}$ can then be extracted from the following functional determinant.
+%
+%
+\begin{equation}
+\text{det} \left(
+\frac{\delta G[A_\mu + D_\mu \varepsilon, \boldsymbol{\phi}_i - i[\boldsymbol{\phi}_i, \varepsilon]]}{\delta \varepsilon}
+\right)
+=
+\text{det} \left(
+\partial^\mu D_\mu [\; \cdot \; ]
+- [\Phi_i, [\Phi_i + \phi_i, \; \cdot \; ]]
+\right)
+\end{equation}
+%
+%
+Where the $[ \; \cdot \;]$ denote an unfilled argument of an operator. We can now make use of the fact that the functional determinant of any operator $\mathcal{O}$ can be written as a Grassman path integral as follow.
+%
+%
+\begin{equation}
+\text{det} ( \mathcal{O} )
+%
+=
+%
+\int \mathcal{D} \bar{c} \, \mathcal{D}c \exp
+\left(
+i \, \frac{2}{g^2} \int_{\mathbb{R}^4} \text{d}^4 x
+\trace \left[ \bar{c} \, \mathcal{O} \, c \right]
+\right)
+\end{equation}
+%
+%
+\begin{equation}
+\Rightarrow \quad
+%
+S_{\text{gh}} = \frac{2}{g^2} \int_{\mathbb{R}^4} \text{d}^4 x
+\tr \left[
+\bar{c} \, \partial^\mu D_\mu c
+- \bar{c} \, [\Phi_i, [\Phi_i + \phi_i, c]]
+\right]
+\end{equation}
+%
+%
+The prefactor of $2 / g^2$ is of course purely conventional. We now see the price we have to pay to get rid of the unwanted term (\ref{unwanted term}); namely the appearance of massive ghosts which couple directly to the scalar fields. Nevertheless, we can now write the full gauge-fixed actions with Faddeev-Popov ghosts.
+%
+%
+\begin{equation}
+S = S_{\mathcal{N} = 4} + S_{\text{gf}} + S_{\text{gh}}
+\end{equation}
+%
+%
+Where the $\mathcal{N}=4$ super Yang Mills action $S_{\mathcal{N} = 4}$ is given in equ. (\ref{SYM action}) in the previous section \ref{cl scalar solutions}.
+
+\subsection{Fluctuations around the classical scalar solutions}\label{fluct cl}
+Now that we have managed to both gauge fix the action (\textit{in a way which will simplify the mass matrix diagonalization}) and reduce the $10D$ Majorana-Weyl fermion, we are now ready to expand the six scalar fields $\boldsymbol{\phi}_i$ around the classical solutions (\ref{cl solution a}), (\ref{cl solution b}) and find the effective form of the action (\ref{SYM action}). We first write the scalar fields as follow.
+%
+%
+\begin{equation}
+\boldsymbol{\phi}_i = \Phi_i + \phi_i
+\end{equation}
+%
+%
+Where $\phi_i$ are perturbations around the classical solutions. Before we get further into the process of expanding the $\mathcal{N} = 4$ action, we note the following two things. Firstly, the field independent part of the expanded action.
+%
+%
+\begin{equation}
+\frac{1}{2} \Phi_i \, \partial^\mu \partial_\mu \Phi_i
+- \frac{1}{4} \Phi_i [\Phi_j, [\Phi_j, \Phi_i]]
+\end{equation}
+%
+%
+Will be ignored from now on, as it does not affect any perturbative calculations. Secondly, the part of the expanded action linear in $\phi_i$ will vanish due to the EOM's for the scalar fields.
+%
+%
+\begin{equation}
+\phi_i \, \partial^\mu \partial_\mu \Phi_i
+- \phi_i \, [\Phi_j, [\Phi_j, \Phi_i]]
+= 0
+\end{equation}
+%
+%
+We can thus ignore these two terms when expanding the action.
+%%\text{d}^4 x
+%%
+%\begin{equation}
+%\tr \left[ 
+%\partial_\mu {\phi^{cl}}_i \partial^\mu {\phi^{cl}}^i
+%\right]
+%%
+%=
+%%
+%\frac{6}{x_3^4} 
+%\end{equation}
+%%
+%%
+%
+%%
+%%
+%\begin{equation}
+%\tr \left[ 
+%[{\phi^{cl}}_i, {\phi^{cl}}_j]
+%[{\phi^{cl}}^i, {\phi^{cl}}^j]
+%\right]
+%%
+%=
+%%
+%\frac{6}{x_3^4} 
+%\end{equation}
+%%
+%%
+Let us now start by expanding the kinetic term for the $\phi_i$ fields. We write here the covariant derivate of $\Phi_i$ and $\phi_i$ for convenience.
+%
+%
+\begin{equation}
+D_\mu \Phi_i = \partial_\mu \Phi_i -i [A_\mu, \Phi_i]
+%
+\quad , \quad
+%
+D_\mu \phi_i = \partial_\mu \phi_i -i [A_\mu, \phi_i]
+\end{equation}
+%
+%
+It is now straight forward to expand the kinetic term for the $\phi_i$ fields, the result of which looks as follow.
+%
+%
+\begin{equation*}
+\tr \left[ -\frac{1}{2} D_\mu \boldsymbol{\phi}_i D^\mu \boldsymbol{\phi}_i \right]
+%
+=
+%
+\tr \left[
+- \frac{1}{2} D_\mu \Phi_i D^\mu \Phi_i
+- D_\mu \phi_i D^\mu \Phi_i
+-\frac{1}{2} D_\mu \phi_i D^\mu \phi_i
+\right]
+\end{equation*}
+%
+%
+\begin{equation*}
+=
+\tr \left[
+i [A_\mu, \Phi_i] \, \partial^\mu \Phi_i
++ \frac{1}{2} [A_\mu, \Phi_i] [ A^\mu, \Phi_i]
++ i [A_\mu, \Phi_i] \, \partial^\mu \phi_i
++ i [A_\mu, \phi_i] \, \partial^\mu \Phi_i
+\right.
+\end{equation*}
+%
+%
+\begin{equation}
+\left.
++ [A_\mu, \phi_i] [A^\mu, \Phi_i]
+- \frac{1}{2} \partial_\mu \phi_i \, \partial^\mu \phi_i
++ i [A_\mu, \phi_i] \, \partial^\mu \phi_i
++ \frac{1}{2} [A_\mu, \phi_i] [A^\mu, \phi_i]
+\right]
+\end{equation}
+%
+%
+Notice that the problematic term mentioned back in section \ref{gauge-fixing} appears in the above expansion. Notice also that the term linear in $A_\mu$ will only ever be relevant in the computation of one-point function of said field, and we will therefore ignore it from this point on. Next up, we expand the self interaction term for the $\phi_i$ fields, and the $\phi_i$, $\psi$ interaction terms.
+%
+%
+\begin{equation*}
+\tr \left[
+\frac{1}{4} [\boldsymbol{\phi}_i, \boldsymbol{\phi}_j][\boldsymbol{\phi}_i, \boldsymbol{\phi}_j]
+\right]
+=
+\tr \left[
+\frac{1}{4} [\Phi_i, \Phi_j][\Phi_i, \Phi_j]
++ [\phi_i, \Phi_j][\Phi_i, \Phi_j]
++ \frac{1}{2} [\phi_i, \phi_j][\Phi_i, \Phi_j]
+\right.
+\end{equation*}
+%
+%
+\begin{equation}
+\left.
++ \frac{1}{2} [\phi_i, \Phi_j][\phi_i, \Phi_j]
++ \frac{1}{2} [\phi_i, \Phi_j][\Phi_i, \phi_j]
++ [\phi_i, \phi_j][\phi_i, \Phi_j]
++ \frac{1}{4} [\phi_i, \phi_j][\phi_i, \phi^j]
+\right]
+\end{equation}
+%
+%
+
+%
+%
+\begin{equation*}
+\tr \left[
+\sum_{i=1}^3 \frac{1}{2} \bar{\psi_a} {(G_i)^a}_b [\boldsymbol{\phi}_i, \psi^b]
++
+\sum_{i=4}^6 \frac{1}{2} \bar{\psi_a} {(G_i)^a}_b [\boldsymbol{\phi}_i, \gamma^5 \psi^b]
+\right]
+\end{equation*}
+%
+%
+\begin{equation*}
+= 
+\tr \left[
+\sum_{i=1}^3 \left(
+\frac{1}{2} \bar{\psi_a} {(G_i)^a}_b [\Phi_i, \psi^b]
++
+\frac{1}{2} \bar{\psi_a} {(G_i)^a}_b [\phi_i, \psi^b]
+\right)
+\right.
+\end{equation*}
+%
+%
+\begin{equation}
+\left.
++
+\sum_{i=4}^6 \left(
+\frac{1}{2} \bar{\psi_a} {(G_i)^a}_b [\Phi_i, \gamma^5 \psi^b]
++
+\frac{1}{2}  \psi^b] \bar{\psi_a} {(G_i)^a}_b [\phi_i, \gamma^5
+\right)
+\right]
+\end{equation}
+%
+%
+Now that we have expanded the terms in the $\mathcal{N} = 4$ action involving the $\phi_i$ fields, we can finally write down the entire expanded action in a well organized form.
+%
+%
+\begin{equation}\label{expanded action}
+S_{\mathcal{N}=4} = S_{\text{kinetic}} + S_{\text{m,b}} + S_{\text{m,f}}
++ S_{\text{qubic}} + S_{\text{quadratic}}
+\end{equation}
+%
+%
+
+%
+%
+\begin{equation}
+S_{\text{kinetic}}
+=
+\frac{2}{g^2} \int_{\mathbb{R}^4} \text{d}^4 x
+\tr \bigg[
+\frac{1}{2} A_\mu \partial_\nu \partial^\nu A^\mu
++ \frac{1}{2} \phi_i \partial_\nu \partial^\nu \phi_i
++ \frac{i}{2} \bar{\psi}_a \gamma^\mu \partial_\mu \psi^a
++ \bar{c} \, \partial_\nu \partial^\nu c
+\bigg]
+\end{equation}
+%
+%
+
+%
+%
+\begin{equation*}
+S_{\text{m,b}}
+=
+\frac{2}{g^2} \int_{\mathbb{R}^4} \text{d}^4 x
+\tr \bigg[
+\frac{1}{2} [A_\mu, \Phi_i] [ A^\mu, \Phi_i]
++ 2 i [A_\mu, \phi_i] \, \partial^\mu \Phi_i
++ \frac{1}{2} [\phi_i, \phi_j][\Phi_i, \Phi_j]
+\end{equation*}
+%
+%
+\begin{equation}\label{boson mass terms}
++ \frac{1}{2} [\phi_i, \Phi_j][\phi_i, \Phi_j]
++ \frac{1}{2} [\phi_i, \Phi_j][\Phi_i, \phi_j]
++ \frac{1}{2} [\phi_i, \Phi_i] [\phi_j, \Phi_j]
+\bigg]
+\end{equation}
+%
+%
+
+%
+%
+\begin{equation*}
+S_{\text{m,f}}
+=
+\frac{2}{g^2} \int_{\mathbb{R}^4} \text{d}^4 x
+\tr \bigg[
+\sum_{i=1}^3 \frac{1}{2} \bar{\psi_a} {(G_i)^a}_b [\Phi_i, \psi^b]
++
+\sum_{i=4}^6 \frac{1}{2} \bar{\psi_a} {(G_i)^a}_b [\Phi_i, \gamma^5 \psi^b]
+\end{equation*}
+%
+%
+\begin{equation}\label{fermion mass terms}
+-
+\bar{c} \, [\Phi_i, [\Phi_i, c]]
+\bigg]
+\end{equation}
+%
+%
+
+%
+%
+\begin{equation*}
+S_{\text{cubic}}
+=
+\frac{2}{g^2} \int_{\mathbb{R}^4} \text{d}^4 x
+\tr \bigg[
+i [A_\mu, A_\nu] \, \partial^\mu A_\nu
++
+[A_\mu, \phi_i] [A^\mu, \Phi_i]
++
+i [A_\mu, \phi_i] \, \partial^\mu \phi_i
+\end{equation*}
+%
+%
+\begin{equation*}
++
+\frac{1}{2} \bar{\psi}_a \gamma^\mu [A_\mu, \psi^a]
++
+\sum_{i=1}^3 \frac{1}{2} \bar{\psi_a} {(G_i)^a}_b [\phi_i, \psi^b]
++
+\sum_{i=4}^6 \frac{1}{2} \bar{\psi_a} {(G_i)^a}_b [\phi_i, \gamma^5 \psi^b]
+\end{equation*}
+%
+%
+\begin{equation}
++
+i \, ( \partial^\mu \bar{c} ) [A_\mu, c]
+-
+\bar{c} \, [\Phi_i, [\phi_i, c]]
++
+[\phi_i, \phi_j][\phi_i, \Phi_j]
+\bigg]
+\end{equation}
+%
+%
+
+%
+%
+\begin{equation*}
+S_{\text{quartic}}
+=
+\frac{2}{g^2} \int_{\mathbb{R}^4} \text{d}^4 x
+\tr \bigg[
+\frac{1}{4} [A_\mu, A_\nu] [A^\mu, A^\nu]
++
+\frac{1}{2} [A_\mu, \phi_i] [A^\mu, \phi_i]
+\end{equation*}
+%
+%
+\begin{equation}
++
+\frac{1}{4} [\phi_i, \phi_j] [\phi_i, \phi_j]
+\bigg]
+\end{equation}
+%
+%
+Where in the above, we have also included the terms from the gauge-fixing and ghost parts of the action (\textit{see section \ref{gauge-fixing}}), as well as the expanded forms of the kinetic terms for both the $A_\mu$ and $\psi^a$ fields (\textit{see equ. (\ref{SYM action}) for the unexpanded forms}). 
+
+\subsection{Diagonalizing the mass matrix}\label{diag mass matrix}
+Now that we finally have the $\mathcal{N} = 4$ SYM action in the fully operational form given above, we are ready to tackle the problem of diagonalizing the mass terms of said action. Looking at both the bosonic (\ref{boson mass terms}) and fermionic (\ref{fermion mass terms}) mass terms of the action (\ref{expanded action}), we see that all of these are either non-diagonal with regards to the $U(N)$ matrix structure (\textit{color mixing}), non-diagonal with regards to the species of fields (\textit{flavor mixing}) or both. The techniques necessary to solve this diagonalization problem was first presented in \cite{One-point functions in D3-D7} for the case of $\mathfrak{so}(3) \times \mathfrak{so}(3)$ symmetric vevs, and in \cite{One-point functions in D3-D7 SO(5)} for the case of $\mathfrak{so}(5)$ symmetric vevs. The following subsection will constitute a review of the work contained in those aforementioned articles.
+
+\subsubsection[Boson mass matrix: $SO(3) \times SO(3)$ symmetric vevs]{Boson mass matrix: $\mathbf{SO(3) \times SO(3)}$ symmetric vevs}
+In order to more clearly see the structure which makes the diagonalization of the boson mass matrix possible, we have to work a bit witht the form of $S_{\text{m,b}}$. It turns out that we can rewrite the boson mass part of the total action (\ref{boson mass terms}) to the following.
+%
+%
+\begin{equation*}
+S_{\text{m,b}}
+=
+\frac{2}{g^2} \int_{\mathbb{R}^4} \text{d}^4 x 
+\tr \left[
+- \frac{1}{2} A_\mu [\Phi_i, [\Phi_i, A^\mu]]
+- 2 i A_\mu [\partial^\mu \Phi_i, \phi_i]
+\right.
+\end{equation*}
+%
+%
+\begin{equation}\label{rewritten boson mass part of action 1}
+\left.
+- \frac{1}{2} \phi_i [\Phi_j, [\Phi_j, \phi_i]]
+- \phi_i [[\Phi_i, \Phi_j], \phi_j]
+\right]
+\end{equation}
+%
+%
+Where we have used cyclicity of the trace to produce the nested commutators, and the Jacobi identity: $[A,[B,C]] + [C,[A,B]] + [B,[C,A]] = 0$, to combine some terms in the action. We now define the following two operators, to make simplify the form of the action further.
+%
+%
+\begin{equation}
+L^{(1)}_i
+=
+\mathrm{ad}(t_i^{(1)})
+\equiv
+[t_i^{(1)} \oplus 0_{N - k_1 k_2}, \; \cdot \;]
+%
+\quad , \quad
+%
+t_i^{(1)}
+\equiv
+t^{k_1}_i \otimes \mathbb{1}_{k_2}
+\end{equation}
+%
+%
+\begin{equation}
+L^{(2)}_i
+= 
+\mathrm{ad}(t_i^{(2)})
+\equiv
+[t_i^{(2)} \oplus 0_{N - k_1 k_2}, \; \cdot \;]
+%
+\quad , \quad
+%
+t_i^{(2)}
+\equiv
+\mathbb{1}_{k_1} \otimes t^{k_2}_i
+\end{equation}
+%
+%
+Recall now that the $\mathfrak{so}(3) \times \mathfrak{so}(3)$ symmetric $\Phi_i$ solutions are constructed from the $\mathfrak{so}(3)$ generators in such a way that their commutators are given by the following.
+%
+%
+\begin{equation}
+[\Phi_i, \Phi_j] = \frac{i}{x_3^2} \,
+\varepsilon_{ijk} \, t_k^{(1)} \oplus 0_{N - k_1 k_2}
+\quad , \quad
+%
+\text{for } i,j,k = 1,2,3
+\end{equation}
+%
+%
+\begin{equation}
+[\Phi_{i+3}, \Phi_{j+3}] = \frac{i}{x_3^2} \,
+\varepsilon_{ijk} \, t_k^{(2)} \oplus 0_{N - k_1 k_2}
+\quad , \quad
+%
+\text{for } i,j,k = 1,2,3
+\end{equation}
+%
+%
+Using the above commutators, we can now further rewrite the boson mass part of the action (\ref{rewritten boson mass part of action 1}).
+
+\newpage
+%
+%
+\begin{equation*}
+S_{\text{m,b}}
+=
+\frac{2}{g^2} \int_{\mathbb{R}^4} \text{d}^4 x \frac{1}{x_3^2}
+\tr \left[
+- \frac{1}{2} A_\mu \left( L_{(1)}^2 + L_{(2)}^2 \right) A^\mu
+- \sum_{i=1}^6 \frac{1}{2} \phi_i \left( L_{(1)}^2 + L_{(2)}^2 \right) \phi_i
+\right.
+\end{equation*}
+%
+%
+\begin{equation*}
+\left.
++ i \sum_{i,j,k=1}^3 \left(
+\varepsilon_{ijk} \phi_i L^{(1)}_j \phi_k
++ \varepsilon_{ijk} \phi_{i+3} L^{(2)}_j \phi_{k+3}
+\right)
+\right.
+\end{equation*}
+%
+%
+\begin{equation}\label{rewritten boson mass part of action 2}
+\left.
++ i \sum_{i=1}^3 \left(
+\phi_i L^{(1)}_i A_3 - A_3 L^{(1)}_i \phi_i
++ \phi_{i+3} L^{(2)}_i A_3 - A_3 L^{(2)}_i \phi_{i+3}
+\right)
+\right]
+\end{equation}
+%
+%
+Where $L^2_{(s)} \equiv L_i^{(s)} L_i^{(s)}$ for $s \in \{ 1,2 \}$ are $\mathfrak{so}(3)$ Casimir operators. We can now group together the various fields in (\ref{rewritten boson mass part of action 2}) according to wether or not their mass terms are flavor diagonal. We call the fields which are flavor diagonal \textit{easy fields}, and denote them collectively by $E$. The fields which are not flavor diagonal we call \textit{complicated fields}, and denote collectively by $\tilde{C}$.
+%
+%
+\begin{equation}
+E = \left( \begin{array}{c}
+A_0 \\
+A_1 \\
+A_2 
+\end{array} \right)
+%
+\quad , \quad
+%
+\tilde{C} = \left( \begin{array}{c}
+\phi_1 \\
+\vdots \\
+\phi_6 \\
+A_3 
+\end{array} \right)
+\end{equation}
+%
+%
+In order to write the terms in (\ref{rewritten boson mass part of action 1}) involving the complicated fields $\tilde{C}$ in a more suggestive way, we define the following two $7 \times 7$ matrices to act on the space of the $7$ complicated fields in $\tilde{C}$.
+%
+%
+\begin{equation}
+\tilde{S}^{(1)}_i = \left( \begin{array}{ccc}
+\tilde{T}_i & 0 & \tilde{R}_i \\
+0 & 0 & 0 \\
+\tilde{R}_i^\dagger & 0 & 0
+\end{array} \right)
+%
+\quad , \quad
+%
+\tilde{S}^{(2)}_i = \left( \begin{array}{ccc}
+0 & 0 & 0 \\
+0 & \tilde{T}_i & \tilde{R}_i \\
+0 & \tilde{R}_i^\dagger & 0
+\end{array} \right)
+\end{equation}
+%
+%
+\begin{equation}
+\tilde{T}_1 = \left( \begin{array}{ccc}
+0 & 0 & 0 \\
+0 & 0 & -i \\
+0 & i & 0
+\end{array} \right)
+%
+\quad , \quad
+%
+\tilde{T}_2 = \left( \begin{array}{ccc}
+0 & 0 & i \\
+0 & 0 & 0 \\
+-i & 0 & 0
+\end{array} \right)
+%
+\quad , \quad
+%
+\tilde{T}_3 = \left( \begin{array}{ccc}
+0 & -i & 0 \\
+i & 0 & 0 \\
+0 & 0 & 0
+\end{array} \right)
+\end{equation}
+%
+%
+Where in the above, the $\tilde{R}_j$ matrices are $3 \times 1$, with only an $i$ in the $j$-th row, and zeros in all other rows: $[\tilde{R}_j]_k = i \delta_{jk}$. Notice also that the set of matrices $\{ \tilde{T}_i \}$ constitute the 3-dimensional irreducible representation of $\mathfrak{so}(3)$. Using the matrices $\tilde{S}^{(1)}_i$ and $\tilde{S}^{(2)}_i$, we can now rewrite the bosonic mass part of the action for a final time.
+%
+%
+\begin{equation}\label{rewritten boson mass part of action 3}
+S_{\text{m,b}}
+=
+-\frac{1}{g^2} \int_{\mathbb{R}^4} \text{d}^4 x \frac{1}{x_3^2}
+\tr \Bigg[
+\sum_{s \in \{ 1, 2 \}}
+E^\dagger \, L_{(s)}^2 \, E
++
+\tilde{C}^\dagger
+\left(
+L_{(s)}^2 - 2 \tilde{S}_{(s)} \cdot L_{(s)}
+\right)
+\tilde{C}
+\Bigg]
+\end{equation}
+%
+%
+We can now see that the problem of diagonalizing the easy fields in (\ref{rewritten boson mass part of action 3}) is structurally very reminiscent to the problem of finding eigenvectors of the total angular momentum in standard quantum mechanics. Similarly, the problem of diagonalizing the complicated fields is structurally very reminiscent to the problem of finding eigenvectors of the total angular momentum with spin-orbit coupling. As might be suspected from these apparent similarities, introducing a kind of spherical harmonics and making use of the machinery of angular momentum addition (\textit{or equivalently decomposition of reducible $\mathfrak{su}(2)$ representations}) will be crucial in solving the mass diagonalization problem at hand.\\
+\\
+Before we proceed further with the task of finding the fields which diagonalize $S_{\text{m,b}}$, it is useful to make the following decomposition of the matrix-valued fields in both $E$ and $\tilde{C}$.
+%
+%
+\newcommand\Red{\cellcolor{red!10}}
+%
+\newcommand\Green{\cellcolor{green!10}}
+%
+\newcommand\Blue{\cellcolor{blue!10}}
+%
+\begin{equation}\label{field blocks}
+\Psi = \left[ \begin{array}{c|ccccc}
+	\Red \, & \Green \, & \Green \, & \Green \, & \Green \, & \Green \, \\[0.75em]
+	\Red \Psi_{n,n'} {E^n}_{n'} & \Green \, & \Green \, & \Green \Psi_{n,a} {E^n}_a & \Green \, & \Green \, \\[1.75em]
+	\hline
+	\Green \, & \Blue \, & \Blue \, & \Blue \, & \Blue \, & \Blue \, \\[2.5em]
+	\Green \Psi_{a,n} {E^a}_n & \Blue \, & \Blue \, & \Blue \Psi_{a,a'} {E^a}_{a'} & \Blue \, & \Blue \, \\[3.5em]
+\end{array} \right]
+\end{equation}
+%
+%
+Here, $\Psi$ is a stand-in for any field contained in either $E$ or $\tilde{C}$. The basis matrices ${E^n}_{n'}$ are defined such that: ${[{E^n}_{n'}]^m}_{m'} = \delta^{nm} \delta_{n' m'}$. In other words, ${E^n}_{n'}$ are the matrices which have $1$ at entry $(n,n')$ and $0$ at every other entry. The indices $n$ $n'$ runs over the values: $n,n' = 1,\ldots,k_1 k_2$, while the indices $a,a'$ runs over the values: $a,a' = k_1 k_2+1,\ldots,N$.
+
+\paragraph{The Easy Fields}
+Let us first focus on diagonalizing the part of $S_{\text{m,b}}$ containing the easy fields $E$. Firstly, the fields spanned by the ${E^a}_{a'}$ matrices in the $(N - k_1 k_2) \times (N - k_1 k_2)$ block are all anihilated by the angular momentum operators.
+%
+%
+\begin{equation}
+L_i^{(1)} {E^a}_{a'}
+=
+[t^{(1)}_i \oplus 0_{N - k_1 k_2}, {E^a}_{a'}]
+=
+0
+\end{equation}
+%
+%
+\begin{equation}
+L_i^{(2)} {E^a}_{a'}
+=
+[t^{(2)}_i \oplus 0_{N - k_1 k_2}, {E^a}_{a'}]
+=
+0
+\end{equation}
+%
+%
+Plugging the lower diagonal fields into the easy part of $S_{\text{m,b}}$, we conclude that all fields in the lower diagonal block have the same mass, which is given by.
+%
+%
+\begin{equation}
+m^2_{\text{diag. 2}} = 0
+%
+\quad , \quad
+%
+\textit{multiplicity: } (N - k_1 k_2)^2
+\end{equation}
+%
+%
+Next, we look at the fields spanned by the ${E^n}_a$ matrices in the off-diagonal $(N - k_1 k_2) \times k_1 k_2$ block, and the fields spanned by the ${E^a}_n$ matrices in the off-diagonal $k_1 k_2 \times (N - k_1 k_2)$ block. The result of applying the angular momentum operators $L_i^{(1)}$, $L_i^{(2)}$ to these fields are as follow.
+%
+%
+\begin{align}
+L_i^{(1)} {E^n}_a
+=
+[t^{(1)}_i]_{n,n'} {E^{n'}}_a
+%
+\quad , & \quad
+%
+L_i^{(2)} {E^n}_a
+=
+[t^{(2)}_i]_{n,n'} {E^{n'}}_a
+\\
+L_i^{(1)} {E^a}_n
+=
+-[t^{(1)}_i]_{n,n'} {E^a}_{n'}
+%
+\quad , & \quad
+%
+L_i^{(2)} {E^a}_n
+=
+-[t^{(2)}_i]_{n,n'} {E^a}_{n'} &
+\end{align}
+%
+%
+Becuase the $\{ t_i^{k_1} \}$ and $\{ t_i^{k_2} \}$ matrices are generators of the $k_1$-dimensional and the $k_2$-dimensional irreducible representations of $\mathfrak{su}(2)$ respectively, we know that $t^2_{k_s} = \ell_s (\ell_s + 1) \mathbb{1}_{k_s}$ with $k_s = 2 \ell_s + 1$, are the Casimir operators of the $k_s$-dimensional irreps. of $\mathfrak{su}(2)$. Therefore, we obtain the following results by applying the angular momentum operators for a second time.
+%
+%
+\begin{equation}
+L_{(1)}^2 {E^n}_a
+=
+\frac{k_1^2 - 1}{4}
+{E^n}_a
+%
+\quad , \quad
+%
+L_{(2)}^2 {E^n}_a
+=
+\frac{k_2^2 - 1}{4}
+{E^n}_a
+\end{equation}
+%
+%
+\begin{equation}
+L_{(1)}^2 {E^a}_n
+=
+\frac{k_1^2 - 1}{4}
+{E^a}_n
+%
+\quad , \quad
+%
+L_{(2)}^2 {E^a}_n
+=
+\frac{k_2^2 - 1}{4}
+{E^a}_n
+\end{equation}
+%
+%
+Plugging the off diagonal fields into the easy part of $S_{\text{m,b}}$, and using the following orthogonality relations for the ${E^n}_a$ matrices.
+%
+%
+\begin{equation*}
+\tr[ ({E^n}_a)^\dagger {E^{n'}}_{a'} ] = \delta_{a,a'} \delta_{n,n'}
+\end{equation*}
+%
+%
+\begin{equation}
+({E^n}_a)^\dagger = {E^a}_n
+%
+\quad \Rightarrow \quad
+%
+(\Psi_{n,a})^\dagger = \Psi_{a,n}
+\end{equation}
+%
+%
+We conclude that all fields in the two off-diagonal blocks have the same mass, which is given by.
+%
+%
+\begin{equation}
+m^2_{\text{off diag.}} = \frac{k_1^2-1}{4} + \frac{k_2^2-1}{4}
+%
+\quad , \quad
+%
+\textit{multiplicity: } 2 \, k_1 k_2 \, (N - k_1 k_2)
+\end{equation}
+%
+%
+Lastly, we will discuss the fields spanned by the ${E^n}_{n'}$ matrices of the diagonal $k_1 k_2 \times k_1 k_2$ block. We observed for the off-diagonal fields, that the matrices ${E^n}_a$, ${E^a}_n$ transform in the $\left( \frac{k_1-1}{2}, \frac{k_2-1}{2} \right)$ irreducible representation of $\mathfrak{su}(2) \times \mathfrak{su}(2)$. To be more precise, only the $n$-indices transform under $\mathfrak{su}(2) \times \mathfrak{su}(2)$, while the $a$-indeices did not transform what so ever. By this line of reasoning, we see that the matrices ${E^n}_{n'}$ transform under the following product representation of $\mathfrak{su}(2) \times \mathfrak{su}(2)$ algebra.
+%
+%
+\begin{equation}\label{su(2) decomposition}
+\left( \frac{k_1-1}{2}, \frac{k_2-1}{2} \right)
+\otimes
+\left( \frac{k_1-1}{2}, \frac{k_2-1}{2} \right)
+=
+\bigoplus_{\ell_1=0}^{k_1-1}
+\bigoplus_{\ell_2=0}^{k_2-1}
+(\ell_1, \ell_2)
+\end{equation}
+%
+%
+Where we have decomposed the reducible $\mathfrak{su}(2) \times \mathfrak{su}(2)$ representation on the LHS into the irreducible representations $(\ell_1,\ell_2)$ on the RHS. If we now want to find fields which have definite masses, we need to decompose ${E^n}_{n'}$ into matrices which transform under the $(\ell_1, \ell_2)$ irreps. of $\mathfrak{su}(2) \times \mathfrak{su}(2)$. In practise, we do this by choosing a different basis of matrices for the diagonal $k_1 k_2 \times k_1 k_2$ block.
+%
+%
+\begin{equation}\label{fuzzy spherical expansion}
+\Psi_{n,n'} {E^n}_{n'}
+=
+\sum_{\ell_1=0}^{k_1-1}
+\sum_{\ell_2=0}^{k_2-1}
+\sum_{m_1=-\ell_1}^{\ell_1}
+\sum_{m_2=-\ell_2}^{\ell_2}
+\Psi_{\ell_1,m_1;\ell_2,m_2} \,
+\hat{Y}_{\ell_1}^{m_1} \otimes \hat{Y}_{\ell_2}^{m_2}
+\end{equation}
+%
+%
+The matrices $\hat{Y}_{\ell}^{m}$ are so called \textit{fuzzy spherical harmonics}\footnote{More information about these matrices can be found in appendix \ref{sec:fuzzy spherical harmonics}.}, and they are the matrix analogs of the well known spherical harmonic functions $Y_{\ell}^{m}(\vec{r})$ over $\mathbb{R}^3$. An explicit contruction of $\hat{Y}_{\ell}^{m}$ can be found in \cite{Two-point functions in D5-D3}. In what follows, we will not need thier explicit form, only the knowledge that they exists and that they can be defined implicitly as solutions to the equations.
+%
+%
+\begin{equation}\label{fuzzy spherical properties}
+L_3^{(s)} \hat{Y}_{\ell}^{m} = [t_3^{(s)}, \hat{Y}_{\ell}^{m}]
+= m \hat{Y}_{\ell}^{m}
+%
+\quad , \quad
+%
+L^2_{(s)} \hat{Y}_{\ell}^{m} = [t_i^{(s)}, [t_i^{(s)}, \hat{Y}_{\ell}^{m}]
+= \ell_s (\ell_s + 1) \hat{Y}_{\ell}^{m}
+\end{equation}
+%
+%
+Plugging the expansion (\ref{fuzzy spherical expansion}) into the easy part of $S_{\text{m,b}}$, and using the following orthogonality realtions for $\hat{Y}_{\ell}^{m}$
+%
+%
+\begin{equation}
+\tr[ (\hat{Y}^{m}_{\ell})^\dagger \hat{Y}^{m'}_{\ell'}]
+=
+\delta_{m,m'} \delta_{\ell,\ell'}
+%
+\quad , \quad
+%
+(\hat{Y}^{m}_{\ell})^\dagger = (-1)^m \hat{Y}^{-m}_{\ell}
+\end{equation}
+%
+%
+We see that the fields in the $k_1 k_2 \times k_1 k_2$ block all have the samme mass, which is given by the following expression.
+%
+%
+\begin{equation}
+m^2_{\text{diag. 1}} = \ell_1 (\ell_1 + 1) + \ell_2 (\ell_2 + 1)
+%
+\quad , \quad
+%
+\textit{multiplicity: } (2 \ell_2 + 1) \times (2 \ell_1 + 1)
+\end{equation}
+%
+%
+This concludes the diagonalization of the term in $S_{\text{m,b}}$ containing the easy fields $E$. The masses and corresponding eigen-fields of the easy sector are summarized in table \ref{tab:boson_masses_easy} for convenience. We now move on to the diagonalization of the part of $S_{\text{m,b}}$ containing the complicated fields.
+%
+%
+\begin{table}
+%
+\begin{center}
+%
+% A table with adjusted row and column spacings
+% \setlength sets the horizontal (column) spacing
+% \arraystretch sets the vertical (row) spacing
+\begingroup
+\setlength{\tabcolsep}{10pt} % Default value: 6pt
+\renewcommand{\arraystretch}{2.0} % Default value: 1
+%
+\begin{tabular}{ !{\vrule width 1.5pt}c!{\vrule width 1.5pt}c!{\vrule width 1.5pt}c!{\vrule width 1.5pt} }
+	\noalign{\hrule height 1.5pt}
+ 	Mass eigenstates & Mass $m^2$ & Multiplicity \\
+ 	\noalign{\hrule height 1.5pt}
+ 	${\Psi^a}_{a'}$ & $m^2_{\text{diag. 2}} = 0$ & $(N-k_2 k_2)^2$ \\
+ 	\hline
+ 	${\Psi^n}_{a}$, ${\Psi^a}_{n}$ & $m^2_{\text{off diag.}} = \frac{k_1^2-1}{4} + \frac{k_2^2 -1}{4}$ & $2 k_1 k_2 (N-k_2 k_2)$ \\
+ 	\hline
+ 	\scalebox{1.0}{$
+ 	\begin{array}{c} 	
+ 	{\Psi^n}_{n'} \to \\
+ 	\hat{Y}^{m_1}_{\ell_1} \otimes \hat{Y}^{m_2}_{\ell_2}
+ 	\end{array}$} & $
+ 	m^2_{\text{diag. 1}} = \ell_1 (\ell_1 + 1) + \ell_2 (\ell_2 + 1)
+ 	$ & $
+ 	(2 \ell_2 + 1) \times (2 \ell_1 + 1)
+ 	$ \\
+ 	\noalign{\hrule height 1.5pt}
+\end{tabular}
+%
+\endgroup
+% The \begingroup ... \endgroup pair ensures the separation
+% parameters only affect this particular table, and not any
+% sebsequent ones in the document.
+%
+\end{center}
+%
+\caption[Masses and eigenstates for $SO(3) \times SO(3)$ easy bosons]{Masses and eigenstates of the easy bosons: $\Psi = \{ A_0, A_1, A_2 \}$, with respect to the block decomposition in (\ref{field blocks}), for $SO(3) \times SO(3)$ symmetric vevs. In the above, $\ell_1=0,\ldots,k_1-1$ and $\ell_2=0,\ldots,k_2-1$.}
+%
+\label{tab:boson_masses_easy}
+%
+\end{table}
+%
+%
+
+\paragraph{The Complicated Fields}
+Let us now begin the diagonalization procedure of the part of $S_{\text{m,b}}$ containing the complicated fields $\tilde{C}$. First, we perform a unitary transformation $U$ to bring the $\tilde{T}_i$ matrices to the usual form of the $\mathfrak{su}(2)$ $spin$-$1$ irrep. To do this in practise, we form a $7 \times 7$ unitary matrix $V$ from the $3 \times 3$ unitary matrix $U$ in the following way.
+%
+%
+\begin{equation}
+V = \frac{1}{\sqrt{2}} \left( \begin{array}{ccc}
+U & 0 & 0 \\
+0 & U & 0 \\
+0 & 0 & 1
+\end{array} \right)
+%
+\quad , \quad
+%
+U = \frac{1}{\sqrt{2}} \left( \begin{array}{ccc}
+-1 & 0 & 1 \\
+-i & 0 & -i \\
+0 & \sqrt{2} & 0
+\end{array} \right)
+\end{equation}
+%
+%
+After performing the unitary basis transformation $U$, the $spin$-$1$ generators given by: $T_i = U^\dagger \tilde{T}_i U$, end up with taking the well know forms, in which the $T_3$ generator specifically is diagonal.
+%
+%
+\begin{equation*}
+T_1 = \frac{1}{\sqrt{2}} \left( \begin{array}{ccc}
+0 & 1 & 0 \\
+1 & 0 & 1 \\
+0 & 1 & 0
+\end{array} \right)
+%
+\quad ,
+\end{equation*}
+%
+%
+\begin{equation}
+T_2 = \frac{1}{\sqrt{2}} \left( \begin{array}{ccc}
+0 & -i & 0 \\
+i & 0 & -i \\
+0 & i & 0
+\end{array} \right)
+%
+\quad , \quad
+%
+T_3 = \frac{1}{\sqrt{2}} \left( \begin{array}{ccc}
+1 & 0 & 0 \\
+0 & 0 & 0 \\
+0 & 0 & -1
+\end{array} \right)
+\end{equation}
+%
+%
+
+\newpage
+Under the unitary transformation $V$, the flavor-mixing matrices $S^{(1)}_i$ and $S^{(2)}_i$ transform such that: $S^{(s)}_i = V^\dagger \tilde{S}^{(s)}_i V$, and the $3 \times 1$ matrices $\tilde{R}_i$ transform such that: $R_i = U^\dagger \tilde{R}_i$. The total spin-orbit coupling operator in (\ref{rewritten boson mass part of action 3}), is then given by the following after we perform the transfomation $V$.
+%
+%
+\begin{equation}\label{spin-orbit coupling}
+S \cdot L \equiv \sum_{s \in \{ 1,2 \} } S_{(s)} \cdot L_{(s)}
+=
+\left( \begin{array}{ccc}
+T_i L_i^{(1)} & 0 & R_i L_i^{(1)} \\
+0 & T_i L_i^{(2)} & R_i L_i^{(2)} \\
+R_i^\dagger L_i^{(1)} & R_i^\dagger L_i^{(2)} & 0
+\end{array} \right)
+\end{equation}
+%
+%
+\begin{equation}
+R_i^\dagger L_i^{(s)} = i \left(
+\frac{1}{\sqrt{2}} L_{+}^{(s)}
+,
+-L_3^{(s)}
+,
+-\frac{1}{\sqrt{2}} L_{-}^{(s)}
+\right)
+\end{equation}
+%
+%
+Where the operators: $L^{(s)}_{\pm} = L^{(s)}_{1} \pm i L^{(s)}_{-}$, are the usual ladder operators of $\mathfrak{su}(2)$. The result of acting with one of these ladder operators on a fuzzy spherical harmonic is the following.
+%
+%
+\begin{equation}\label{ladder operators}
+L_{\pm} \hat{Y}^m_\ell = \sqrt{\ell (\ell + 1) - m (m \pm 1)} \,
+\hat{Y}^{m \pm 1}_\ell
+\end{equation}
+%
+%
+The complicated fields will also transforms under the unitary transformation $V$, in the following way.
+%
+%
+\begin{equation}\label{complicated fields after V}
+C = V^\dagger \tilde{C}
+=
+\left( \begin{array}{c}
+C^{(1)} \\
+C^{(2)} \\
+A_3 \\
+\end{array} \right)
+\end{equation}
+%
+%
+The entries of the $3 \times 1$ column vectors $C^{(1)}$ and $C^{(2)}$ are given as linear combinations of the scalars.
+%
+%
+\begin{equation}\label{T eiegen-fields 1}
+C^{(1)}
+\equiv
+\left( \begin{array}{c}
+C^{(1)}_{+} \\
+C^{(1)}_{0} \\
+C^{(1)}_{-} \\
+\end{array} \right)
+\equiv
+\left( \begin{array}{c}
+\frac{1}{\sqrt{2}} (-\phi_1 + i \phi_2) \\
+\phi_3 \\
+\frac{1}{\sqrt{2}} (+\phi_1 + i \phi_2) \\
+\end{array} \right)
+\end{equation}
+%
+%
+\begin{equation}\label{T eiegen-fields 2}
+C^{(2)}
+\equiv
+\left( \begin{array}{c}
+C^{(2)}_{+} \\
+C^{(2)}_{0} \\
+C^{(2)}_{-} \\
+\end{array} \right)
+\equiv
+\left( \begin{array}{c}
+\frac{1}{\sqrt{2}} (-\phi_4 + i \phi_5) \\
+\phi_6 \\
+\frac{1}{\sqrt{2}} (+\phi_4 + i \phi_5) \\
+\end{array} \right)
+\end{equation}
+%
+%
+The subscripts $+$, $0$, $-$ of the fields above, denote their respective eigenvalues $1$, $0$, $-1$ with respect to the generator $T_3$. Now that we have fleshed out what happens to all the objects connected with the complicated fields $\tilde{C}$ under the transformatio $V$, we are ready to make contact with ideas concerning addition of angular momentum. First, we define the total angular momentum operators $J_i^{(s)}$ as follow.
+%
+%
+\begin{equation}\label{total angular momentum}
+J_i^{(s)} = L_i^{(s)} + T_i
+%
+\quad \Rightarrow \quad
+%
+T_i L_i^{(s)} = \frac{1}{2} \left(
+J^2_{(s)} - L^2_{(s)} - T^2
+\right)
+\end{equation}
+%
+%
+Looking at the spin-orbit coupling operator (\ref{spin-orbit coupling}), we see that if we can find eigenvectors of $T_i L_i^{(s)}$ which are also annihilated by $R_i^\dagger L_i^{(s)}$, we can obtain eigenvectors of the entire $7 \times 7$ matrix $S \cdot L$ by padding the $3$-dimensional eigenvectors of the $(1)$ and $(2)$ sectors with $0$'s as shown below.
+%
+%
+\begin{equation*}
+T_i L_i^{(s)} \, X^{(s)} = \lambda^{(s)} \, X^{(s)}
+%
+\quad , \quad
+%
+R_i^\dagger L_i^{(s)} \, X^{(s)} = 0
+\end{equation*}
+%
+%
+\begin{equation*}
+\Rightarrow \quad
+%
+S \cdot L \, \left( \begin{array}{c}
+X^{(1)} \\
+0 \\
+0
+\end{array} \right)
+=
+\lambda^{(1)} \, \left( \begin{array}{c}
+X^{(1)} \\
+0 \\
+0
+\end{array} \right)
+%
+\quad ,
+\end{equation*}
+%
+%
+\begin{equation}\label{stacked eigenvectors}
+S \cdot L \, \left( \begin{array}{c}
+0 \\
+X^{(2)} \\
+0
+\end{array} \right)
+=
+\lambda^{(2)} \, \left( \begin{array}{c}
+0 \\
+X^{(2)} \\
+0
+\end{array} \right)
+\end{equation}
+%
+%
+Not all eigenvectors of $S \cdot L$ will be of the above type, but it turns out the we can easily find the rest by diagonalizing a simple $3 \times 3$ matrix, as we will see shortly. First, we need to find eigenvectors of $T_i L_i^{(1)}$ and $T_i L_i^{(2)}$. At this point, it should be noted that we can focus on finding eigenvectors of the $k_1 k_2 \times k_1 k_2$ block of the decomposition (\ref{field blocks}). The reasons for this are as follow.
+%
+%
+\begin{enumerate}
+%
+\item The fields in the lower diagonal $(N - k_1 k_2) \times (N - k_1 k_2)$ block are annihilated by both $S \cdot L$ and $L_{(s)}^2$, and so these fields always have zero mass.
+%
+\item The fields in the off-diagonal $(N - k_1 k_2) \times k_1 k_2$ and $k_1 k_2 \times (N - k_1 k_2)$ blocks are actually covered by the analysis of the $k_1 k_2 \times k_1 k_2$ block. This is because the ${E^n}_a$ and ${E^a}_n$ matrices transform in the $(\frac{k_1-1}{2}, \frac{k_2-1}{2})$ of $\mathfrak{su}(2) \times \mathfrak{su}(2)$, which is covered in the decomposition (\ref{su(2) decomposition}). We can thus map results from the $k_1 k_2 \times k_1 k_2$ block to the off-diagonal blocks by making the following substitutions.
+%
+%
+\begin{equation*}
+\ell_1 \to \frac{k_1 - 1}{2}
+%
+\quad , \quad
+%
+\ell_2 \to \frac{k_2 - 1}{2}
+%
+\quad ,
+\end{equation*}
+%
+%
+\begin{equation}\label{k1k1 block to off diagonal}
+\hat{Y}^{m_1}_{\ell_1} \otimes \hat{Y}^{m_2}_{\ell_2}
+\to
+{E^n}_a, {E^a}_n
+\end{equation}
+%
+%
+The multiplicities of the masses in the off-diagonal blocks can also be obtained from those in the $k_1 k_2 \times k_1 k_2$ block, simply by multiplying by $(N - k_1 k_2)$, which is the number of possible values the $a,a'$ indices can take.
+%
+\end{enumerate}
+%
+%
+Since we are now going to couple a $spin$-$1$ representation (\textit{spanned by the generators $\{ T_i \}$}) and a $spin$-$\ell_s$ representation (\textit{spanned by the generators $\{ L_i^{(s)} \}$}), we can express the eigenvectors of the $\{ J^2_{(s)}, J_3^{(s)} , L^2_{(s)} , T^2 \}$ operators as linear combinations of the eigenvectors of $\{ L^2_{(s)}, L_3^{(s)} , T^2 , T_3 \}$. The expansion coefficients are given by the well known $\mathfrak{su}(2)$ \textit{Clebsch Gordan coefficients}. Let us now write out this expansion explicitly.
+%
+%
+\begin{equation}\label{j1-fields}
+(\mathcal{C}^{(1)})_{j_1,n_1,\ell_1; \ell_2, m_2}
+=
+\sum_{m_T = -1}^{+1}
+\sum_{m_1 = -\ell_1}^{\ell_1}
+\braket{\ell_1,m_1;1,m_T}{j_1, n_1}
+(C^{(1)}_{m_T})_{\ell_1,m_1;\ell_2,m_2}
+\end{equation}
+%
+%
+
+%
+%
+\begin{equation}\label{j2-fields}
+(\mathcal{C}^{(2)})_{\ell_1, m_1; j_2,n_2,\ell_2}
+=
+\sum_{m_T = -1}^{+1}
+\sum_{m_2 = -\ell_2}^{\ell_2}
+\braket{\ell_2,m_2;1,m_T}{j_2, n_2}
+(C^{(2)}_{m_T})_{\ell_1,m_1;\ell_2,m_2} 
+\end{equation}
+%
+%
+Here, the $(C^{(s)}_{m_T})_{\ell_1,m_1;\ell_2,m_2}$ fields are the coefficient of the matrix valued fields $C^{(s)}$ (\ref{T eiegen-fields 1}, \ref{T eiegen-fields 2}), when expanded in terms of the basis vectors $\hat{Y}^{m_1}_{\ell_1} \otimes \hat{Y}^{m_2}_{\ell_2} \otimes \hat{e}_{m_T}$. The fields $(\mathcal{C}^{(s)})_{j_1,n_1,\ell_1; \ell_2, m_2}$ are also coefficients of the matrix valued fields $C^{(s)}$, but with respect to an expansion in terms of the following modified fuzzy spherical harmonics. 
+%
+%
+\begin{equation}
+(\hat{Y}^{(1)})^{n_1,m_2}_{j_1, \ell_1, \ell_2}
+\equiv
+\hat{Y}^{n_1}_{j_1,\ell_1} \otimes \hat{Y}^{m_2}_{\ell_2}
+%
+\quad , \quad
+%
+(\hat{Y}^{(2)})^{m_1,n_2}_{\ell_1,j_2, \ell_2}
+\equiv
+\hat{Y}^{m_1}_{\ell_1} \otimes \hat{Y}^{n_2}_{j_2,\ell_2}
+\end{equation}
+%
+%
+\begin{equation}\label{modified fuzzy spherical harmonics}
+\hat{Y}^n_{j,\ell} = \sum_{m_T = -1}^{+1} \sum_{m = -\ell}^{\ell}
+\braket{\ell, m;1,m_T}{j,n}
+\hat{Y}_\ell^{m} \otimes \hat{e}_{m_T}
+=
+\sum_{m = -\ell}^{\ell}
+\left( \begin{array}{c}
+\braket{\ell, m;1,+1}{j,n} \hat{Y}_\ell^{m} \\
+\braket{\ell, m;1,0}{j,n} \hat{Y}_\ell^{m} \\
+\braket{\ell, m;1,-1}{j,n} \hat{Y}_\ell^{m} \\
+\end{array} \right)
+\end{equation}
+%
+%
+Where the vectors $\hat{e}_{m_T}$ are eigenvectors of $T_3$ with eigenvalues $m_T$. In what follows, it will be most convenient to know of the following simplifying properties of the $\mathfrak{su}(2)$ Clebsch Gordan coefficients.
+%
+%
+\begin{enumerate}
+%
+\item For the Clebsch Gordan coefficients to be non-vanishing, the following equality must hold true: $m_s + m_T = n_s$.
+%
+\item For the Clebsch Gordan coefficients to be non-vanishing, the following inequality must hold: $|\ell - \ell_T| \leq j \leq \ell + \ell_T$, where $\ell_T = 1$. This means that $j = \ell-1,\ell,\ell+1$, except for the case $\ell=0$ for which $j = 1$.
+%
+\end{enumerate}
+%
+%
+Using the above information, we can simplify the sums appearing in (\ref{j1-fields}), (\ref{j2-fields}) and (\ref{modified fuzzy spherical harmonics}), and also slightly simplify the notation, using $j = \ell + \alpha$ with $\alpha=-1,0,1$. The result of these simplifications are written out below.
+
+\newpage
+%
+%
+\begin{equation}\label{modified fuzzy sphere fields 1}
+(\mathcal{C}^{(1)}_{\alpha_1})_{\ell_1,n_1; \ell_2, m_2}
+=
+\sum_{m_T = -1}^{+1}
+\braket{\ell_1,n_1-m_T;1,m_T}{\ell_1 + \alpha_1, n_1}
+(C^{(1)}_{m_T})_{\ell_1,n_1-m_T;\ell_2,m_2}
+\end{equation}
+%
+%
+
+%
+%
+\begin{equation}\label{modified fuzzy sphere fields 2}
+(\mathcal{C}^{(2)}_{\alpha_2})_{\ell_1, m_1; \ell_2,n_2}
+=
+\sum_{m_T = -1}^{+1}
+\braket{\ell_2,n_2-m_T;1,m_T}{\ell_2 + \alpha_2, n_2}
+(C^{(2)}_{m_T})_{\ell_1,m_1;\ell_2,n_2-m_T}
+\end{equation}
+%
+%
+
+%
+%
+\begin{equation}
+(\hat{Y}^{(1)}_{\alpha_1})^{n_1,m_2}_{\ell_1,\ell_2}
+\equiv
+(\hat{Y}_{\alpha_1})^{n_1}_{\ell_1} \otimes \hat{Y}^{m_2}_{\ell_2}
+%
+\quad , \quad
+%
+(\hat{Y}^{(2)}_{\alpha_2})^{m_1,n_2}_{\ell_1,\ell_2}
+\equiv
+\hat{Y}^{m_1}_{\ell_1} \otimes (\hat{Y}_{\alpha_2})^{n_2}_{\ell_2}
+\end{equation}
+%
+%
+\begin{equation}\label{modified fuzzy spherical harmonics rewritten}
+(\hat{Y}_\alpha)^n_\ell
+=
+\sum_{m_T=-1}^{+1}
+\braket{\ell, n-m_T ;1,m_T}{\ell+\alpha,n}
+\hat{Y}_\ell^{n-m_T} \otimes \hat{e}_{m_T}
+\end{equation}
+%
+%
+Using the fact that the $(\hat{Y}_\alpha)^n_{\ell}$ matrices are constructed to be eigenvectors of $\{ J^2_{(s)}, J_3^{(s)} , L^2_{(s)} , T^2 \}$, we can easily use (\ref{total angular momentum}) to find their eigenvalues with respect to the $T_i L_i$ operators appearing in $S \cdot L$.
+%
+%
+\begin{equation}
+T_i L_i (\hat{Y}_\alpha)^n_{\ell}
+=
+\frac{1}{2} \left[
+(\ell + \alpha) (\ell + \alpha + 1)
+- \ell (\ell + 1)
+- 2
+\right]
+(\hat{Y}_\alpha)^n_{\ell}
+=
+\mu_{\alpha}
+(\hat{Y}_\alpha)^n_{\ell}
+\end{equation}
+%
+%
+\begin{equation}\label{modified fuzzy eigenvalues}
+\mu_\alpha = \frac{1}{2} \left[
+\alpha (2 \ell + \alpha + 1)
+- 2
+\right]
+=
+\begin{cases}
+	\ell
+	& \quad \text{for } \alpha = +1 \\
+		
+    -1
+	& \quad \text{for } \alpha = 0 \\
+	
+	-(\ell + 1)
+	& \quad \text{for } \alpha = -1 \\
+\end{cases}
+\end{equation}
+%
+%
+We need to find out which, if any, of the $(\hat{Y}_\alpha)^n_{\ell}$ matrices are annihilated by $R_i^\dagger L_i$. When we evaluate the action of $R_i^\dagger L_i$ on $(\hat{Y}_\alpha)^n_{\ell}$, it is convenient to make use of following Clebsch Gordan coefficients.
+%
+%
+\begin{align}
+\braket{\ell,n;1,0}{\ell,n}
+&=
+\frac{n}{\sqrt{\ell (\ell + 1)}}
+\\
+\braket{\ell,n \mp 1;1,\pm 1}{\ell,n}
+&=
+\mp \frac{\sqrt{\ell (\ell + 1) - n (n \pm 1)}}{\sqrt{2 \ell (\ell + 1)}}
+\end{align}
+%
+%
+Using the above Clebsch Gordan coefficients together with equations (\ref{ladder operators}) and (\ref{modified fuzzy spherical harmonics rewritten}), we can now evaluate the action of $R_i^\dagger L_i$ on $(\hat{Y}_\alpha)^n_{\ell}$. The result is the following.
+
+\newpage
+%
+%
+\begin{equation*}
+R_i^\dagger L_i (\hat{Y}_\alpha)^n_{\ell}
+=
+-i \sqrt{\ell (\ell + 1)} \sum_{m_T = -1}^{+1} \sum_{m=-\ell}^\ell
+\braket{\ell,n}{\ell, m ;1,m_T}
+\braket{\ell, m ;1,m_T}{\ell+\alpha,n}
+\hat{Y}_\ell^{n}
+\end{equation*}
+%
+%
+%\begin{equation*}
+%-i \sqrt{\ell (\ell + 1)} \sum_{m_T = -1}^{+1}
+%\braket{\ell, n-m_T ;1,m_T}{\ell,n}
+%\braket{\ell, n-m_T ;1,m_T}{\ell+\alpha,n}
+%\hat{Y}_\ell^{n}
+%\end{equation*}
+%
+%
+\begin{equation}\label{annihilated vectors}
+= -i \delta_{\ell,\ell+\alpha} \sqrt{\ell (\ell + 1)} \, \hat{Y}_\ell^{n}
+\end{equation}
+%
+%
+Where we have used that the Clebsch Gordan coefficients can be taken to be real, and that the set of states $\{ \ket{\ell,m;1,m_T} \}$ form a complete basis. Alternatively to using the completeness of the Clebsch Gordan coefficients, the above sum can be explicitly evaluated using the \textit{Wigner 3-j symbols} and the following relation.
+%
+%
+\begin{equation}
+\braket{\ell_1,m_1;\ell_2,m_2}{\ell,m}
+=
+(-1)^{j_1 - j_2 + m}
+\left( \begin{array}{ccc}
+\ell_1 & \ell_2 & \ell \\
+m_1 & m_2 & -m \\
+\end{array} \right)
+\end{equation}
+%
+%
+From (\ref{annihilated vectors}), we can now contruct four eigenvectors of $S \cdot L$, using the prescription given in (\ref{stacked eigenvectors}).
+%
+%
+\begin{equation}
+\left( \begin{array}{c}
+(\hat{Y}^{(1)}_{\alpha_1})^{n_1, m_2}_{\ell_1, \ell_2} \\
+0 \\
+0 \\
+\end{array} \right)
+%
+\quad , \quad
+%
+\left( \begin{array}{c}
+0 \\
+(\hat{Y}^{(2)}_{\alpha_2})^{m_1, n_2}_{\ell_1, \ell_2} \\
+0 \\
+\end{array} \right)
+%
+\quad , \quad
+%
+\alpha_1,\alpha_2 =-1,+1
+\end{equation}
+%
+%
+Taking linear combinations of the above eigenvectors with the coefficient fields $(\mathcal{C}^{(1)}_0)_{\ell_1,n_1; \ell_2, m_2}$ and $(\mathcal{C}^{(1)}_0)_{\ell_1,n_1; \ell_2, m_2}$, plugging them into the complicated part of $S_{\text{m,b}}$ and using (\ref{modified fuzzy eigenvalues}, \ref{fuzzy spherical properties}), we find the following masses.
+%
+%
+\begin{align}
+& m^2_{(1),+} = \ell_1 (\ell_1 - 1) + \ell_2 (\ell_2 + 1)
+%
+\quad , \quad\quad\quad\;\,
+%
+\textit{miltiplicity: } (2 \ell_1 + 3) (2 \ell_2 + 1)
+\\
+& m^2_{(1),-} = (\ell_1 + 1) (\ell_1 + 2) + \ell_2 (\ell_2 + 1)
+%
+\quad , \quad
+%
+\textit{miltiplicity: } (2 \ell_1 - 1) (2 \ell_2 + 1)
+\\
+& m^2_{(2),+} = \ell_2 (\ell_2 - 1) + \ell_1 (\ell_1 + 1)
+%
+\quad , \quad\quad\quad\;\,
+%
+\textit{miltiplicity: } (2 \ell_2 + 3) (2 \ell_1 + 1)
+\\
+& m^2_{(2),-} = (\ell_2 + 1) (\ell_2 + 2) + \ell_1 (\ell_1 + 1)
+%
+\quad , \quad
+%
+\textit{miltiplicity: } (2 \ell_2 - 1) (2 \ell_1 + 1)
+\end{align}
+%
+%
+What remains now, is to find the last three eigenvectors of the $7 \times 7$ coupling matrix $S \cdot L$.	In order to do this, we first write down the most general complicated field vector possible, which does not contain any of the four known eigenvectors.
+%
+%
+\begin{equation}\label{complicated fields modified fuzzy sphericals}
+\mathcal{C}
+=
+\left( \begin{array}{c}
+(\hat{Y}^{(1)}_{0})^{n_1,m_2}_{\ell_1,\ell_2}
+(\mathcal{C}^{(1)}_{0})_{\ell_1,n_1;\ell_2,m_2} \\
+(\hat{Y}^{(2)}_{0})^{m_1,n_2}_{\ell_1,\ell_2}
+(\mathcal{C}^{(2)}_{0})_{\ell_1,m_1;\ell_2,n_2} \\
+\hat{Y}^{m_1}_{\ell_1} \otimes \hat{Y}^{m_2}_{\ell_2}
+(A_3)_{\ell_1,m_1;\ell_2,m_2} \\
+\end{array} \right)
+\end{equation}
+%
+%
+We now want to take the complicated field vector above, and insert it into the term in $S_{\text{m,b}}$ containing the coupling operator $S \cdot L$. We will need the following matrix elements in order to simplify what we obtain after inserting $\mathcal{C}$.
+%
+%
+\begin{equation}
+\tr[ (\hat{Y}_{\alpha'})_{\ell',n'}^\dagger
+T_i L_i (\hat{Y}_\alpha)_{\ell,n} ]
+=
+\mu_\alpha \delta_{n,n'} \delta_{\ell,\ell'} \delta_{\alpha,\alpha'}
+\end{equation}
+%
+%
+\begin{equation}
+\tr[ (\hat{Y}^{m'}_{\ell'})^\dagger
+R_i^\dagger L_i  (\hat{Y}_\alpha)_{\ell,n} ]
+=
+-i \delta_{n,m'} \delta_{\ell,\ell'} \delta_{\ell,\ell + \alpha}
+\sqrt{\ell (\ell+1)}
+\end{equation}
+%
+%
+\begin{equation}
+\tr[ (\hat{Y}_{\alpha'})_{\ell',n'}^\dagger
+R_i L_i \hat{Y}^{m}_{\ell} ]
+=
++i \delta_{m,n'} \delta_{\ell,\ell'} \delta_{\ell,\ell + \alpha'}
+\sqrt{\ell (\ell+1)}
+\end{equation}
+%
+%
+These results are easily obtained from (\ref{modified fuzzy eigenvalues}) and (\ref{annihilated vectors}) and the orthogonality relation for fuzzy spherical harmonics. We have also used the fact that $L_i^\dagger = L_i$, to obtain the last result. We now insert (\ref{complicated fields modified fuzzy sphericals}) into the part of $S_{\text{m,b}}$ containing $S \cdot L$, and simplify using the above traces. The result looks as follow.
+%
+%
+\begin{equation*}
+\tr \left[
+\mathcal{C}^\dagger \, S \cdot L \, \mathcal{C}
+\right]
+=
+\end{equation*}
+%
+%
+\begin{equation}
+\left( 
+(\mathcal{C}_0^{(1)})^\dagger \;
+(\mathcal{C}_0^{(2)})^\dagger \;
+(A_3)^\dagger
+\right)
+\left(\begin{array}{ccc}
+-1 & 0 & -i \sqrt{\ell_1 (\ell_1 + 1)} \\
+0 & -1 & -i \sqrt{\ell_2 (\ell_2 + 1)} \\
+i \sqrt{\ell_1 (\ell_1 + 1)} & i \sqrt{\ell_2 (\ell_2 + 1)} & 0 \\
+\end{array} \right)
+\left(\begin{array}{c}
+\mathcal{C}_0^{(1)} \\
+\mathcal{C}_0^{(2)} \\
+A_3 \\
+\end{array} \right)
+\end{equation}
+%
+%
+Where we have dropped all but the $\alpha$-indices on the coefficient fields in the above, in order to make the result more easily readable. We can now easily transform the above matrix into diagonal form. 
+%
+%
+\begin{equation}\label{residual 3x3 matrix}
+\Big( 
+(\mathfrak{C}_0)^\dagger \;
+(\mathfrak{C}_{+})^\dagger \;
+(\mathfrak{C}_{-})^\dagger
+\Big)
+\left(\begin{array}{ccc}
+\lambda_0 & 0 & 0 \\
+0 & \lambda_{+} & 0 \\
+0 & 0 & \lambda_{-} \\
+\end{array} \right)
+\left(\begin{array}{c}
+\mathfrak{C}_0 \\
+\mathfrak{C}_{+} \\
+\mathfrak{C}_{-} \\
+\end{array} \right)
+\end{equation}
+%
+%
+Where the eigenvalues $\lambda_0$, $\lambda_{\pm}$ and the corresponding eigen-fields $\mathfrak{C}_0$, $\mathfrak{C}_{\pm}$ are given by the following.
+%
+%
+\begin{equation}
+\lambda_0 = -1
+%
+\quad , \quad
+%
+\lambda_{\pm}
+=
+-\frac{1}{2} \pm \sqrt{\ell_1 (\ell_1 + 1) + \ell_2 (\ell_2 + 1) + \frac{1}{4}}
+\end{equation}
+%
+%
+
+%
+%
+\begin{equation}
+\mathfrak{C}_{0} = \frac{1}{\sqrt{N_0}}
+\left(
+-
+\sqrt{\ell_2 (\ell_2 + 1)} \, \mathcal{C}_0^{(1)}
++
+\sqrt{\ell_1 (\ell_1 + 1)} \, \mathcal{C}_0^{(2)}
+\right)
+\end{equation}
+%
+%
+
+%
+%
+\begin{equation}
+\mathfrak{C}_{\pm} = \frac{1}{\sqrt{N_\pm}}
+\left(
+i \sqrt{\ell_1 (\ell_1 + 1)} \, \mathcal{C}_0^{(1)}
++
+i \sqrt{\ell_2 (\ell_2 + 1)} \, \mathcal{C}_0^{(2)}
++
+\lambda_{\mp} A_3
+\right)
+\end{equation}
+%
+%
+
+%
+%
+\begin{equation}
+N_0 = -\lambda_{+} \lambda_{-}
+%
+\quad , \quad
+%
+N_{\pm} = \lambda_{\mp} (\lambda_{\mp} - \lambda_{\pm})
+\end{equation}
+%
+%
+
+\newpage
+Using the above eigenvalues with respect to $S \cdot L$ together with the $L_{(s)}^2$ eigenvalues given in (\ref{fuzzy spherical properties}), we obtain that following masses for the fields $\mathfrak{C}_0$ and $\mathfrak{C}_{\pm}$ from the form of $S_{\text{m,b}}$ given in (\ref{rewritten boson mass part of action 3}).
+%
+%
+\begin{align}
+& m^2_{0} = \ell_1 (\ell_1 + 1) + \ell_2 (\ell_2 + 1) - 2 \lambda_0
+%
+\quad , \quad\;\,
+%
+\textit{multiplicity: } (2 \ell_1 + 1) (2 \ell_2 + 1)
+\\
+& m^2_{+} = \ell_1 (\ell_1 + 1) + \ell_2 (\ell_2 + 1) - 2 \lambda_{+}
+%
+\quad , \quad
+%
+\textit{multiplicity: } (2 \ell_1 + 1) (2 \ell_2 + 1)
+\\
+& m^2_{-} = \ell_1 (\ell_1 + 1) + \ell_2 (\ell_2 + 1) - 2 \lambda_{-}
+%
+\quad , \quad
+%
+\textit{multiplicity: } (2 \ell_1 + 1) (2 \ell_2 + 1)
+\end{align}
+%
+%
+This concludes the diagonalization of the complicated fields. The masses and corresponding eigen-fields of the complicated sector are summarized in table \ref{tab:boson_masses_complicated} for convenience. We note here that for the case of $\ell_s = 0$, the fields $\mathcal{C}^{(s)}_{-}$, $\mathcal{C}^{(s)}_{0}$ do not exist, as we must have $j=1$. Furthermore, the fields $\mathfrak{C}_0$ do not exist either, since the matrix in (\ref{residual 3x3 matrix}) is effectively reduced to a $2 \times 2$ matrix by the absence of $\mathcal{C}^{(s)}_{0}$ \cite{Two-point functions in D5-D3}. We will now move on to discuss the diagonalization procedure for the case of $SO(5)$ symmetric vevs.
+%
+%
+\begin{table}
+%
+\begin{center}
+%
+% A table with adjusted row and column spacings
+% \setlength sets the horizontal (column) spacing
+% \arraystretch sets the vertical (row) spacing
+\begingroup
+\setlength{\tabcolsep}{8pt} % Default value: 6pt
+\renewcommand{\arraystretch}{2.0} % Default value: 1
+%
+\begin{tabular}{ !{\vrule width 1.5pt}c!{\vrule width 1.5pt}c!{\vrule width 1.5pt}c!{\vrule width 1.5pt} }
+	\noalign{\hrule height 1.5pt}
+ 	Mass eigenstates & Mass $m^2$ & Multiplicity \\
+ 	\noalign{\hrule height 1.5pt}
+ 	$\mathcal{C}^{(1)}_+$ & $m^2_{(1),+} = \ell_1 (\ell_1 - 1) + \ell_2 (\ell_2 + 1)$ & $(2 \ell_1 + 3) (2 \ell_2 + 1)$ \\
+ 	\hline
+ 	$\mathcal{C}^{(1)}_-$ & $m^2_{(1),-} = (\ell_1 + 1) (\ell_1 + 2) + \ell_2 (\ell_2 + 1)$ & $(2 \ell_1 - 1) (2 \ell_2 + 1)$ \\
+ 	\hline
+ 	$\mathcal{C}^{(2)}_+$ & $m^2_{(2),+} = \ell_2 (\ell_2 - 1) + \ell_1 (\ell_1 + 1)$ & $(2 \ell_2 + 3) (2 \ell_1 + 1)$ \\
+ 	\hline
+ 	$\mathcal{C}^{(2)}_-$ & $m^2_{(2),-} = (\ell_2 + 1) (\ell_2 + 2) + \ell_1 (\ell_1 + 1)$ & $(2 \ell_2 - 1) (2 \ell_1 + 1)$ \\
+ 	\hline
+ 	$\mathfrak{C}_0$ & $m^2_0 = \ell_1 (\ell_1 + 1) + \ell_2 (\ell_2 + 1) + 2$ & $(2 \ell_1 + 1) (2 \ell_2 + 1)$ \\
+ 	\hline
+ 	$\mathfrak{C}_+$ & $m^2_+ = \ell_1 (\ell_1 + 1) + \ell_2 (\ell_2 + 1) - 2 \lambda_+$ & $(2 \ell_1 + 1) (2 \ell_2 + 1)$ \\
+ 	\hline
+ 	$\mathfrak{C}_-$ & $m^2_- = \ell_1 (\ell_1 + 1) + \ell_2 (\ell_2 + 1) - 2 \lambda_-$ & $(2 \ell_1 + 1) (2 \ell_2 + 1)$ \\
+ 	\noalign{\hrule height 1.5pt}
+\end{tabular}
+%
+\endgroup
+% The \begingroup ... \endgroup pair ensures the separation
+% parameters only affect this particular table, and not any
+% sebsequent ones in the document.
+%
+\end{center}
+%
+\caption[Masses and eigenstates for $SO(3) \times SO(3)$ comp. bosons]{Masses and eigenstates of the complicated bosons in the $k_1 k_2 \times k_1 k_2$ block for the case of $SO(3) \times SO(3)$ symmetric vevs. In the above, $\ell_1 = 1,\ldots, k_1 - 1$ and $\ell_2 = 1,\ldots, k_2 - 1$. The masses and multiplicities for the fields in the off-diagonal blocks can be obtained from those above by using (\ref{k1k1 block to off diagonal}) and the following steps.}
+%
+\label{tab:boson_masses_complicated}
+%
+\end{table}
+%
+%
+
+%\subsubsection[The fermion mass matrix for $SO(3) \times SO(3)$ symmetric vevs]{The fermion mass matrix for $\mathbf{SO(3) \times SO(3)}$ symmetric vevs}
+%
+%%
+%%
+%\begin{equation}
+%S_{\text{m,f}}
+%=
+%\frac{2}{g^2} \int_{\mathbb{R}^4} \text{d}^4 x
+%\tr \left[
+%\sum_{i=1}^3 \frac{1}{2} \bar{\psi_a} {(G_{1,i})^a}_b L_1^i \psi^b
+%+
+%\sum_{i=1}^3 \frac{1}{2} \bar{\psi_a} \gamma^5 {(G_{2,i})^a}_b L_2^i \psi^b
+%-
+%\bar{c} \, (L_1^2 + L_2^2) c
+%\right]
+%\end{equation}
+%%
+%%
+%
+%%
+%%
+%\begin{equation}
+%U = \frac{1}{\sqrt{2}} \left( \begin{array}{cccc}
+%0 & -i & -1 & 0 \\
+%0 & 1 & i & 0 \\
+%-1 & 0 & 0 & i \\
+%i & 0 & 0 & -1
+%\end{array} \right)
+%\end{equation}
+%%
+%%
+%
+%%
+%%
+%\begin{equation}
+%U^\dagger G_{1,i} U = -\sigma_i \otimes \mathbb{1}_2
+%%
+%\quad , \quad
+%%
+%U^\dagger G_{2,i} U = i \mathbb{1}_2 \otimes \sigma_i
+%\end{equation}
+%%
+%%
+%
+%%
+%%
+%\begin{table}
+%%
+%\begin{center}
+%%
+%% A table with adjusted row and column spacings
+%% \setlength sets the horizontal (column) spacing
+%% \arraystretch sets the vertical (row) spacing
+%\begingroup
+%\setlength{\tabcolsep}{10pt} % Default value: 6pt
+%\renewcommand{\arraystretch}{2.0} % Default value: 1
+%%
+%\begin{tabular}{ !{\vrule width 2pt}c!{\vrule width 2pt}c!{\vrule width 2pt}c!{\vrule width 2pt}c!{\vrule width 2pt}c!{\vrule width 2pt} }
+%	\noalign{\hrule height 2pt}
+% 	Mass eigenstates & $c$ & $d$ & Mass $m = |c + i d|$ & Multiplicity \\
+% 	\noalign{\hrule height 2pt}
+% 	$B^{\ell_1+\frac{1}{2}, \ell_2+\frac{1}{2}}$ & $-\ell_1$ & $\ell_2$ & $m_{++} = \sqrt{\ell_1^2 + \ell_2^2}$ & $(\ell_1 + 1) (\ell_2 + 1)$ \\
+% 	\hline
+% 	$B^{\ell_1+\frac{1}{2}, \ell_2-\frac{1}{2}}$ & $-\ell_1$ & $-\ell_2-1$ & $m_{+-} = \sqrt{\ell_1^2 + (\ell_2+1)^2}$ & $(\ell_1 + 1) \ell_2$ \\
+% 	\hlinesymbols
+% 	$B^{\ell_1-\frac{1}{2}, \ell_2+\frac{1}{2}}$ & $\ell_1 + 1$ & $\ell_2$ & $m_{-+} = \sqrt{(\ell_1+1)^2 + \ell_2^2}$ & $(\ell_2 + 1) \ell_1$ \\
+% 	\hline
+% 	$B^{\ell_1-\frac{1}{2}, \ell_2-\frac{1}{2}}$ & $\ell_1 + 1$ & $-\ell_2-1$ & $m_{--} = \sqrt{(\ell_1+1)^2 + (\ell_2+1)^2}$ & $\ell_2 \ell_1$ \\
+% 	\noalign{\hrule height 2pt}
+%\end{tabular}
+%%
+%\endgroup
+%% The \begingroup ... \endgroup pair ensures the separation
+%% parameters only affect this particular table, and not any
+%% sebsequent ones in the document.
+%%
+%\end{center}
+%%
+%\caption[Masses and eigenstates of the fermions in the $k_1 k_2 \times k_1 k_2$ block]{Masses and eigenstates of the complicated bosons in the $k_1 k_2 \times k_1 k_2$ block in the $SO(3) \times SO(3)$-symmetric case. One must consider all combinations of $\ell_1 = 1,\ldots, k_1 - 1$ and $\ell_2 = 1,\ldots, k_2 - 1$. The values for $c$, $d$ and $m$ for the fields in the off-diagonal blocks are obtained by the replacements $\ell_1 \to \frac{k_1 - 1}{2}$ and $\ell_2 \to \frac{k_2 - 1}{2}$, while the corresponding multiplicities are obtained by the same replacement followed by a multiplication with $2(N − k_1 k_2 )$. This table is recreated from \cite{One-point functions in D3-D7}.}
+%%
+%\label{tab:boson_masses}
+%%
+%\end{table}
+%%
+%%
+
+\subsubsection[Boson mass matrix: $SO(5)$ symmetric vevs]{Boson mass matrix: $\mathbf{SO(5)}$ symmetric vevs}
+The process of diagonalizing the boson mass matrix for the case of the $SO(5)$ symmetric vevs (\ref{cl solution b}) is very similar in spirit to the already dicussed case of $SO(3) \times SO(3)$ symmetric vevs. As we will see shortly however, the detials of the procedure is group-theoretically a bit more involved, since the structure of $SO(5)$ is more complex than that of $SO(3) \times SO(3)$. Our starting point for the diagonalization procedure will, also in this case, be the boson mass part of the total expanded action (\ref{expanded action}), written in the following form.
+%
+%
+\begin{equation*}
+S_{\text{m,b}}
+=
+\frac{2}{g^2} \int_{\mathbb{R}^4} \text{d}^4 x 
+\tr \left[
+- \frac{1}{2} A_\mu [\Phi_i, [\Phi_i, A^\mu]]
+- 2 i A_\mu [\partial^\mu \Phi_i, \phi_i]
+\right.
+\end{equation*}
+%
+%
+\begin{equation}\label{rewritten boson mass part of action 1 repeat}
+\left.
+- \frac{1}{2} \phi_i [\Phi_j, [\Phi_j, \phi_i]]
+- \phi_i [[\Phi_i, \Phi_j], \phi_j]
+\right]
+\end{equation}
+%
+%
+Analogously to our approach for the $SO(3) \times SO(3)$ symmetric case, we now define the following operators to help us put the action (\ref{rewritten boson mass part of action 1 repeat}) into a more workable form.
+%
+%
+\begin{equation}
+L_{ij} \equiv \text{ad}(G_{ij}) = [G_{ij}, \, \cdot \,]
+%
+\quad , \quad
+%
+G_{ij} \equiv G_{ij}^{d_n} \oplus 0_{N - d_n}
+%
+\quad , \quad
+%
+i,j = 1, \ldots , 6
+\end{equation}
+%
+%
+The matrices $G_{ij}$, with $i,j = 1,\ldots , 5$, can be obtained from $G_{i6}$ by application of the commutation relations for the $\mathfrak{so}(6)$ algebra: $G_{ij} \equiv -i [G_{i6}, G_{j6}]$. We also define the $5 \times 1$ matricies $R_i$ and the $5 \times 5$ matrices $S_{ij}$, where the $S_{ij}$ form the fundamental representation of $\mathfrak{so}(5)$. The matrix elements of $R_i$ and $S_{ij}$ are given as follow.
+%
+%
+\begin{equation}
+[R_i]_j = i \delta_{ij}
+%
+\quad , \quad
+%
+[S_{ij}]_{kl} = -i ( \delta_{ik} \delta_{jl} - \delta_{il} \delta_{jk} )
+\end{equation}
+%
+%
+Using the operators $L_{ij}$ together with the matrices $R_i$ and $S_{ij}$, it is possible to rewrite the boson mass action (\ref{rewritten boson mass part of action 1 repeat}) into the following form.
+%
+%
+\begin{equation}
+S_{\text{m,b}} = S_{\text{m,b;E}} + S_{\text{m,b;C}}
+\end{equation}
+%
+%
+
+%
+%
+\begin{equation}\label{easy boson mass action so(5)}
+S_{\text{m,b;E}} = -\frac{1}{g^2} \int \mathrm{d}^4 x \frac{1}{x_3^2} \tr[
+\frac{1}{2} E^\dagger \sum_{i=1}^5 L_{i6}^2 E
+]
+\end{equation}
+%
+%
+
+%
+%
+\begin{equation}\label{complicated boson mass action so(5)}
+S_{\text{m,b;C}} = -\frac{1}{g^2} \int \mathrm{d}^4 x \frac{1}{x_3^2} \tr[
+C^\dagger
+\left( \begin{array}{cc}
+\frac{1}{2} \sum_{i=1}^5 L_{i6}^2 - \frac{1}{2} \sum_{i,j=1}^5 S_{ij} L_{ij} & \sqrt{2} \sum_{i=1}^5 R_i L_{i6} \\
+\sqrt{2} \sum_{i=1}^5 R_i^\dagger L_{i6} & \frac{1}{2} \sum_{i=1}^5 L_{i6}^2 \\
+\end{array} \right) C
+]
+\end{equation}
+%
+%
+Where in the $\mathfrak{so}(5)$ case, the easy fields $E$ and the complicated fields $C$ contains the following fields.
+%
+%
+\begin{equation}
+E = \left( \begin{array}{c}
+\phi_6 \\
+A_0 \\
+A_1 \\
+A_2 \\
+\end{array} \right)
+%
+\quad , \quad
+%
+C = \left( \begin{array}{c}
+\phi_1 \\
+\vdots \\
+\phi_5 \\
+A_3 \\
+\end{array} \right)
+\end{equation}
+%
+%
+The fields contained in $E$ and $C$ will further be decomposed into basis matrices ${E^{n}}_{n'}$, ${E^{n}}_{a}$, ${E^{a}}_{n}$ and ${E^{a}}_{a'}$, as was explain in the $SO(3) \times SO(3)$ symmetric case (\ref{field blocks}). In this case, the indices run over the values: $n,n' = 1, \ldots , d_n$ and $a,a' = d_n + 1, \ldots , N$.
+
+\paragraph{The Easy Fields}
+Let us first focus on diagonalizing the part $S_{\text{m,b;E}}$ of the boson mass action, which only contains the easy fields $E$. Firstly, the fields spanned by ${E^{a}}_{a'}$ are all anihilated by $L_{ij}$, and thus the masses of these fields are all zero.
+%
+%
+\begin{equation}
+m^2_{\text{diag. 2}} = 0
+%
+\quad , \quad
+%
+\textit{multiplicity: } (N - d_n)^2
+\end{equation}
+%
+%
+Next, the off-diagonal fields, spanned by the basis matrices ${E^{n}}_{a}$ and ${E^{a}}_{n}$, transform under application of the $L_{ij}$ operators according to the following rules.
+%
+%
+\begin{equation}
+L_{ij} {E^n}_a = {E^{n'}}_a [G_{ij}]_{n',n}
+%
+\quad , \quad
+%
+L_{ij} {E^a}_n = -{E^a}_{n'} [G_{ij}^T]_{n',n}
+\end{equation}
+%
+%
+These transformation properties are exactly those for vectors of the irreducible representations $(\tfrac{n}{2},\tfrac{n}{2},\tfrac{n}{2})$ and $(\tfrac{n}{2},\tfrac{n}{2},-\tfrac{n}{2})$ of $\mathfrak{so}(6)$, since the $G_{ij}$ and $-G^T_{ij}$ matrices respectively constitute these particular irreducible representation of $\mathfrak{so}(6)$. More information about the explicit construction of $G_{ij}$ in terms of $\mathfrak{so}(5)$ $\gamma$-matrices can be found in \cite{Grau Volk thesis, MPS bethe state overlap SO(5)}. If $L_{ij}$ is applied to ${E^{n}}_{a}$ and ${E^{a}}_{n}$ for a second time, we find that the results can be written in the following way.
+%
+%
+\begin{equation}
+\sum_{i,j=1}^6 L^2_{ij} {E^n}_a = \sum_{i,j=1}^6 {E^{n'}}_a [G_{ij} G_{ij}]_{n',n}
+\end{equation}
+%
+%
+\begin{equation}
+\sum_{i,j=1}^6 L^2_{ij} {E^a}_n = \sum_{i,j=1}^6 {E^{n'}}_a [G^T_{ij} G^T_{ij}]_{n',n}
+\end{equation}
+%
+%
+Just like the combination $\sum_{i=1}^3 t_i t_i$ is a quadratic Casimir of $\mathfrak{so}(3)$, on can easy check that the combination $\sum_{i,j=1}^6 G_{ij} G_{ij}$ is a quadratic Casimir of $\mathfrak{so}(6)$, which can be written as the following multiple of the identity $\mathbb{1}_{d_n}$.
+%
+%
+\begin{equation}
+\sum_{i,j=1}^6 G_{ij} G_{ij}
+=
+2 \, C_6(\tfrac{n}{2},\tfrac{n}{2},\tfrac{n}{2}) \, \mathbb{1}_{d_n}
+=
+\frac{3}{2} n (n + 4) \, \mathbb{1}_{d_n}
+\end{equation}
+%
+%
+\begin{equation}
+\sum_{i,j=1}^6 G^T_{ij} G^T_{ij}
+=
+2 \, C_6(\tfrac{n}{2},\tfrac{n}{2},-\tfrac{n}{2}) \, \mathbb{1}_{d_n}
+=
+\frac{3}{2} n (n + 4) \, \mathbb{1}_{d_n}
+\end{equation}
+%
+%
+Furthermore, it is generally true that $\sum_{i,j=1}^n \mathcal{L}_{ij} \mathcal{L}_{ij}$ is a quadratic Casimir of $\mathfrak{so}(n)$, with $\mathcal{L}_{ij}$ constituting some irreducible representation of $\mathfrak{so}(n)$. This information is of particular interest to us, since it allows us to write the action of $\sum_{i=1}^5 L^2_{i6}$ (\textit{which is what appears in $S_{\text{m,b;E}}$}) as the difference between the $\mathfrak{so}(6)$ and $\mathfrak{so}(5)$ Casismir.
+%
+%
+\begin{equation}\label{so(6) so(6) casimir differnce}
+\sum_{i=1}^5 L^2_{i6}
+=
+\frac{1}{2} \sum_{i,j=1}^6 L^2_{ij} - \frac{1}{2} \sum_{i,j=1}^5 L^2_{ij}
+=
+C_6(P_1,P_2,P_3) - C_5(L_1,L_2)
+\end{equation}
+%
+%
+Where the numbers $(P_1, P_2, P_3)$ and $(L_1,L_2)$ label the irreducible representations of $\mathfrak{so}(6)$ and $\mathfrak{so}(5)$ respectively, in terms of the highest weight state of a given irrep \footnote{More information about the representation theory of $\mathfrak{so}(5)$ and $\mathfrak{so}(6)$ can be found in appendix \ref{sec:so(5)_so(6)_rep_theory}.}. For the particular case of the $G_{ij}$ and $-G^T_{ij}$ matrices, of which both the subsets $G_{ij}$ and $-G^T_{ij}$ with $i,j=1,\ldots,5$ constitute the $(\tfrac{1}{2},0)$ representation of $\mathfrak{so}(5)$, we find that.
+%
+%
+\begin{equation}
+\sum_{i=1}^5 G_{i6} G_{i6}
+=
+C_6(\tfrac{n}{2},\tfrac{n}{2},\tfrac{n}{2}) - C_5(\tfrac{n}{2},0)
+=
+\frac{1}{4} n (n+4) \, \mathbb{1}_{d_n}
+\end{equation}
+%
+%
+\begin{equation}
+\sum_{i=1}^5 G^T_{i6} G^T_{i6}
+=
+C_6(\tfrac{n}{2},\tfrac{n}{2},-\tfrac{n}{2}) - C_5(\tfrac{n}{2},0)
+=
+\frac{1}{4} n (n+4) \, \mathbb{1}_{d_n}
+\end{equation}
+%
+%
+Thus, we find that the off-diagonal fileds, spanned by the matrices ${E^{n}}_{a}$ and ${E^{a}}_{n}$, all have indentical masses equal to the following.
+%
+%
+\begin{equation}
+m^2_{\text{off diag.}} = \frac{1}{8} n (n + 4)
+%
+\quad , \quad
+%
+\textit{multiplicity: } 2 d_n (N - d_n)
+\end{equation}
+%
+%
+Lastly, we find that the fields spanned by the matrices ${E^{n}}_{n'}$ transform in the product representation $(\tfrac{n}{2},\tfrac{n}{2},\tfrac{n}{2}) \otimes (\tfrac{n}{2},\tfrac{n}{2},-\tfrac{n}{2})$ of $\mathfrak{so}(6)$, since the upper and lower indices transform under the right and left part of the product separately. This product representation is not an irrep of $\mathfrak{so}(6)$, and so it can be decomposed into a sum of irreps, using for example $\mathfrak{so}(6) \simeq \mathfrak{su}(4)$  together with Young tableau techniques \cite{Lie groups and Lie algebras}.
+%
+%
+\begin{equation}\label{so(6) to so(6) decompoistion}
+(\tfrac{n}{2},\tfrac{n}{2},\tfrac{n}{2})
+\otimes
+(\tfrac{n}{2},\tfrac{n}{2},-\tfrac{n}{2})
+=
+\bigoplus_{m = 0}^{n}
+(m,m,0)
+\end{equation}
+%
+%
+In order to find a decomposition into fields with definite values of (\ref{so(6) so(6) casimir differnce}), we need to further consider how the $\mathfrak{so}(6)$ irreps $(m,m,0)$ decompose under the restriction to $\mathfrak{so}(5)$. The rules for decomposing irreps of unitary and orthogonal algebras into irreps of their canonical sub-algebras, was worked out by Gel'fand and Cetlin in the 1950s. For the spicific case of $(m,m,0)$ restricted to $\mathfrak{so}(5)$, we find the following decomposition into $\mathfrak{so}(5)$ irreps \cite{Lie groups and Lie algebras}.
+%
+%
+\begin{equation}\label{so(6) to so(5) decomposition single}
+(m,m,0)
+\to
+\bigoplus
+(L_1,L_2)
+%
+\quad , \quad
+%
+0 \leq L_1 - L_2 \leq m \leq L_1 + L_2 \leq m
+\end{equation}
+%
+%
+Combining (\ref{so(6) to so(6) decompoistion}) and (\ref{so(6) to so(5) decomposition single}), we find that the product $(\tfrac{n}{2},\tfrac{n}{2},\tfrac{n}{2}) \otimes (\tfrac{n}{2},\tfrac{n}{2},-\tfrac{n}{2})$, can be decomposed dircetly into the following $\mathfrak{so}(5)$ irreps \cite{One-point functions in D3-D7 SO(5)}.
+%
+%
+\begin{equation*}
+(\tfrac{n}{2},\tfrac{n}{2},\tfrac{n}{2})
+\otimes
+(\tfrac{n}{2},\tfrac{n}{2},-\tfrac{n}{2})
+\to
+\bigoplus
+(L_1,L_2)
+%
+\quad ,
+\end{equation*}
+%
+%
+\begin{equation}\label{so(6) to so(5) decomposition combined}
+0 \leq L_2 \leq L_1
+%
+\quad , \quad
+%
+0 \leq L_1 + L_2 \leq n
+\end{equation}
+%
+%
+Where the sum over $L_1$, $L_2$ above runs over half-integers. Analogously to the case of $\mathfrak{so}(3) \times \mathfrak{so}(3)$ symmetric vevs, we now need to decompose the $d_n \times d_n$ matrices ${E^n}_{n'}$, into a basis which transforms under definite representations of $\mathfrak{so}(5)$ and $\mathfrak{so}(6)$. Such a basis can be realized in the form of \textit{the fuzzy spherical harmonics} $\hat{Y}_{\mathbf{L}}$ over $S^4$.
+%
+%
+\begin{equation}
+\Psi_{n,n'} {E^{n}}_{n'}
+=
+\sum_{\mathbf{L}}
+\Psi_{\mathbf{L}} \hat{Y}_{\mathbf{L}}
+%
+\quad , \quad
+%
+0 \leq L_2 \leq L_1
+%
+\quad , \quad
+%
+0 \leq L_1 + L_2 \leq n
+\end{equation}
+%
+%
+Where $\mathbf{L}$ is shorthand for the quantum numbers $(L_1, L_2; \ell_1, m_1; \ell_2, m_2)$, used to uniquely identify states in a given $\mathfrak{so}(5)$ irrep. The labels $(L_1, L_2)$ are used to identify the $\mathfrak{so}(5)$ irrep, whereas the labels $(\ell_1, \ell_2)$ are used to identify one of the many $\mathfrak{so}(4) \simeq \mathfrak{su}(2) \times \mathfrak{su}(2)$ of which the $\mathfrak{so}(5)$ irrep consists. $(m_1,m_2)$ then specify a given state whithin any given $\mathfrak{so}(4)$ irrep. An explicit construction of the $\hat{Y}_{\mathbf{L}}$ matrices can be found in \cite{Fuzzy harmonics on S4}. The $S^4$ fuzzy harmonics can be normalized such as to obey the following orthogonality relation.
+%
+%
+\begin{equation}
+\tr[\hat{Y}_{\mathbf{L}}^\dagger \, \hat{Y}_{\mathbf{L}'}]
+=
+\delta_{\mathbf{L}, \mathbf{L}'}
+\end{equation}
+%
+%
+Using the above orthogonality realtion, together with the information of how the operator $\sum_{i=1}^5 L_{i6}^2$ acts on the fuzzy harmonics $\hat{Y}_{\mathbf{L}}$.
+%
+%
+\begin{equation*}
+\sum_{i=1}^5 L_{i6}^2 \, \hat{Y}_{\mathbf{L}}
+=
+[C_6(L_1 + L_2, L_1 + L_2, 0) - C_5(L_1, L_2)] \, \hat{Y}_{\mathbf{L}}
+\end{equation*}
+%
+%
+\begin{equation}
+=
+[2 L_1 L_2 + L_1 + 2 L_2] \, \hat{Y}_{\mathbf{L}}
+\end{equation}
+%
+%
+We find that the fields spanned by fuzzy harmonics $\hat{Y}_{\mathbf{L}}$, with given $(L_1, L_2)$, are eigen-fields of the operator $\sum_{i=1}^5 L_{i6}^2$ with the following masses.
+%
+%
+\begin{equation}
+m^2_{\text{diag. 1}}
+=
+2 L_1 L_2 + L_1 + 2 L_2
+%
+\quad , \quad
+%
+\textit{multiplicity: }
+d_5(L_1, L_2)
+\end{equation}
+%
+%
+\begin{equation}
+d_5(L_1, L_2)
+=
+\frac{1}{6} (2 L_1 + 2 L_2 + 3)(2 L_1 - 2 L_2 + 1)(2 L_2 + 1)(2 L_1 + 2) 
+\end{equation}
+%
+%
+
+%
+%
+\begin{table}
+%
+\begin{center}
+%
+% A table with adjusted row and column spacings
+% \setlength sets the horizontal (column) spacing
+% \arraystretch sets the vertical (row) spacing
+\begingroup
+\setlength{\tabcolsep}{10pt} % Default value: 6pt
+\renewcommand{\arraystretch}{2.0} % Default value: 1
+%
+\begin{tabular}{ !{\vrule width 1.5pt}c!{\vrule width 1.5pt}c!{\vrule width 1.5pt}c!{\vrule width 1.5pt} }
+	\noalign{\hrule height 1.5pt}
+ 	Mass eigenstates & Mass $m^2$ & Multiplicity \\
+ 	\noalign{\hrule height 1.5pt}
+ 	${\Psi^a}_{a'}$ & $m^2_{\text{diag. 2}} = 0$ & $(N-d_n)^2$ \\
+ 	\hline
+ 	${\Psi^n}_{a}$, ${\Psi^a}_{n}$ & $m^2_{\text{off diag.}} = \frac{1}{8} n (n + 4)$ & $2 d_n (N-d_n)$ \\
+ 	\hline
+ 	${\Psi^n}_{n'} \to \hat{Y}_{\mathbf{L}}$ & $m^2_{\text{diag. 1}} = 2 L_1 L_2 + L_1 + 2 L_2$ & $d_5(L_1, L_2)$ \\
+ 	\noalign{\hrule height 1.5pt}
+\end{tabular}
+%
+\endgroup
+% The \begingroup ... \endgroup pair ensures the separation
+% parameters only affect this particular table, and not any
+% sebsequent ones in the document.
+%
+\end{center}
+%
+\caption[Masses and eigenstates for $SO(5)$ easy bosons]{Masses and eigenstates of the easy bosons: $\Psi = \{ \phi_6, A_0, A_1, A_2 \}$, with respect to the block decomposition in (\ref{field blocks}), for $SO(5)$ symmetric vevs. The ranges of the $\mathfrak{so}(5)$ irrep lables are, $0 \leq L_2 \leq L_1$ and $0 \leq L_1 + L_2 \leq n$.}
+%
+\label{tab:boson_masses_easy_so(5)}
+%
+\end{table}
+%
+%
+
+\paragraph{The Complicated Fields}
+We now turn our attention towards the part $S_{\text{m,b;C}}$ of the boson mass action, which contains the complicated fields $C$. Just as in the case of $SO(3) \times SO(3)$ symmetric vevs, the added complication for the complicated fields as compared to the easy ones, is that the operator in $S_{\text{m,b;C}}$ mixes the fields in $C$. The process of finding the fields whch diagonalize $S_{\text{m,b;C}}$ is also very similar to what has already been dicussed for the $SO(3) \times SO(3)$ case. We start by looking for fields which diagonalize the $5 \times 5$ part of the operator in $S_{\text{m,b;C}}$.
+%
+%
+\begin{equation}\label{5x5 block operator}
+\sum_{i=1}^5 L_{i6}^2
+-
+\sum_{i,j=1}^5 S_{ij} L_{ij}
+=
+\frac{1}{2} \sum_{i,j=1}^6 L_{ij}^2
+-
+\frac{1}{2} \sum_{i,j=1}^5 L_{ij}^2
+-
+\sum_{i,j=1}^5 S_{ij} L_{ij} 
+\end{equation}
+%
+%
+We now introduce a total '$\mathfrak{so}(5)$ angular momentum', such that we can write the coupling term in the above expression as follow.
+%
+%
+\begin{equation}
+J_{ij} \equiv L_{ij} + S_{ij}
+%
+\quad , \quad
+%
+\sum_{i,j=1}^5 S_{ij} L_{ij}
+=
+\frac{1}{2} \sum_{i,j=1}^5 \left[
+J_{ij}^2 - L_{ij}^2 - S_{ij}^2
+\right]
+\end{equation}
+%
+%
+Note that the operators $L_{ij}$ act trivially in flavor-space, while the matrices $S_{ij}$ act trivially in color-space. Thus, we conclude that $[L_{ij}, S_{kl}] = 0$, which implies that we can find a basis of modified fuzzy harmonics transforming under the $\mathfrak{so}(5)$ irrep labeled by $\mathbf{J} = (J_1, J_2; j_1, n_1; j_2, n_2)$ when acted upon by $J_{ij}$, while simultaniously retaining the representation labels $(L_1, L_2)$ and $(S_1, S_2)$ when acted upon by $L_{ij}$ and $S_{ij}$ respectively. We denote these modified fuzzy harmonics by $\hat{Y}^{\alpha_1, \alpha_2}_{\mathbf{J}}$, were $J_1 = L_1 + \alpha_1$ and $J_2 = L_2 + \alpha_2$. We can now expand any complicated scalar in terms of these modified fuzzy harmonics \cite{One-point functions in D3-D7 SO(5)}.
+%
+%
+\begin{equation}
+\Psi
+=
+\sum_{\alpha_1, \alpha_2} \sum_{\mathbf{J}}
+[\mathcal{B}_{\alpha_1, \alpha_2}]_{\mathbf{J}} \,
+\hat{Y}^{\alpha_1, \alpha_2}_{\mathbf{J}}
+%
+\quad , \quad
+%
+\Psi \in \{ \phi_1 , \phi_2 , \phi_3 , \phi_4 , \phi_5 \}
+\end{equation}
+%
+%
+The component $A_3$ of the gauge field do not mix with the scalar, and can simply be epanded in terms of the non-modified fuzzy harmonics $\hat{Y}_{\mathbf{J}}$. The possible values of $\alpha_1$, $\alpha_2$ are determined by the rules for decomposing product representations of $\mathfrak{so}(5)$. Since $S_{ij}$ constitute the fundamental representaion $(\tfrac{1}{2},\tfrac{1}{2})$ of $\mathfrak{so}(5)$, we will be interested in the decomposition of $(L_1, L_2) \otimes (\tfrac{1}{2},\tfrac{1}{2})$ in particular. There are $3$ cases for this particuar decomposition, apart from the trivial $L_1 = L_2 = 0$ case \cite{SO(5) and SO(6) rep theory, Lie groups and Lie algebras}.
+
+\newpage
+%
+%
+\begin{subequations}
+%
+%
+\begin{equation*}
+(L_1, L_2) \otimes (\tfrac{1}{2}, \tfrac{1}{2})
+=
+(L_1 + \tfrac{1}{2}, L_2 + \tfrac{1}{2})
+\oplus
+(L_1 + \tfrac{1}{2}, L_2 - \tfrac{1}{2})
+\oplus
+(L_1 - \tfrac{1}{2}, L_2 + \tfrac{1}{2})
+\end{equation*}
+%
+%
+\begin{equation}\label{so(5) desomposition general}
+\oplus
+(L_1 - \tfrac{1}{2}, L_2 - \tfrac{1}{2})
+\oplus
+(L_1, L_2)
+%
+\quad , \quad
+%
+0 < L_2 < L_1
+\end{equation}
+%
+%
+
+%
+%
+\begin{equation}\label{so(5) desomposition equal L1 L2}
+(L, L) \otimes (\tfrac{1}{2}, \tfrac{1}{2})
+=
+(L + \tfrac{1}{2}, L + \tfrac{1}{2})
+\oplus
+(L + \tfrac{1}{2}, L - \tfrac{1}{2})
+\oplus
+(L - \tfrac{1}{2}, L - \tfrac{1}{2})
+%
+\quad , \quad
+%
+0 < L
+\end{equation}
+%
+%
+
+%
+%
+\begin{equation}\label{so(5) desomposition zero L2}
+(L, 0) \otimes (\tfrac{1}{2}, \tfrac{1}{2})
+=
+(L + \tfrac{1}{2}, \tfrac{1}{2})
+\oplus
+(L - \tfrac{1}{2}, \tfrac{1}{2})
+\oplus
+(L, 0)
+%
+\quad , \quad
+%
+0 < L
+\end{equation}
+%
+%
+\end{subequations}
+%
+%
+For the generic case, we see that $(\alpha_1, \alpha_2) \in \{ (\pm \tfrac{1}{2}, \pm \tfrac{1}{2}), (\pm \tfrac{1}{2}, \mp \tfrac{1}{2}), (0,0) \}$. Now that we have found a basis $\hat{Y}^{\alpha_1, \alpha_2}_{\mathbf{J}}$ for the complicated fields $C$, which is also an eigen-basis for the operator (\ref{5x5 block operator}) in the $5 \times 5$ block of the mass-matrix (\ref{complicated boson mass action so(5)}).
+%
+%
+\begin{equation*}
+\left[
+\sum_{i=1}^5 L_{i6}^2
+-
+\sum_{i,j=1}^5 S_{ij} L_{ij}
+\right] \, \hat{Y}^{\alpha_1, \alpha_2}_{\mathbf{J}}
+=
+\Big[
+C_6(J_2 + J_1 - \alpha_1 - \alpha_2, J_2 + J_1 - \alpha_1 - \alpha_2)
+\end{equation*}
+%
+%
+\begin{equation}\label{5x5 block masses}
+-
+C_5(J_1, J_2)
++
+C_5(\tfrac{1}{2},\tfrac{1}{2})
+\Big] \, \hat{Y}^{\alpha_1, \alpha_2}_{\mathbf{J}}
+\end{equation}
+%
+%
+We can now try to construct from $\hat{Y}^{\alpha_1, \alpha_2}_{\mathbf{J}}$, eigen-vectors for the entire $6 \times 6$ operator found in $S_{\text{m,b;C}}$ (\ref{complicated boson mass action so(5)}). We employ the same idea as used for the case of $\mathfrak{so}(3) \times \mathfrak{so}(3)$ symmetric vevs.
+%
+%
+\begin{enumerate}
+%
+\item Start by check whcih of the fuzzy spherical harmonic $\hat{Y}^{\alpha_1, \alpha_2}_{\mathbf{J}}$, if any, are annihilated by the operator $\sum_{i=1}^5 R_{i}^\dagger L_{i6}$.
+%
+\item For each fuzzy harmonic $\hat{Y}^{\alpha_1, \alpha_2}_{\mathbf{J}}$ which is annihilated by $\sum_{i=1}^5 R_{i}^\dagger L_{i6}$, append to it a $0$ to make a vector of size $6$:
+%
+%
+\begin{equation}\label{eigen-vector of 6x6 block}
+\hat{Y}^{\alpha_1, \alpha_2}_{\mathbf{J}} \to
+\left( \begin{array}{c}
+\hat{Y}^{\alpha_1, \alpha_2}_{\mathbf{J}} \\
+0 \\
+\end{array} \right)
+\end{equation}
+%
+%
+\item All the vectors of size $6$ given by (\ref{eigen-vector of 6x6 block}), for whcih $\sum_{i=1}^5 R_{i}^\dagger L_{i6} \, \hat{Y}^{\alpha_1, \alpha_2}_{\mathbf{J}} = 0$, will be eigen-vectors of the complicated mass-matrix found in (\ref{complicated boson mass action so(5)}).
+%
+\end{enumerate}
+%
+%
+One can now explicitly check, as was done in \cite{One-point functions in D3-D7 SO(5)}, that the fuzzy harmonics $\hat{Y}^{\pm, \pm}_{\mathbf{J}}$ and $\hat{Y}^{0, 0}_{\mathbf{J}}$ are indeed annihilated by $\sum_{i=1}^5 R_{i}^\dagger L_{i6}$, and thus they each span sub-spaces of fields with definite masses (\ref{5x5 block masses}).
+%
+%
+\begin{align}
+& m^2_{00} = L_1 + 2 L_2 (L_1 + 1) + 2
+%
+\quad , \quad
+%
+\textit{multiplicity: } d_5(L_1, L_2)
+\\
+& m^2_{++} = (2 L_1 + 1) L_2
+%
+\quad , \quad\quad\quad\quad\;\;
+%
+\textit{multiplicity: } d_5 \left( L_1 + \tfrac{1}{2}, L_2 + \tfrac{1}{2} \right)
+\\
+& m^2_{--} = (2 L_1 + 3) (L_2 + 1)
+%
+\quad , \quad\quad\,
+%
+\textit{multiplicity: } d_5 \left( L_1 - \tfrac{1}{2}, L_2 - \tfrac{1}{2} \right)
+\end{align}
+%
+%
+They remaining fields spanned by the modified fuzzy harmonics $\hat{Y}^{\pm, \mp}_{\mathbf{J}}$, can now be joined with the $A_3$ component of the gauge field to form a vector of size $6$.
+%
+%
+\begin{equation}\label{non-diagonal sub-space vetor}
+\mathcal{B} = \left( \begin{array}{c}
+\sum_{\alpha_1, \alpha_2, \mathbf{J}}
+[B_{\alpha_1, \alpha_2}]_{\mathbf{J}} \,
+\hat{Y}^{\alpha_1, \alpha_2}_{\mathbf{J}} \\
+\sum_{\mathbf{J}}
+[A_3]_{\mathbf{L}} \, 
+\hat{Y}_{\mathbf{L}} \\
+\end{array} \right)
+%
+\quad , \quad
+%
+(\alpha_1, \alpha_2) \in \{ (+,-), (-,+) \}
+\end{equation}
+%
+%
+Just as with the case of $\mathfrak{so}(3) \times \mathfrak{so}(3)$ symmetric vevs, we have to 'manually' diagonalize the mass-matrix found in (\ref{complicated boson mass action so(5)}), in the sub-space containing vectors of the form $\mathcal{B}$. By inserting the fields $\mathcal{B}$ into $S_{\text{m,b;C}}$, one obtains a $3 \times 3$ matrix whose eigen-fields we will denote by $[\mathfrak{B}_0]_{\mathbf{J}}$ and $[\mathfrak{B}_{\pm}]_{\mathbf{J}}$. The explicit construction of $[\mathfrak{B}_0]_{\mathbf{J}}$, $[\mathfrak{B}_{\pm}]_{\mathbf{J}}$ in terms of $[\mathcal{B}_{\pm, \mp}]_{\mathbf{J}}$, $[A_3]_{\mathbf{L}}$ can be found in \cite{One-point functions in D3-D7 SO(5)}. Here will will simply present the associated mass eigen-values together with thier multiplicities.
+%
+%
+\begin{align}
+& m^2_{0} = L_1 + 2 L_2 (L_1 + 1) + 2
+%
+\quad , \quad\quad\quad\;\;
+%
+\textit{multiplicity: } d_5(L_1, L_2)
+\\
+& m^2_{+} = L_1 + 2 L_2 (L_1 + 1) + 2 + \lambda_{+}
+%
+\quad , \quad
+%
+\textit{multiplicity: } d_5(L_1, L_2)
+\\
+& m^2_{-} = L_1 + 2 L_2 (L_1 + 1) + 2 + \lambda_{-}
+%
+\quad , \quad
+%
+\textit{multiplicity: } d_5(L_1, L_2)
+\end{align}
+%
+%
+Where $\lambda_{\pm} = -1 \pm \sqrt{1 + 4 (L_1 + 2 L_2 (L_1 + 1))}$. So far we have only been concerned with the most generic decomposition (\ref{so(5) desomposition general}). If we instead look at the case (\ref{so(5) desomposition equal L1 L2}), we find that the possible values for the $\alpha_1$ and $\alpha_2$ parameters are now limited to: $(\alpha_1, \alpha_2) \in \{ (\pm \tfrac{1}{2}, \pm \tfrac{1}{2}), (\tfrac{1}{2}, -\tfrac{1}{2}) \}$. Thus, the fields $\mathcal{B}_{00}$ and $\mathcal{B}_{-+}$ are missing for in this case. One can go through procedure of 'manually diagonalizing' the sub-space spanned by (\ref{non-diagonal sub-space vetor}), now without $\mathcal{B}_{-+}$, and find that this leads to the absence of $\mathfrak{B}_0$. For the (\ref{so(5) desomposition zero L2}), we find that: $(\alpha_1, \alpha_2) \in \{ (\tfrac{1}{2}, \tfrac{1}{2}), (-\tfrac{1}{2}, \tfrac{1}{2}), (0,0) \})$. This leads to the absence of $\mathcal{B}_{++}$ and $\mathcal{B}_{-+}$. The absence of $\mathcal{B}_{-+}$ truns out to also implie the absence of $\mathfrak{B}_0$.\\
+%
+%
+\begin{table}
+%
+\begin{center}
+%
+% A table with adjusted row and column spacings
+% \setlength sets the horizontal (column) spacing
+% \arraystretch sets the vertical (row) spacing
+\begingroup
+\setlength{\tabcolsep}{10pt} % Default value: 6pt
+\renewcommand{\arraystretch}{2.0} % Default value: 1
+%
+\begin{tabular}{ !{\vrule width 1.5pt}c!{\vrule width 1.5pt}c!{\vrule width 1.5pt}c!{\vrule width 1.5pt} }
+	\noalign{\hrule height 1.5pt}
+ 	Mass eigenstates & Mass $m^2$ & Multiplicity \\
+ 	\noalign{\hrule height 1.5pt}
+ 	$\mathcal{B}_{00}$ & $m^2_{00} = L_1 + 2 L_2 (L_1 + 1) + 2$ & $d_5(L_1,L_2)$ \\
+ 	\hline
+ 	$\mathcal{B}_{++}$ & $m^2_{++} = (2 L_1 + 1) L_2$ & $d_5 \left( L_1 + \tfrac{1}{2}, L_2 + \tfrac{1}{2} \right)$ \\
+ 	\hline
+ 	$\mathcal{B}_{--}$ & $m^2_{--} = (2 L_1 + 3) (L_2 + 1)$ & $d_5 \left( L_1 - \tfrac{1}{2}, L_2 - \tfrac{1}{2} \right)$ \\
+ 	\hline
+ 	$\mathfrak{B}_0$ & $m^2_0 = L_1 + 2 L_2 (L_1 + 1) + 2$ & $d_5(L_1,L_2)$ \\
+ 	\hline
+ 	$\mathfrak{B}_+$ & $m^2_+ = L_1 + 2 L_2 (L_1 + 1) + 2 + \lambda_+$ & $d_5(L_1,L_2)$ \\
+ 	\hline
+ 	$\mathfrak{B}_-$ & $m^2_- = L_1 + 2 L_2 (L_1 + 1) + 2 + \lambda_-$ & $d_5(L_1,L_2)$ \\
+ 	\noalign{\hrule height 1.5pt}
+\end{tabular}
+%
+\endgroup
+% The \begingroup ... \endgroup pair ensures the separation
+% parameters only affect this particular table, and not any
+% sebsequent ones in the document.
+%
+\end{center}
+%
+\caption[Masses and eigenstates for $SO(5)$ comp. bosons: $d_n \times d_n$ block]{Masses and eigenstates of the complicated bosons in the $d_n \times d_n$ block for the case of $SO(5)$ symmetric vevs. In the above, $0 \leq L_2 \leq L_1$ and $0 \leq L_1 + L_2 \leq n$. For $0 < L_2 < L_1$, all the above fields are present. For the case of $0 < L_2 = L_1$, the fields $\mathcal{B}_{00}$ and $\mathfrak{B}_0$ are missing. For the case of $0 < L_1$, $L_2 = 0$, the fields $\mathcal{B}_{--}$ and $\mathfrak{B}_0$ are missing.}
+%
+\label{tab:boson_masses_complicated_so(5)}
+%
+\end{table}
+%
+%
+The non-generic case (\ref{so(5) desomposition zero L2}) can also be used to obtain the fields eigen-fields in the off-diagonal blocks. From the analysis of the easy fields, we know that the matrices ${E^a}_n$, ${E^n}_a$ transform in the $(\tfrac{n}{2},\tfrac{n}{2},\tfrac{n}{2})$, $(\tfrac{n}{2},\tfrac{n}{2},-\tfrac{n}{2})$ of $\mathfrak{so}(6)$ respectively, which both reduce to $(\tfrac{n}{2},0)$ when restricted to $\mathfrak{so}(5)$. This is different from the $d_n \times d_n$ block, where a $\mathfrak{so}(5)$ irrep  labeled by $(L_1,L_2)$ originated from the $(L_1 + L_2, L_1 + L_2,0)$ of $\mathfrak{so}(6)$. Thus, the ${E^a}_n$, ${E^n}_a$ matrices have different eigenvalues w.r.t. the $\mathfrak{so}(6)$ Cassimir, than a fuzzy harmonic $\hat{Y}_{\mathbf{L}}$ with $(L_1=\tfrac{n}{2}, L_2 = 0)$ from the $d_n \times d_n$ block. This leads to the eigen-fields for the off-diagonal blocks having slightly different masses than those of the $d_n \times d_n$ upper diagonal block with the same $\mathfrak{so}(5)$ quantum numbers. This is the only detial\footnote{Which of the modified fuzzy harmonics $\hat{Y}^{\alpha_1,\alpha_2}_{\mathbf{J}}$ are annihilated by $\sum_{i=1}^5 R^\dagger_i L_{i6}$ also change, and consequently which eigen-fields are present. For more detials, see \cite{One-point functions in D3-D7 SO(5)}.} which makes the analysis of the off-diagonal blocks different from the upper diagonal $d_n \times d_n$ block, and so we will not go through the detials of diagonalizing the off-diagonal fields, but simply present the eigen-fields and corresponding masses in table \ref{tab:boson_masses_complicated_so(5)_off-diagonal}.\\
+This concludes our discussion of the diagonalization procedure for the boson mass matrix in the case of $\mathfrak{so}(5)$ symmetric vevs. In proceeding sections, we will also need the propagators between the original $\mathcal{N} = 4$ bosonic fields $\{\phi_i , A_\mu \}$, with $i=1,\ldots,6$ and $\mu = 0,\ldots, 3$. As for the $SO(3) \times SO(3)$ symmetric case, this can be done by tracing back the diagonalization procedure to find expressions for $\{\phi_i , A_\mu \}$ in terms of the appropriate diagonalizing fields. These expressions were found in \cite{One-point functions in D3-D7 SO(5)}, and so we refer to this work for detials about their derivation.
+%
+%
+\begin{table}
+%
+\begin{center}
+%
+% A table with adjusted row and column spacings
+% \setlength sets the horizontal (column) spacing
+% \arraystretch sets the vertical (row) spacing
+\begingroup
+\setlength{\tabcolsep}{10pt} % Default value: 6pt
+\renewcommand{\arraystretch}{2.0} % Default value: 1
+%
+\begin{tabular}{ !{\vrule width 1.5pt}c!{\vrule width 1.5pt}c!{\vrule width 1.5pt}c!{\vrule width 1.5pt} }
+	\noalign{\hrule height 1.5pt}
+ 	Mass eigenstates & Mass $m^2$ & Multiplicity \\
+ 	\noalign{\hrule height 1.5pt}
+ 	$\mathcal{B}_{++}$ & $m^2_{++} = \frac{1}{8} n^2$ & $2 d_5 \left(\frac{n+1}{2}, \tfrac{1}{2} \right) (N - d_n)$ \\
+ 	\hline
+ 	$\mathcal{B}_{-+}$ & $m^2_{-+} = \frac{1}{8} (n+4)^2$ & $2 d_5 \left(\frac{n-1}{2}, \tfrac{1}{2} \right) (N - d_n)$ \\
+ 	\hline
+ 	$\mathfrak{B}_+$ & $m^2_+ = \frac{1}{8} (n^2 + 4 n + 16 + \lambda_+)$ & $2 d_5 \left(\frac{n}{2}, 0 \right) (N - d_n)$ \\
+ 	\hline
+ 	$\mathfrak{B}_-$ & $m^2_- = \frac{1}{8} (n^2 + 4 n + 16 + \lambda_-)$ & $2 d_5 \left(\frac{n}{2}, 0 \right) (N - d_n)$ \\
+ 	\noalign{\hrule height 1.5pt}
+\end{tabular}
+%
+\endgroup
+% The \begingroup ... \endgroup pair ensures the separation
+% parameters only affect this particular table, and not any
+% sebsequent ones in the document.
+%
+\end{center}
+%
+\caption[Masses and eigenstates for $SO(5)$ comp. bosons: off-diag. blocks]{Masses and eigenstates of the complicated bosons in the off-diagonal blocks for the case of $SO(5)$ symmetric vevs. In the above, $\lambda_{\pm} = -8 \pm 4 \sqrt{2 (n^2 + 4 n + 2)}$.}
+%
+\label{tab:boson_masses_complicated_so(5)_off-diagonal}
+%
+\end{table}
+%
+%
+
+\subsection{The field propagators}\label{sec:field propagators}
+Now that we know the masses of the fields which diagonalize the mass terms $S_{\text{m,b}}$ and $S_{\text{m,f}}$, we have almost done all the ground work needed to begin perturbative calculations in our dCFT setups. The last unusual thing we need to deal with, is the spacetime dependence in $S_{\text{m,b}}$ and $S_{\text{m,f}}$, which effectively change the standard Minkowski-space propagator equation to the following.
+%
+%
+\begin{equation}\label{propagator equation}
+\left(
+-\partial_\mu \partial^\mu + \frac{m^2}{x_3^2}
+\right)
+K(x,y)
+=
+\frac{g^2}{2} \delta(x-y)
+\end{equation}
+%
+%
+The trick to solving the above equation \cite{One-point functions in D5-D3}, is to define the following modified propagator $\tilde{K}(x,y)$.
+%
+%
+\begin{equation}
+K(x,y) = \frac{g^2}{2} \frac{\tilde{K}(x,y)}{x_3 y_3}
+\end{equation}
+%
+%
+We can now insert the above definition into the propagator equation (\ref{propagator equation}). The result is as follow.
+%
+%
+\begin{equation}\label{modified propagator equation}
+\left(
+-x_3^2 \partial_\mu \partial^\mu + 2 x_3 \partial_3 + m^2 - 2
+\right)
+\tilde{K}(x,y)
+=
+x_3^4 \delta(x-y)
+\end{equation}
+%
+%
+The above form of the propagator equation is indetical to the propagator equation of $AdS_4$ space. To see this, we first write the general curved space version of the Klein Gordon propagator equation.
+%
+%
+\begin{equation}\label{curved space propagator equation}
+\left(
+- \nabla_\mu \nabla^\mu + \tilde{m}^2
+\right)
+K_{AdS}(x,y)
+=
+\frac{\delta(x-y)}{\sqrt{g}}
+\end{equation}
+%
+%
+Given that we use Poincar\'{e} coordinates on $AdS_4$, the metric components take the following form.
+%
+%
+\begin{equation}
+g_{\mu\nu} = \frac{1}{x_3^2} \delta_{\mu\nu}
+%
+\quad , \quad
+%
+g^{\mu\nu} = x_3^2 \delta^{\mu\nu}
+%
+\quad , \quad
+%
+\sqrt{g} = \frac{1}{x_3^4}
+\end{equation}
+%
+%
+\begin{equation}
+-\nabla_\mu \nabla^\mu
+=
+-\frac{1}{\sqrt{g}} \partial_\mu \left( g^{\mu\nu} \sqrt{g} \, \partial_\nu \right)
+=
+-x_3^2 \partial_\mu \partial^\mu + 2 x_3 \partial_3
+\end{equation}
+%
+%
+Inserting the above into equation (\ref{curved space propagator equation}), we find it takes exactly the same form as (\ref{modified propagator equation}), given that we make the identification: $\tilde{m}^2 = m^2 - 2$. The solutions to equation (\ref{modified propagator equation}) as propagators on $AdS_4$ are well known in the literature, and can be written in the following way using \textit{hypergeometric functions} \cite{Two-point functions in D5-D3}. The solutions to equation (\ref{propagator equation}) can then be written as follow.
+%%
+%%
+%\begin{equation}
+%K^{m^2}(x,y) = \frac{g^2}{2 x_3 y_3}
+%\frac{\Gamma(\Delta) \tilde{\xi}^{\Delta}(x,y)}
+%{2^{\Delta} (2 \Delta - 3) \pi^{3 / 2} \Gamma(\Delta - \frac{3}{2})}
+%{}_2F_1 \left(
+%\frac{\Delta}{2}, \frac{\Delta + 1}{2}; \Delta - \frac{1}{2}; \tilde{\xi}^2(x,y)
+%\right)
+%\end{equation}
+%%
+%%
+%Where $\Delta = \frac{3}{2} + \nu$, and $\nu = \sqrt{m^2 + \frac{1}{4}}$. Using numerous identities for the hypergeometrc function and the gamma function, the propagator can also be written as follow. $\tilde{\xi}^{-1}(x,y) = 2 \xi(x,y) + 1$
+
+\newpage
+%
+%
+\begin{equation}
+K^{m^2}(x,y)
+=
+\frac{g^2}{16 \pi^2 x_3 y_3}
+\binom{2 \nu + 1}{\nu + \frac{1}{2}}^{-1}
+\frac{{}_2F_1 \left(
+\nu - \frac{1}{2}, \nu + \frac{1}{2}; 2 \nu + 1; -\xi^{-1}
+\right) }
+{(1 + \xi) \xi^{\nu + \frac{1}{2}} }
+\end{equation}
+%
+%
+\begin{equation}
+\xi = \frac{|x-y|^2}{4 x_3 y_3}
+%
+\quad , \quad
+%
+\nu = \sqrt{m^2 + \frac{1}{4}}
+\end{equation}
+%
+%
+We note here, that the specific combination $\xi$ of $x_3$ and $y_3$, appearing in the above propagator, is actually connected to the $SO(3,2)$ symmetry of the dCFT setups. The same goes for the combination $(x_3 y_3)^{-1}$. More on this in section $\ref{sec:CPO}$. For a treatment of the fermion propagators, see for example \cite{One-point functions in D5-D3}.
+
+
+

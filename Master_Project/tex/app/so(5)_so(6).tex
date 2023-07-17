@@ -1,0 +1,578 @@
+% \newgeometry{top=2cm,left=2cm,right=2cm,bottom=2cm} 
+%
+\section{Representation theory for $\mathbf{\mathfrak{so}(5)}$ and $\mathbf{\mathfrak{so}(6)}$}\label{sec:so(5)_so(6)_rep_theory}
+Back in section \ref{sec:dCFT}, during the process of diagonalizing the boson mass matrix for $\mathfrak{so}(5)$ symmetric vevs, we naturally made heavy use of representation theory for $\mathfrak{so}(5)$ and $\mathfrak{so}(6)$. In this appendix, we will discuss these Lie algebra in greater detial; our conventions, dimensions of irreducible representations etc. Our starting point will be the defining commutation relations for the general $\mathfrak{so}(n)$ algebra.
+%
+%
+\begin{equation}\label{so(n) commutators}
+[L_{ij}, L_{kl}] = i (
+\delta_{ik} L_{jl}
++
+\delta_{jl} L_{ik}
+-
+\delta_{il} L_{jk}
+-
+\delta_{jk} L_{il}
+)
+%
+\quad , \quad
+%
+i,j,k,l = 1,\ldots,n
+\end{equation}
+%
+%
+Since all the $SO(n)$ groups are compact groups, any given group representations is equivalent to a unitary representation, and we can thus assume $L_{ij}$ to be Hermitian. Using the above commutation relations, we can now restrict our attention to the cases $n=5$, $n=6$.
+
+\subsection{$\mathfrak{so}(5)$ representation theory}
+The Lie algebra $\mathfrak{so}(5)$ consists of the $10$ independent generators $L_{ij}$, with $i > j$ and $i,j = 1,\ldots,5$. The algebra is of rank $2$, meaning that one can find $2$ mutually commuting generators among the total $10$ generators at maximum. A maximal set of commuting generators in any Lie algebra is referred to as a \textit{Cartan sub-algebra}. Since all generators in any Cartan sub-algebra are mutually commuting (\textit{and Hermitian}), it is possible to find a common eigen-basis for any representation space. One can then use the eigenvalues with respect to the Cartan generators to label the states in a given representation of the algebra. Certain linear combinations of the remaining generators can then be used as ladder-operators, which map states with given Cartan eigenvalues into states with different Cartan eigenvalues. These ladder-operators can be associated to so-called \textit{root vectors} according to how much the eigenvalues of a given state changes when acted upon. For the case of $\mathfrak{so}(5)$, there exist $8$ roots.
+%
+%
+\begin{equation}
+\alpha^{(1)} = \left( 0 , 1 \right)
+%
+\quad , \quad
+%
+\alpha^{(2)} = \left( \frac{1}{2} , -\frac{1}{2} \right)
+%
+\quad , \quad
+%
+\alpha^{(3)} = \left( 1 , 0 \right)
+%
+\quad , \quad
+%
+\alpha^{(4)} = \left( \frac{1}{2} , \frac{1}{2} \right)
+\end{equation}
+%
+%
+The other $4$ root vectors are the negatives of the above. It is in fact generally  true, that if $\alpha$ is a root vector, so is $-\alpha$. It would at this point be appropriate to introduce some relevant terminology. The root vectors whose first non-zero entry is positive, are called \textit{positive roots}. These always constitute half of the roots. The positive root vectors which can not be written as sum of other positive roots, are called \textit{simple roots}. Any positive root can be written as a sum, with positive integer coefficients, of simple roots. Thus, if we know the simple roots of any given Lie algebra, we can construct all the roots. For the case of $\mathfrak{so}(5)$, the root vectors $\alpha^{(1)}$ and $\alpha^{(2)}$ are simple.\\
+Let us now choose a specific Cartan sub-algebra for $\mathfrak{so}(5)$. Using (\ref{so(n) commutators}), it can readily be seen that the following $2$ linear combinations of generators commute.
+%
+%
+\begin{equation}\label{Cartan generators so(5)}
+H_1 = \frac{1}{2} (L_{14} + L_{25})
+%
+\quad , \quad
+%
+H_2 = \frac{1}{2} (L_{14} - L_{25})
+\end{equation}
+%
+%
+We can now use the eigenvalues of the chosen set of Cartan generators above, to label the states of a given representation of $\mathfrak{so}(5)$.
+%
+%
+\begin{equation}
+H_1 \ket{m_1,m_2} = m_1 \ket{m_1,m_2}
+%
+\quad , \quad
+%
+H_2 \ket{m_1,m_2} = m_2 \ket{m_1,m_2}
+\end{equation}
+%
+%
+It turns out the the ladder-operators corresponding to $\pm \alpha_1$ and $\pm \alpha_2$, form $2$ independent $\mathfrak{su}(2)$ sub-algebra with $H_1$ and $H_2$ respectively. The ladder-operators $F_{\pm 1, 0}$ corresponding to $\pm \alpha_1$, and the ladder-operators $F_{0,\pm 1}$ corresponding to $\pm \alpha_2$, are given as follow.
+%
+%
+\begin{equation}
+F_{\pm 1, 0} = \frac{1}{2} [(L_{15} + L_{42}) \pm i (L_{45} + L_{21})]
+\end{equation}
+%
+%
+\begin{equation}
+[H_1, F_{\pm 1, 0}] = \pm F_{\pm 1, 0}
+%
+\quad , \quad
+%
+[F_{+1, 0}, F_{-1, 0}] = 2 H_1
+\end{equation}
+%
+%
+
+%
+%
+\begin{equation}
+F_{0,\pm 1} = \frac{1}{2} [(L_{15} - L_{42}) \pm i (L_{45} - L_{21})]
+\end{equation}
+%
+%
+\begin{equation}
+[H_2, F_{0,\pm 1}] = \pm F_{0,\pm 1}
+%
+\quad , \quad
+%
+[F_{0, +1}, F_{0, -1}] = 2 H_2
+\end{equation}
+%
+%
+It should not surprise us that the above $2$ independent $\mathfrak{su}(2)$ sub-algebra can be found inside $\mathfrak{so}(5)$, since we know that $\mathfrak{so}(4) \subset \mathfrak{so}(5)$, and $\mathfrak{su}(2) \times \mathfrak{su}(2) \simeq \mathfrak{so}(4)$. Because of the existence of the $2$ $\mathfrak{su}(2)$ sub-algebra, we are able to assign further labels to the representation states, using the eigenvalues of the $\mathfrak{su}(2)$ Casimir operators.
+%
+%
+\begin{equation}
+J_1^2 \equiv F_{-1,0} F_{+1,0} + H_1 (H_1 + 1)
+\end{equation}
+%
+%
+\begin{equation}
+J_1^2 \ket{\ell_1, m_1;\ell_2, m_2} = \ell_1 (\ell_1 + 1) \ket{\ell_1, m_1;\ell_2, m_2}
+\end{equation}
+%
+%
+
+%
+%
+\begin{equation}
+J_2^2 \equiv F_{0,-1} F_{0,+1} + H_2 (H_2 + 1)
+\end{equation}
+%
+%
+\begin{equation}
+J_2^2 \ket{\ell_1, m_1;\ell_2, m_2} = \ell_2 (\ell_2 + 1) \ket{\ell_1, m_1;\ell_2, m_2}
+\end{equation}
+%
+%
+The remaining $4$ ladder-operators of the $\mathfrak{so}(5)$ algebra, corresponding to $\pm \alpha_3$ and $\pm \alpha_4$, can now be constructed using the remaining independent $L_{ij}$ generators.
+%
+%
+\begin{equation}\label{so(5) ladder-operators}
+F_{\pm \frac{1}{2},\pm \frac{1}{2}} = \frac{1}{\sqrt{2}} (L_{34} \pm i L_{13})
+%
+\quad , \quad
+%
+F_{\pm \frac{1}{2},\mp \frac{1}{2}} = \frac{1}{\sqrt{2}} (L_{53} \pm i L_{32})
+\end{equation}
+%
+%
+The commutation relations between between the above ladder-operators $F_{\pm \frac{1}{2},\pm \frac{1}{2}}$ and $F_{\pm \frac{1}{2},\mp \frac{1}{2}}$, and the Cartan generators $H_1$ and $H_2$, looks as one would expect given which root vectors they correspond to. We list below for future reference.
+%
+%
+\begin{equation}
+[H_1, F_{\pm \frac{1}{2},\pm \frac{1}{2}}] = \pm \frac{1}{2} F_{\pm \frac{1}{2},\pm \frac{1}{2}}
+%
+\quad , \quad
+%
+[H_2, F_{\pm \frac{1}{2},\pm \frac{1}{2}}] = \pm \frac{1}{2} F_{\pm \frac{1}{2},\pm \frac{1}{2}}
+\end{equation}
+%
+%
+\begin{equation}
+[H_1, F_{\pm \frac{1}{2},\mp \frac{1}{2}}] = \pm \frac{1}{2} F_{\pm \frac{1}{2},\mp \frac{1}{2}}
+%
+\quad , \quad
+%
+[H_2, F_{\pm \frac{1}{2},\mp \frac{1}{2}}] = \mp \frac{1}{2} F_{\pm \frac{1}{2},\mp \frac{1}{2}}
+\end{equation}
+%
+%
+%%
+%%
+%\begin{equation}
+%[J_{+}, F_{\pm \frac{1}{2},\pm \frac{1}{2}}] = \frac{1 \mp 1}{2} F_{\mp \frac{1}{2},\pm \frac{1}{2}}
+%%
+%\quad , \quad
+%%
+%[\Lambda_{+}, F_{\pm \frac{1}{2},\pm \frac{1}{2}}] = -\frac{1 \mp 1}{2} F_{\mp \frac{1}{2},\pm \frac{1}{2}}
+%\end{equation}
+%%
+%%
+%
+%%
+%%
+%\begin{equation}
+%[J_{-}, F_{\pm \frac{1}{2},\pm \frac{1}{2}}] = \frac{1 \mp 1}{2} F_{\mp \frac{1}{2},\pm \frac{1}{2}}
+%%
+%\quad , \quad
+%%
+%[\Lambda_{-}, F_{\pm \frac{1}{2},\pm \frac{1}{2}}] = -\frac{1 \mp 1}{2} F_{\mp \frac{1}{2},\pm \frac{1}{2}}
+%\end{equation}
+%%
+%%
+Using the $\mathfrak{so}(n)$ commutation relations (\ref{so(n) commutators}), as well as the definitions of relevant ladder-operators, one finds the followinf results for the commutators between the operators $J_1^2$, $J_2^2$, $F_{-\frac{1}{2},-\frac{1}{2}}$, $F_{-\frac{1}{2},+\frac{1}{2}}$ when acting on the highest weight $\mathfrak{su}(2) \times \mathfrak{su}(2)$ states.
+%
+%
+\begin{equation}
+[J_1^2, F_{-\frac{1}{2},-\frac{1}{2}}] \ket{\ell_1, \ell_1; \ell_2, \ell_2}
+=
+-\left( \ell_1 + \tfrac{1}{4} \right) \ket{\ell_1, \ell_1; \ell_2, \ell_2}
+\end{equation}
+%
+%
+\begin{equation}
+[J_1^2, F_{-\frac{1}{2},+\frac{1}{2}}] \ket{\ell_1, \ell_1; \ell_2, \ell_2}
+=
+-\left( \ell_1 + \tfrac{1}{4} \right) \ket{\ell_1, \ell_1; \ell_2, \ell_2}
+\end{equation}
+%
+%
+\begin{equation}
+[J_2^2, F_{-\frac{1}{2},-\frac{1}{2}}] \ket{\ell_1, \ell_1; \ell_2, \ell_2}
+=
+-\left( \ell_1 + \tfrac{1}{4} \right) \ket{\ell_1, \ell_1; \ell_2, \ell_2}
+\end{equation}
+%
+%
+\begin{equation}
+[J_2^2, F_{-\frac{1}{2},+\frac{1}{2}}] \ket{\ell_1, \ell_1; \ell_2, \ell_2}
+=
++\left( \ell_1 + \tfrac{3}{4} \right) \ket{\ell_1, \ell_1; \ell_2, \ell_2}
+\end{equation}
+%
+%
+The above commutation relations indicate that we can use the ladder-operators $F_{-\frac{1}{2},-\frac{1}{2}}$ and $F_{-\frac{1}{2},+\frac{1}{2}}$ to move between different irreducible $\mathfrak{su}(2) \times \mathfrak{su}(2)$ representations through the highest weight states.
+%
+%
+\begin{equation}
+F_{-\frac{1}{2},-\frac{1}{2}} \ket{\ell_1, \ell_1; \ell_2, \ell_2}
+\sim
+\ket{\ell_1 - \tfrac{1}{2}, \ell_1 - \tfrac{1}{2}; \ell_2 - \tfrac{1}{2}, \ell_2 - \tfrac{1}{2}}
+\end{equation}
+%
+%
+\begin{equation}
+F_{-\frac{1}{2},+\frac{1}{2}} \ket{\ell_1, \ell_1; \ell_2, \ell_2}
+\sim
+\ket{\ell_1 - \tfrac{1}{2}, \ell_1 - \tfrac{1}{2}; \ell_2 + \tfrac{1}{2}, \ell_2 + \tfrac{1}{2}}
+\end{equation}
+%
+%
+We can then use the $F_{\pm,0}$ and $F_{0,\pm}$ ladder-operators to move around inside any individual irreducible $\mathfrak{su}(2) \times \mathfrak{su}(2)$ representation. Which $\mathfrak{su}(2) \times \mathfrak{su}(2)$ irreps one can find depends on the $\mathfrak{so}(5)$ representation in question. In general, one can label the irreps of any simple Lie algebra using what is known as \textit{Dynkin indices} $q_k$, $k = 1, \ldots , C$ with $C$ being the number of Cartan generators of the given Lie algebra. Each $q_k$ correspond to a simple root $\alpha^{(k)}$ of the algebra, of which there are always $m$.\\
+The value of $q_k$ indicates how many times one can apply the ladder-operator corresponding to the root vector $-\alpha^{(k)}$, starting from the highest weight state, before leaving the given irrep. We denote the HWS by $\ket{\mu} = \ket{L_1, L_2}$, where $L_1$ and $L_2$ are the eigenvalues of $H_1$ and $H_2$ respectively. We suppress the $\mathfrak{su}(2)$ Casimir labels for the HWS, as they do not play a significant role in the following discussion.\\
+The HWS can always be uniquely determined using what we will refer to as \textit{the master formula}.
+%
+%
+\begin{equation}\label{master formula}
+\frac{\alpha^{(k)} \cdot \mu}{\alpha^{(k)} \cdot \alpha^{(k)}}
+=
+\frac{q_k}{2} \geq 0
+\end{equation}
+%
+%
+Since we always have the same number of simple roots and Cartan generators. For the case of $\mathfrak{so}(5)$, we obtain the following expression for the HWS.
+%
+%
+\begin{equation}
+L_2 = \frac{q_1}{2}
+%
+\quad , \quad
+%
+L_1 - L_2 = \frac{q_2}{2}
+%
+\quad \Rightarrow \quad
+%
+\mu = (L_1, L_2) = \left(\frac{q_1 + q_2}{2}, \frac{q_1}{2} \right)
+\end{equation}
+%
+%
+Notice that due to the linear nature of the master formula, one can also uniquely determine the Dynkin labels $q_k$ given the HWS $\mu$. Thus, we can use $(L_1, L_2)$ to label the irreps of $\mathfrak{so}(5)$, just as well as $(q_1, q_2)$. With the inclusion of the representation labels $(L_1, L_2)$, we can now assign a total of six labels to each state in a given $\mathfrak{so}(5)$ irrep: $\ket{\nu} = \ket{(L_1,L_2);\ell_1,m_1;\ell_2,m_2}$.\\
+We now turn to the question of how to compute the dimension of any given irrep of $\mathfrak{so}(5)$. The approach we will take here uses the ladder-operators $F_{-\frac{1}{2},-\frac{1}{2}}$ and $F_{-\frac{1}{2},+\frac{1}{2}}$ to step through all the possible $\mathfrak{su}(2) \times \mathfrak{su}(2)$ irreps, starting from the HWS. It is subsequently straight forward to add up all the dimensions of the $\mathfrak{su}(2) \times \mathfrak{su}(2)$ irreps found. The question is now how to parametrize a walk through all $\mathfrak{su}(2) \times \mathfrak{su}(2)$ irreps, such that each one is only visited once. It turns out that an example of such parametrization is given by \cite{SO(5) and SO(6) rep theory}.
+%
+%
+\begin{equation}\label{possible l1 l2}
+\ell_1 = L_1 - \frac{1}{2} m - \frac{1}{2} n
+%
+\quad , \quad
+%
+\ell_2 = L_2 - \frac{1}{2} m + \frac{1}{2} n
+\end{equation}
+%
+%
+\begin{equation}\label{m and n ranges}
+0 \leq m \leq 2 L_2 = q_1
+%
+\quad , \quad
+%
+0 \leq n \leq 2 (L_1 - L_2) = q_2
+\end{equation}
+%
+%
+%
+%%
+%%
+%\begin{equation}
+%m_J = -J, -J + 1,\ldots,J-1,J
+%%
+%\quad , \quad
+%%
+%m_\Lambda = -\Lambda, -\Lambda + 1,\ldots,\Lambda-1,\Lambda
+%\end{equation}
+%%
+%%
+Where in the above, $m$ is the number of times $F_{-\frac{1}{2},-\frac{1}{2}}$ is applied to the HWS, while $n$ is the number of times $F_{-\frac{1}{2},+\frac{1}{2}}$ is applied. Using the ranges for $m$ and $n$ (\ref{m and n ranges}), it is now straight forward to compute the total number of states in a given irreduceable representation of $\mathfrak{so}(5)$, labeled by $(L_1, L_2)$.
+%
+%
+\begin{equation*}
+d_5(L_1,L_2)
+=
+\sum_{n=0}^{2 (L_1 - L_2)}
+\sum_{m=0}^{2 L_2}
+[2 L_1 - m - n + 1] [2 L_2 - m + n + 1]
+\end{equation*}
+%
+%
+\begin{equation}\label{so(5) irrep dimensions}
+=
+\frac{1}{3}
+(2 L_1 + 2 L_2 + 3)
+(2 L_1 - 2 L_2 + 1)
+(L_1 + 1)
+(2 L_2 + 1)
+\end{equation}
+%
+%
+From (\ref{possible l1 l2}) and (\ref{m and n ranges}), one can also deduce how a given $\mathfrak{so}(5)$ irrep decompose when restricted to $\mathfrak{so}(4) \simeq \mathfrak{su}(2) \times \mathfrak{su}(2)$. The decomposition rule looks as follow.
+%
+%
+\begin{equation*}
+(L_1, L_2) \rightarrow \bigoplus (\ell_1, \ell_2)
+%
+\quad ,
+\end{equation*}
+%
+%
+\begin{equation}
+-L_1 + L_2 \leq \ell_1 - \ell_2 \leq L_1 - L_2 \leq \ell_1 + \ell_2 \leq L_1 + L_2
+\end{equation}
+%
+%
+Finally, we note that the $\mathfrak{so}(n)$ algebra all have a quadratic \textit{Casimir operator}, given simply by the sum of the generators squared. For the particular case of $\mathfrak{so}(5)$, we define the quadratic Casimir with the following normalization.
+%
+%
+\begin{equation}
+C_5 = \frac{1}{2} \sum_{i,j=1}^5 L_{ij}^2
+\end{equation}
+%
+%
+\begin{equation}
+\left[ \frac{1}{2} \sum_{i,j=1}^5 L_{ij}^2 \right] \ket{(L_1,L_2); \cdots }
+=
+C_5(L_1, L_2) \ket{(L_1,L_2); \cdots }
+\end{equation}
+%
+%
+Where $\ket{(L_1,L_2); \cdots }$ can be any state in a given irrep of $\mathfrak{so}(5)$. The number $C_5(L_1,L_2)$ can be found by rewriting the Casimir operator $C_5$ as a sum of terms containing only the Cartan generators (\ref{Cartan generators so(5)}), and terms containg only ladder-operators for positive roots as the right-most operators. When written in this form, one can let $C_5$ act on the HWS, for which only the terms containing Cartan generators can give non-vanishing results. Carrying out this procedure, one finds that.
+%
+%
+\begin{equation}
+C_5(L_1, L_2) = 2 \left[ L_1 (L_1 + 2) + L_2 (L_2 + 1) \right]
+\end{equation}
+%
+%
+
+\subsection{$\mathfrak{so}(6)$ representation theory}
+The Lie algebra $\mathfrak{so}(6)$ consists of $15$ independent generators; the $10$ generators $L_{ij}$ of $\mathfrak{so}(5)$ together with the $5$ generators $L_{i6}$, where $i > j$ and $i,j=1,\ldots,5$. The $\mathfrak{so}(6)$ algebra is of rank $3$, and so we can assemble a Cartan sub-algebra for $\mathfrak{so}(6)$ by simply appending to the set $\{H_1, H_2 \}$, the only generator which commutes with this set.
+%
+%
+\begin{equation}\label{Cartan generators so(6)}
+\{H_1, H_2 \} \to \{H_1, H_2, H_3 \}
+%
+\quad , \quad
+%
+H_3 = L_{36}
+\end{equation}
+%
+%
+As was the case for $\mathfrak{so}(5)$, appropriately chosen linear combinations of the the remaining generators can be used to construct ladder-operators for the algebra. For $\mathfrak{so}(6)$ we have $12$ remaining generators, which can be used to construct the ladder-operators. The first $8$ are exactly identical to those of $\mathfrak{so}(5)$, while the last $4$ are defined as follow.
+%
+%
+\begin{equation}\label{so(6) ladder-operators}
+T_{\pm \frac{1}{2},\pm \frac{1}{2}}
+=
+-\frac{1}{\sqrt{2}} (L_{16} \pm i L_{46})
+%
+\quad , \quad
+%
+T_{\mp \frac{1}{2},\pm \frac{1}{2}}
+=
+-\frac{i}{\sqrt{2}} (L_{56} \pm i L_{26})
+\end{equation}
+%
+%
+The above $4$ ladder-operators, together with the $8$ ladder-operators we already defined for $\mathfrak{so}(5)$, each correspond to the $12$ root vectors for the $\mathfrak{so}(6)$ algebra \footnote{This is not completely accurate, since the ladder operators (\ref{so(5) ladder-operators}) and (\ref{so(6) ladder-operators}) do not commute correctly with $H_3$. One can however make $8$ new ladder-operators out of simple linear combinations of (\ref{so(5) ladder-operators}) and (\ref{so(6) ladder-operators}), which do commute correctly with all Cartan generators.}.
+%
+%
+\begin{equation}
+\alpha_1 = \left(0 , 1, 0 \right)
+%
+\quad , \quad
+%
+\alpha_2 = \left( \frac{1}{2} , -\frac{1}{2} , \frac{1}{\sqrt{2}} \right)
+%
+\quad , \quad
+%
+\alpha_3 = \left( \frac{1}{2} , -\frac{1}{2} , -\frac{1}{\sqrt{2}} \right)
+\end{equation}
+%
+%
+\begin{equation}
+\alpha_4 = \left(1, 0, 0 \right)
+%
+\quad , \quad
+%
+\alpha_5 = \left( \frac{1}{2} , \frac{1}{2} , \frac{1}{\sqrt{2}} \right)
+%
+\quad , \quad
+%
+\alpha_6 = \left( \frac{1}{2} , \frac{1}{2} , -\frac{1}{\sqrt{2}} \right)
+\end{equation}
+%
+%
+As for $\mathfrak{so}(5)$, we only list the positive root vectors. The last $6$ root vectors are simply the negatives of the positive ones. The simple roots of $\mathfrak{so}(6)$ are given by $\alpha_1$, $\alpha_2$ and $\alpha_3$. These simple roots can now be used to uniquely determine the highest weight state $\ket{\mu} = \ket{P_1,P_2,P_3}$ of $\mathfrak{so}(6)$, using the master formula (\ref{master formula}). 
+%
+%
+\begin{equation}
+P_2 = \frac{q_1}{2}
+%
+\quad , \quad
+%
+\frac{P_1}{2} - \frac{P_2}{2} + \frac{P_3}{\sqrt{2}} = \frac{q_2}{2}
+%
+\quad , \quad
+%
+\frac{P_1}{2} - \frac{P_2}{2} - \frac{P_3}{\sqrt{2}} = \frac{q_3}{2}
+\end{equation}
+%
+%
+\begin{equation}
+\Rightarrow \quad
+%
+\mu = (P_1,P_2,P_3) = \left( \frac{q_1 + q_2 + q_3}{2}, \frac{q_1}{2}, \frac{q_2 - q_3}{2 \sqrt{2}} \right)
+\end{equation}
+%
+%
+Given the labels $\mu$ corresponding to the HWS, there is exists a general scheme for decomposing a given $\mathfrak{so}(6)$ irrep into a sum of $\mathfrak{so}(5)$ irreps. This scheme, which was developed by Gel'fand and Cetlin in the 1950s, is in fact a lot more general, and works for decomposing $\mathfrak{so}(n) \to \mathfrak{so}(n-1)$ and also $\mathfrak{u}(n) \to \mathfrak{u}(n-1)$. For more detials,see \cite{Lie groups and Lie algebras}. The particular rule for $\mathfrak{so}(6) \to \mathfrak{so}(5)$, is expressed in terms of the following inequality.
+%
+%
+\begin{equation}\label{so(6) to so(5) decomposition}
+|P_3| \leq L_1 - L_2 \leq P_2 \leq L_1 + L_2 \leq P_1
+\end{equation}
+%
+%
+Given the above decomposition inequality, one can easily find the dimension of any given irrep of $\mathfrak{so}(6)$, using the formula (\ref{so(5) irrep dimensions}) for the dimensions of $\mathfrak{so}(5)$ irreps. This is done by choosing a particular parameterization of the $\mathfrak{so}(5)$ representation labels $(L_1,L_2)$, which satisfy (\ref{so(6) to so(5) decomposition}). We will choose to work with the following parameterization.
+%
+%
+\begin{equation}
+L_1 = \frac{1}{2} (P_1 + P_2) - \frac{1}{2} M - \frac{1}{2} N
+%
+\quad , \quad
+%
+L_2 = \frac{1}{2} (P_1 - P_2) - \frac{1}{2} M + \frac{1}{2} N
+\end{equation}
+%
+%
+\begin{equation}
+0 \leq M \leq P_1 - P_2
+%
+\quad , \quad
+%
+0 \leq N \leq P_2 - |P_3|
+\end{equation}
+%
+%
+
+\newpage
+One can easily check that the above parameterization covers all possible values of $(L_1,L_2)$. Using our chosen parameterization, we can now easily find the dimensions of any given $\mathfrak{so}(6)$ irrep, by summing the dimensions of all $\mathfrak{so}(5)$ irrep which it can be decomposed into.
+%
+%
+\begin{equation*}
+d_6(P_1,P_2,P_3)
+\end{equation*}
+%
+%
+\begin{equation*}
+=
+\sum_{N=0}^{P_2-|P_3|}
+\sum_{M=0}^{P_1-P_2}
+d_5 \Bigg(
+\frac{1}{2} (P_1 + P_2) - \frac{1}{2} M - \frac{1}{2} N,
+\frac{1}{2} (P_1 - P_2) - \frac{1}{2} M + \frac{1}{2} N
+\Bigg)
+\end{equation*}
+%
+%
+\begin{equation*}
+=
+\frac{1}{12}
+(1 + P_1 - P_2)
+(3 + P_1 + P_2)
+(2 + P_1 - P_3)
+\end{equation*}
+%
+%
+\begin{equation}
+\times
+(1 + P_2 - P_3)
+(2 + P_1 + P_3)
+(1 + P_2 + P_3)
+\end{equation}
+%
+%
+%%
+%%
+%\begin{equation}
+%[T_{0,0}, F_{\pm \frac{1}{2},\pm \frac{1}{2}}]
+%=
+%\pm T_{\pm \frac{1}{2},\pm \frac{1}{2}}
+%%
+%\quad , \quad
+%%
+%[T_{0,0}, T_{\pm \frac{1}{2},\pm \frac{1}{2}}]
+%=
+%\pm F_{\pm \frac{1}{2},\pm \frac{1}{2}}
+%\end{equation}
+%%
+%%
+%
+%%
+%%
+%\begin{equation}
+%[T_{0,0}, F_{\pm \frac{1}{2},\mp \frac{1}{2}}]
+%=
+%\mp T_{\mp \frac{1}{2},\pm \frac{1}{2}}
+%%
+%\quad , \quad
+%%
+%[T_{0,0}, T_{\mp \frac{1}{2},\pm \frac{1}{2}}]
+%=
+%\mp F_{\pm \frac{1}{2},\mp \frac{1}{2}}
+%\end{equation}
+%%
+%%
+%
+%%
+%%
+%\begin{equation}
+%[F_{\pm \frac{1}{2},\pm \frac{1}{2}}, T_{\pm \frac{1}{2},\pm \frac{1}{2}}]
+%=
+%0
+%%
+%\quad , \quad
+%%
+%[F_{\pm \frac{1}{2},\mp \frac{1}{2}}, T_{\pm \frac{1}{2},\mp \frac{1}{2}}]
+%=
+%T_{0,0}
+%\end{equation}
+%%
+%%
+Lastly, as noted during the discussion of the $\mathfrak{so}(5)$ algebra, all the orthogonal algebras $\mathfrak{so}(n)$ have a simple quadratic Cassimir operator given by the sum of the generators squared. Thus, for the case of $\mathfrak{so}(6)$, there exists a quadratic Cassimir of the form.
+%
+%
+\begin{equation}
+C_6 = \frac{1}{2} \sum_{i,j=1}^6 L_{ij}^2
+\end{equation}
+%
+%
+\begin{equation}
+\left[
+\frac{1}{2} \sum_{i,j=1}^6 L_{ij}^2
+\right] \ket{(P_1,P_2,P_3);\cdots}
+=
+C_6(P_1,P_2,P_3) \ket{(P_1,P_2,P_3);\cdots}
+\end{equation}
+%
+%
+Where $\ket{(P_1,P_2,P_3); \cdots }$ can be any state in a given irrep of $\mathfrak{so}(6)$. In complete analogy to the $\mathfrak{so}(5)$ algebra, the number $C_6(P_1,P_2,P_3)$ can be found by rewriting the Casimir operator $C_6$ as a sum of terms containing only the Cartan generators (\ref{Cartan generators so(6)}), and terms containg only ladder-operators for positive roots as the right-most operators. Carrying out this procedure on $C_6$, one finds that.
+%
+%
+\begin{equation}
+C_6(P_1, P_2, P_3) = P_1 (P_1 + 4) + P_2 (P_2 + 2) + P_3^2
+\end{equation}
+%
+%

@@ -1,0 +1,55 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Symmetries of the dCFTs}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{The aim of the thesis}{section.1}% 3
+\BOOKMARK [1][-]{section.2}{Defect conformal field theory setup}{}% 4
+\BOOKMARK [2][-]{subsection.2.1}{Non zero classical scalar field solutions}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.2}{Reducing the 10D Majorana-Weyl fermion}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.3}{Gauge fixing and ghost fields}{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.4}{Fluctuations around the classical scalar solutions}{section.2}% 8
+\BOOKMARK [2][-]{subsection.2.5}{Diagonalizing the mass matrix}{section.2}% 9
+\BOOKMARK [3][-]{subsubsection.2.5.1}{Boson mass matrix: SO\(3\) SO\(3\) symmetric vevs}{subsection.2.5}% 10
+\BOOKMARK [4][-]{paragraph.2.5.1.1}{The Easy Fields}{subsubsection.2.5.1}% 11
+\BOOKMARK [4][-]{paragraph.2.5.1.2}{The Complicated Fields}{subsubsection.2.5.1}% 12
+\BOOKMARK [3][-]{subsubsection.2.5.2}{Boson mass matrix: SO\(5\) symmetric vevs}{subsection.2.5}% 13
+\BOOKMARK [4][-]{paragraph.2.5.2.1}{The Easy Fields}{subsubsection.2.5.2}% 14
+\BOOKMARK [4][-]{paragraph.2.5.2.2}{The Complicated Fields}{subsubsection.2.5.2}% 15
+\BOOKMARK [2][-]{subsection.2.6}{The field propagators}{section.2}% 16
+\BOOKMARK [1][-]{section.3}{Two-point functions of chiral primary operators}{}% 17
+\BOOKMARK [2][-]{subsection.3.1}{Chiral primary operators in SCFTs}{section.3}% 18
+\BOOKMARK [2][-]{subsection.3.2}{Symmetries and the form of two-point functions in dCFTs}{section.3}% 19
+\BOOKMARK [2][-]{subsection.3.3}{Two-point functions at tree level \(disconnected\)}{section.3}% 20
+\BOOKMARK [3][-]{subsubsection.3.3.1}{SO\(3\) SO\(3\) symmetric vevs}{subsection.3.3}% 21
+\BOOKMARK [3][-]{subsubsection.3.3.2}{SO\(5\) symmetric vevs}{subsection.3.3}% 22
+\BOOKMARK [2][-]{subsection.3.4}{Two-point functions at tree level \(connected\)}{section.3}% 23
+\BOOKMARK [3][-]{subsubsection.3.4.1}{SO\(3\) SO\(3\) symmetric vevs}{subsection.3.4}% 24
+\BOOKMARK [4][-]{paragraph.3.4.1.1}{The case of L1 = 2 and L2 = 2}{subsubsection.3.4.1}% 25
+\BOOKMARK [4][-]{paragraph.3.4.1.2}{The case of k1 = 1 or k2 = 1}{subsubsection.3.4.1}% 26
+\BOOKMARK [3][-]{subsubsection.3.4.2}{SO\(5\) symmetric vevs}{subsection.3.4}% 27
+\BOOKMARK [2][-]{subsection.3.5}{Two-point functions at 1-loop \(disconnected\)}{section.3}% 28
+\BOOKMARK [3][-]{subsubsection.3.5.1}{SO\(3\) SO\(3\) symmetric vevs}{subsection.3.5}% 29
+\BOOKMARK [3][-]{subsubsection.3.5.2}{SO\(5\) symmetric vevs}{subsection.3.5}% 30
+\BOOKMARK [1][-]{section.4}{Two-point functions of long and short operators}{}% 31
+\BOOKMARK [2][-]{subsection.4.1}{Two-point functions of non-protected operators}{section.4}% 32
+\BOOKMARK [2][-]{subsection.4.2}{Spin-chains and integrability in N=4 SYM}{section.4}% 33
+\BOOKMARK [3][-]{subsubsection.4.2.1}{The SU\(2\) subsector}{subsection.4.2}% 34
+\BOOKMARK [2][-]{subsection.4.3}{Defects represented as spin-chain states}{section.4}% 35
+\BOOKMARK [3][-]{subsubsection.4.3.1}{The action of Q3 on the MPS}{subsection.4.3}% 36
+\BOOKMARK [4][-]{paragraph.4.3.1.1}{The SO\(3\) symmetric setup}{subsubsection.4.3.1}% 37
+\BOOKMARK [4][-]{paragraph.4.3.1.2}{The SO\(5\) symmetric setup}{subsubsection.4.3.1}% 38
+\BOOKMARK [4][-]{paragraph.4.3.1.3}{The SO\(3\) SO\(3\) symmetric setup}{subsubsection.4.3.1}% 39
+\BOOKMARK [3][-]{subsubsection.4.3.2}{Tree-level Bethe operator one-point functions}{subsection.4.3}% 40
+\BOOKMARK [2][-]{subsection.4.4}{Computing the long / short two-point functions}{section.4}% 41
+\BOOKMARK [3][-]{subsubsection.4.4.1}{SO\(3\) SO\(3\) symmetric vevs}{subsection.4.4}% 42
+\BOOKMARK [4][-]{paragraph.4.4.1.1}{The T operators: ideas and examples}{subsubsection.4.4.1}% 43
+\BOOKMARK [4][-]{paragraph.4.4.1.2}{The T operators: obtaining the rest}{subsubsection.4.4.1}% 44
+\BOOKMARK [4][-]{paragraph.4.4.1.3}{T operators and spin-chain operators}{subsubsection.4.4.1}% 45
+\BOOKMARK [4][-]{paragraph.4.4.1.4}{T operators containing Y and \040scalars}{subsubsection.4.4.1}% 46
+\BOOKMARK [3][-]{subsubsection.4.4.2}{SO\(5\) symmetric vevs}{subsection.4.4}% 47
+\BOOKMARK [1][-]{section.5}{Conclusion and outlook}{}% 48
+\BOOKMARK [1][-]{appendix.a.A}{Representation theory for so\(5\) and so\(6\)}{}% 49
+\BOOKMARK [2][-]{subsection.a.A.1}{so\(5\) representation theory}{appendix.a.A}% 50
+\BOOKMARK [2][-]{subsection.a.A.2}{so\(6\) representation theory}{appendix.a.A}% 51
+\BOOKMARK [1][-]{appendix.a.B}{Propagators of the complex scalar fields}{}% 52
+\BOOKMARK [2][-]{subsection.a.B.1}{Propagators for SO\(3\) SO\(3\) symmetric vevs}{appendix.a.B}% 53
+\BOOKMARK [1][-]{appendix.a.C}{Fuzzy spherical harmonics}{}% 54
+\BOOKMARK [2][-]{subsection.a.C.1}{Fuzzy spherical harmonics on so\(3\)}{appendix.a.C}% 55

@@ -1,0 +1,363 @@
+% import packeges
+\documentclass[a4paper,12pt]{article}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage[headheight=15pt]{geometry}
+\usepackage{paralist}
+\usepackage[danish,english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{wrapfig}
+\usepackage{eso-pic}
+\usepackage{mathtools}
+\usepackage{datetime}
+\usepackage{lastpage}
+\usepackage{amsfonts}
+\usepackage{appendix}
+\usepackage{fancyheadings}
+\usepackage{lipsum}
+\usepackage{braket}
+\usepackage{physics}
+\usepackage{simplewick}
+\usepackage{amsmath,amsbsy}
+\usepackage{extarrows}
+\usepackage[linktocpage]{hyperref}
+\usepackage[eng]{nbi}
+\usepackage{array}
+\usepackage{caption}
+\captionsetup{labelfont={bf}}
+\usepackage{subfiles}
+\usepackage{tikz-feynman}
+\usepackage{colortbl}
+\usepackage{bbold}
+\usepackage{pdflscape}			% Automatic rotation of landscaped pages
+% \usepackage{lscape}			% No rotation of landscaped pages
+\usepackage{afterpage}
+\usepackage{tabulary}
+
+% Set line-spacing
+\renewcommand{\baselinestretch}{1.15}
+
+%  Show paragraphs in table of contents
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4}
+
+% Fix no indent
+\setlength{\parindent}{0pt}
+
+% For boxes around multiple equations
+\usepackage{empheq}
+\newcommand*\widefbox[1]{\fbox{\hspace{0em}#1\hspace{0em}}}
+
+% Hyperref config
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=red,
+    citecolor=red,
+    pdftitle={Two-point functions in N=4 SYM dCFTs},
+    bookmarks=true,
+    % pdfpagemode=FullScreen,
+}
+
+% definition environment
+\usepackage{amsthm}
+ 
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+\theoremstyle{theorem}
+\newtheorem{theorem}{Theorem}[section]
+
+% number equations by subsection
+\numberwithin{equation}{subsection}
+
+% set font type
+\usepackage{times}
+
+% redefinition of the plain style
+\usepackage{nameref}
+\makeatletter
+\newcommand*{\currentname}{\@currentlabelname}
+\makeatother
+
+\graphicspath{ {figures/} }
+\addto\captionsenglish{\renewcommand{\listfigurename}{Figures}}
+\addto\captionsenglish{\renewcommand{\listtablename}{Tables}}
+
+% create the front pages
+\supervisor{Charlotte Fl\o e Kristjansen}
+\project{Master thesis in theoretical physics}
+\author{Rasmus Nielsen}
+\title{Two-point functions in defect versions of $\mathcal{N}=4$ super Yang Mills theory}
+\subtitle{Investigating the field theory side of non-supersymmetric AdS / CFT setups}
+\institute{Niels Bohr Institute}
+\faculty{Faculty of Science}
+\email{jbz701@alumni.ku.dk}
+\handindate{30.9.2020}
+\defencedate{To be decided}
+
+\begin{document}
+
+\maketitle
+
+% \newgeometry{top=4cm,left=4cm,right=4cm,bottom=4cm}
+
+% The abstracts
+\input{../abs/abstracts}
+\newpage
+
+\pagestyle{empty}
+
+% The table of contents
+\tableofcontents
+\newpage
+
+% List of figures
+\listoffigures
+
+% List of tables
+\listoftables
+
+\setcounter{page}{0}
+\newpage
+
+\pagestyle{fancy}
+\renewcommand{\subsectionmark}[1]{ \markright{#1} }
+\renewcommand{\sectionmark}[1]{ \markright{#1} }
+\renewcommand{\footrulewidth}{0.5pt}
+
+\fancyhf{}
+\fancyhead[L]{\textit{ R.S.K. Nielsen }}
+\fancyhead[R]{\textit{ \nouppercase{\rightmark}} }
+\fancyfoot[C]{Page \thepage{} of \pageref{LastPage}}
+
+% section 1: Introduction
+%\subfile{../Intro/Introduction}
+\input{../Intro/Introduction}
+\newpage
+
+% section 2: The dCFT setup
+\input{../dCFT/dCFT}
+\newpage
+
+% section 3: The chiral primarie operators
+\input{../2-pt-CPO/2-pt-CPO}
+\newpage
+
+% section 4: The non protected operators
+\input{../2-pt-NPO/2-pt-NPO}
+\newpage
+
+% chapter 5: The conclusion
+\input{../conclusion/conclusion}
+\newpage
+
+%\pagestyle{empty}
+
+\begin{appendices}
+
+% appendix 1: Representation theory for so(5) and so(6)
+\input{../app/so(5)_so(6)}
+\newpage
+
+% appendix 2: Complex scalar propagators
+\input{../app/propagators}
+\newpage
+
+% appendix 3: spherical harmonics on different fuzzy spheres
+\input{../app/fuzzy_spherical_harmonics}
+\newpage
+
+% appendix 4: Trace formulas for various generators
+% \input{../app/color_traces}
+% \newpage
+
+\end{appendices}
+
+\newpage
+
+\begin{thebibliography}{9}
+
+\bibitem{Holography Suskind}
+L. Suskind, 
+"The World as a Hologram", 
+\textit{J. Math. Phys.} \textbf{36} (1995) 6377-6396, 
+\href{https://arxiv.org/abs/hep-th/9409089}{arXiv:hep-th/9409089}
+
+\bibitem{AdS/CFT Maldacena}
+J. Maldacena, 
+"The Large N Limit of Superconformal field theories and supergravity", 
+\textit{Int. J. Theor. Phys.} \textbf{38} (1999) 1113-1133, \textit{Adv. Theor. Math. Phys.} \textbf{2} (1998) 231-252, 
+\href{https://arxiv.org/abs/hep-th/9711200}{arXiv:hep-th/9711200}
+
+\bibitem{Integrability Review}
+J. A. Minahan, 
+"Review of AdS/CFT Integrability, Chapter I.1: Spin Chains in N = 4 Super Yang-Mills", 
+\href{https://arxiv.org/abs/1012.3983}{arXiv:1012.3983 [hep-th]}
+
+\bibitem{Search for SUSY}
+V. A. Mitsou, 
+"Experimental status of particle and astroparticle
+searches for supersymmetry", 
+2013 \textit{J. Phys.: Conf. Sereffectively.} \textbf{447} 012019, 
+\href{https://arxiv.org/abs/1304.1414}{	arXiv:1304.1414 [hep-ph]}
+
+\bibitem{fuzzy-funnel solution}
+N. R. Constable, R. C. Myers, and O. Tafjord, 
+"The Noncommutative bion core", 
+\textit{Phys. Rev.} \textbf{D61} (2000) 106009, 
+\href{https://arxiv.org/abs/hep-th/9911136}{arXiv:hep-th/9911136 [hep-th]}
+
+\bibitem{fuzzy-funnel solution D7}
+R. Bhattacharyya and R. de Mello Koch, 
+"Fluctuating Fuzzy Funnels", 
+\textit{JHEP} \textbf{0510} (2005) 036
+\href{https://arxiv.org/abs/hep-th/0508131}{arXiv:hep-th/0508131}
+
+\bibitem{Sypersymmetric boundary conditions}
+D. Gaiotto and E. Witten, 
+"Supersymmetric Boundary Conditions in N=4 Super Yang-Mills Theory", 
+\textit{J. Statist. Phys.} \textbf{135} (2009) 789-855, 
+\href{https://arxiv.org/abs/0804.2902}{arXiv:0804.2902 [hep-th]}
+
+\bibitem{Form_of_correlators_in_dCFT}
+P. Liendo, L. Rastelli and B. C. van Rees, 
+"The Bootstrap Program for Boundary CFT${}_d$", 
+\textit{JHEP} \textbf{1307} (2013) 113, 
+\href{https://arxiv.org/abs/1210.4258}{arXiv:1210.4258 [h$\mathfrak{so}(6)$ep-th] YITP-SB-12-37}
+
+\bibitem{One-point functions in D5-D3}
+I. Buhl-Mortensen, M. de Leeuw, A. C. Ipsen, C. Kristjansen and M. Wilhelm, 
+"A Quantum Check of AdS/dCFT", 
+\textit{JHEP} \textbf{1701} (2017) 098, 
+\href{https://arxiv.org/abs/1611.04603}{arXiv:1611.04603 [hep-th]}
+
+\bibitem{Two-point functions in D5-D3}
+M. de Leeuw, A. C. Ipsen, C. Kristjansen, K. E. Vardinghus and M. Wilhelm, 
+"Two-point functions in AdS/dCFT and the boundary conformal bootstrap equations", 
+\textit{JHEP} \textbf{1708} (2017) 020, 
+\href{http://arxiv.org/abs/1705.03898}{arXiv:1705.03898 [hep-th]}
+
+\bibitem{One-point functions in D3-D7}
+A. G. Grau, C. Kristjansen, M. Volk and M. Wilhelm, 
+"A Quantum Check of Non-Supersymmetric AdS/dCFT", 
+\textit{JHEP} \textbf{1901} (2019) 007, 
+\href{http://arxiv.org/abs/1810.11463}{arXiv:1810.11463 [hep-th]}
+
+\bibitem{One-point functions in D3-D7 SO(5)}
+A. G. Grau, C. Kristjansen, M. Volk and M. Wilhelm, 
+"A Quantum Framework for AdS/dCFT through Fuzzy Spherical Harmonics on $S^4$", 
+DESY-19-220, 
+\href{https://arxiv.org/abs/1912.02468}{arXiv:1912.02468 [hep-th]}
+
+\bibitem{Algebraic Bethe Ansatz}
+L. D. Faddeev, 
+"How Algebraic Bethe Ansatz works for integrable model", 
+\href{https://arxiv.org/abs/hep-th/9605187}{arXiv:hep-th/9605187}
+
+\bibitem{Coordinate bethe Ansatz}
+M. Staudacher, 
+"The Factorized S-Matrix of CFT/AdS", 
+\textit{JHEP} \textbf{0505} (2005) 054, 
+\href{https://arxiv.org/abs/hep-th/0412188}{arXiv:hep-th/0412188}
+
+\bibitem{ABE in N=4 SYM}
+J. A. Minahan and K. Zarembo, 
+"The Bethe-Ansatz for $\mathcal{N} = 4$ Super Yang-Mills", 
+\textit{JHEP} \textbf{0303} (2003) 013, 
+\href{https://arxiv.org/abs/hep-th/0212208}{arXiv:hep-th/0212208}
+
+\bibitem{MPS bethe state overlap}
+M. de Leeuw, C. Kristjansen and K. Zarembo, 
+"One-point Functions in Defect CFT and Integrability", 
+\textit{JHEP} \textbf{1508} (2015) 098, 
+\href{https://arxiv.org/abs/1506.06958}{arXiv:1506.06958 [hep-th]},  
+NORDITA-2015-72, UUITP-12-15
+
+\bibitem{MPS bethe state overlap SO(5)}
+M. de Leeuw, C. Kristjansen and G. Linardopoulos, 
+"One-Point Functions of Non-protected Operators in the $SO(5)$ Symmetric D3-D7 dCFT", 
+\textit{Journal of Physics A Mathematical and Theoretical} \textbf{50(25)}, 
+\href{https://arxiv.org/abs/1612.06236}{arXiv:1612.06236 [hep-th]}
+
+\bibitem{non-protected one-point functions}
+I. Buhl-Mortensen, M. de Leeuw, C. Kristjansen and K. Zarembo, 
+"One-point Functions in AdS/dCFT from Matrix Product States", 
+\textit{JHEP} \textbf{1602} (2016) 052, 
+\href{https://arxiv.org/abs/1512.02532}{arXiv:1512.02532 [hep-th]}, 
+NORDITA-2015-132, UUITP-26-15
+
+\bibitem{Length L length 2 two-point functions D5-D3}
+E. Widen, 
+"Two-point functions of SU(2)-subsector and length-two operators in dCFT", 
+\textit{Phys. Lett.} \textbf{B773} (2017) 435-439, 
+\href{https://arxiv.org/abs/1705.08679}{arXiv:1705.08679 [hep-th]}
+
+\bibitem{Fuzzy Shperical Harmonics 1}
+J. Hoppe, 
+"Quantum theory of a massless relativistic surface and a two-dimensional bound state problem", 
+\href{https://dspace.mit.edu/handle/1721.1/15717}{PhD thesis, MIT 1982}.
+
+\bibitem{Fuzzy Shperical Harmonics 2}
+S. Kawamoto and T. Kuroki, 
+"Existence of new nonlocal field theory on noncommutative space and spiral flow in renormalization group analysis of matrix models", 
+\textit{JHEP} \textbf{06} (2015) 062, 
+\href{https://arxiv.org/abs/1503.08411}{arXiv:1503.08411 [hep-th]}
+
+\bibitem{Lack of integrability in SO(3)xSO(3)}
+M. de Leeuw, C. Kristjansen and K. E. Vardinghus, 
+"A non-integrable quench from AdS/dCFT", 
+\textit{Phys.Lett.} \textbf{B798} (2019) 134940, 
+\href{https://arxiv.org/abs/1906.10714}{arXiv:1906.10714 [hep-th]}
+
+\bibitem{SO(5) and SO(6) rep theory}
+K. Hecht, 
+"Some simple R5 Wigner Coefficients and their application", 
+\href{https://www.sciencedirect.com/science/article/pii/002955826590338X}{\textit{Nuclear Physics}} \textbf{63}
+(1965) 177.
+
+\bibitem{Grau Volk thesis}
+M. Volk and A. G. Grau, 
+"One-Loop One-Point Functions in Non-Supersymmetric AdS/dCFT", 
+\textit{Master thesis 2017 / 2018}, 
+at the \textit{Niels Bohr Institute}
+
+\bibitem{Stabilization so(3)xso(3)}
+O. Bergman, N. Jokela, G. Lifschytz, and M. Lippert, 
+"Quantum Hall Effect in a Holographic Model", 
+\textit{JHEP} \textbf{10} (2010) 063, 
+\href{https://arxiv.org/abs/1003.4965}{arXiv:1003.4965 [hep-th]}
+
+\bibitem{Stabilization so(5)}
+R. C. Myers and M. C. Wapler, 
+"Transport Properties of Holographic Defects", 
+\textit{JHEP} \textbf{12} (2008) 115, 
+\href{https://arxiv.org/abs/0811.0480}{arXiv:0811.0480 [hep-th]}
+
+\bibitem{Conserved charges eigenvalues}
+M. De Leeuw, 
+"One-point functions in AdS/dCFT", 
+\href{https://arxiv.org/abs/1908.03444}{arXiv:1908.03444 [hep-th]}
+
+\bibitem{Lie groups and Lie algebras}
+F. Iachello, 
+"Lie Algebras and Applications", 
+vol. 891. Springer, 
+2006
+
+\bibitem{Fuzzy harmonics on S4}
+S. Ramgoolam, 
+"On spherical harmonics for fuzzy spheres in diverse dimensions", 
+\textit{Nucl. Phys.} \textbf{B610} (2001) 461–488, 
+\href{https://arxiv.org/abs/hep-th/0105006}{arXiv:hep-th/0105006}
+
+\bibitem{Overlap SO(5) general formula}
+M. de Leeuw, T. Gombor, C. Kristjansen, G. Linardopoulos and B. Pozsgay, 
+"Spin Chain Overlaps and the Twisted Yangian", 
+\textit{JHEP} \textbf{01} (2020) 176, 
+\href{https://arxiv.org/abs/1912.09338}{arXiv:1912.09338 [hep-th]}
+
+\end{thebibliography}
+
+\end{document}

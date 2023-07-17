@@ -1,0 +1,730 @@
+% \newgeometry{top=2cm,left=2cm,right=2cm,bottom=2cm} 
+%
+\section{Fuzzy spherical harmonics}\label{sec:fuzzy spherical harmonics}
+In the process of diagonalizing the lower diagonal blocks of the boson mass-matrices, both for the cases of $SO(3) \times SO(3)$ and $SO(5)$ symmetric defect setups, the fuzzy spherical harmonics of $S^2$ and $S^4$ respectively played central roles. In this appendix we will discuss some important features of the $SO(3)$ fuzzy harmonics in particular, and also describe how to construct them explicitly using the \textit{Wigner-Eckart theorem}.
+
+\subsection[Fuzzy spherical harmonics on $\mathfrak{so}(3)$]{Fuzzy spherical harmonics on $\mathbf{\mathfrak{so}(3)}$}
+Let us start by restating the defining properties of the $SO(3)$ fuzzy harmonics $\hat{Y}^m_\ell$, first encountered in section \ref{sec:dCFT} during the process of diagonalizing the boson mass matrix for the $SO(3) \times SO(3)$ symmetric vevs.  
+%
+%
+\begin{equation}
+L_3 \, \hat{Y}^m_\ell \equiv [t_3, \hat{Y}^m_\ell] = m \, \hat{Y}^m_\ell
+%
+\quad , \quad
+%
+L^2 \, \hat{Y}^m_\ell \equiv [t_i, [t_i, \hat{Y}^m_\ell] = \ell \, (\ell+1) \, \hat{Y}^m_\ell
+\end{equation}
+%
+%
+With $t_1$, $t_2$, $t_3$ the $k$-dimensional representation of the $\mathfrak{so}(3)$ generators, and the repeated index $i$ is summed over. The defining property above can also equivalently be expressed by the following transformation rule for the fuzzy spherical harmonics.
+%
+%
+\begin{equation}\label{fuzzy harmonics def}
+n^i L_i \hat{Y}^m_\ell \equiv [n^i \, t_i, \hat{Y}^m_\ell]
+=
+\sum_{m' = -\ell}^{\ell} \hat{Y}^{'}_\ell \bra{\ell, m'} n^i \, t_i \ket{\ell, m}
+\end{equation}
+%
+%
+Where $n^i$ can be any $3$-vector. The fuzzy harmonic matrices $\hat{Y}^m_\ell$ are examples of what are called \textit{spherical tensor operators}, the defining properties of which are exactly those given by (\ref{fuzzy harmonics def}). The matrix elements of such operators can be obtained by invoking the \textit{Wigner-Eckart theorem}, which simply states that.
+%
+%
+\begin{equation}\label{Wigner-Eckart theorem so(3)}
+\bra{\ell_1, m_1} T_{\ell,m} \ket{\ell_2,m_2}
+=
+\delta_{\ell_1,\ell_2} \,
+R'(\ell_1,\ell)
+\braket{\ell_2, m_2; \ell, m}{\ell_1, m_1; \ell_2, \ell}
+\end{equation}
+%
+%
+Where the factor $R'$ is know as the \textit{reduced matrix element}. Because the reduces matrix element does not depend on $m_1$, $m_2$, $m$, it suffices to compute one matrix element explicitly for a given tensor operator. The others can then be related to the known one through the Celbsch-Gordan coefficients in (\ref{Wigner-Eckart theorem so(3)}). For our purposes, it turns out to be convinient to write these Celbsch-Gordan coefficients in terms of \textit{Wigner 3-j symbols}. The relation bewteen Celbsch-Gordan coefficients and 3-j symbols looks as follow.
+%
+%
+\begin{equation}\label{coupling-coefficients 3j relation}
+\braket{\ell_1, m_1; \ell_2, m_2}{\ell, m; \ell_1, \ell_2}
+=
+(-1)^{\ell_1 - \ell_2 + m} \sqrt{2 \ell + 1}
+\left( \begin{array}{ccc}
+\ell_1 & \ell_2 & \ell \\
+m_1 & m_2 & -m \\
+\end{array} \right)
+\end{equation}
+%
+%
+With $\left( \begin{array}{ccc} \ell_1 & \ell_2 & \ell \\ m_1 & m_2 & -m \\ \end{array} \right)$ being the 3-j symbol. The properties of these 3-j symbols follows from those of Celbsch-Gordan coefficients. The most important of these properties, in regards to this discussion, are as follow.
+%
+%
+\begin{enumerate}
+%
+\item The 3-j symbols are only non-zero if: $m_1 + m_2 = m$ and $|\ell_1 - \ell_2| \leq \ell \leq \ell_1 + \ell_2$.
+%
+\item Interchanging two columns produces a factor $(-1)^{\ell_1 + \ell_2 + \ell}$. For example:
+%
+%
+\begin{equation}\label{3j column interchange}
+\left( \begin{array}{ccc}
+\ell_1 & \ell_2 & \ell \\
+m_1 & m_2 & -m \\
+\end{array} \right)
+=
+(-1)^{\ell_1 + \ell_2 + \ell} \left( \begin{array}{ccc}
+\ell & \ell_2 & \ell_1 \\
+-m & m_2 & m_1 \\
+\end{array} \right)
+\end{equation}
+%
+%
+\item Flipping the signs of $m_1$, $m_2$, $m$ also produces a factor $(-1)^{\ell_1 + \ell_2 + \ell}$.
+%
+%
+\begin{equation}\label{3j m sign flip}
+\left( \begin{array}{ccc}
+\ell_1 & \ell_2 & \ell \\
+m_1 & m_2 & -m \\
+\end{array} \right)
+=
+(-1)^{\ell_1 + \ell_2 + \ell} \left( \begin{array}{ccc}
+\ell_1 & \ell_2 & \ell \\
+-m_1 & -m_2 & m \\
+\end{array} \right)
+\end{equation}
+%
+%
+\end{enumerate}
+%
+%
+Using the Wigner-Eckart theorem and the Wigner 3-j symbols, we can now find the matrix elements of the $k$-dimensional representations of the fuzzy harmonics $\hat{Y}^m_\ell$.
+%%
+%%
+%\begin{equation}
+%[\hat{Y}^0_0]_{n,n'}
+%=
+%\bra{s, n} \hat{Y}^0_0 \ket{s, n'}
+%=
+%(-1)^{k+1} \sqrt{k} \, \delta_{n,n'}
+%\end{equation}
+%%
+%%
+%Using the, we can find the matrix elements of the fuzzy spherical harmonics.
+%
+%
+\begin{equation}\label{fuzzy harmonics matrix elements}
+[\hat{Y}^m_\ell]_{m_1,m_2}
+=
+\bra{s, m_1} \hat{Y}^m_\ell \ket{s, m_2}
+=
+(-1)^{s-\ell-m_1} \, R(\ell,s) \,
+\left( \begin{array}{ccc}
+s & \ell & s \\
+m_2 & m & -m_1 \\
+\end{array} \right)
+\end{equation}
+%
+%
+Where we have defined a new reduced matrix elememt $R(\ell,s)$, which is defined as follow.
+%
+%
+\begin{equation}
+R(\ell) = R'(\ell) \, \sqrt{2 \, s + 1}
+\end{equation}
+%
+%
+Furthermore, the $\mathfrak{so}(3)$ quantum numbers are related to the dimension $k$ in the following way. 
+%
+%
+\begin{equation}
+s = \frac{k - 1}{2} 
+%
+\quad , \quad
+%
+k \in \mathbb{N}
+%
+\quad , \quad
+%
+m_1,m_2 = -s,-s+1,\ldots,s-1,s
+\end{equation}
+%
+%
+%According to \cite{Fuzzy Shperical Harmonics 1}, with right normalization.
+%%
+%%
+%\begin{equation}
+%=
+%(-1)^{s-m_1}
+%\sqrt{2 \ell + 1}
+%\left( \begin{array}{ccc}
+%s & \ell & s \\
+%-m_1 & m & m_2 \\
+%\end{array} \right)
+%\end{equation}
+%%
+%%
+%What I would want it to be.
+%%
+%%
+%\begin{equation}
+%=
+%(-1)^{k-i}
+%\sqrt{2 \ell + 1}
+%\left( \begin{array}{ccc}
+%\frac{k-1}{2} & \ell & \frac{k-1}{2} \\
+%i - \frac{k+1}{2} & m & \frac{k+1}{2} - j \\
+%\end{array} \right)
+%\end{equation}
+%%
+%%
+%Where $i,j = 1,\ldots,\frac{k-1}{2}$.\\
+%Work in progress...
+We can use the matrix elements (\ref{fuzzy harmonics matrix elements}) to determine the reduced matrix element $R(\ell,s)$. We do this by first demanding that the fuzzy harmonics $\hat{Y}^m_\ell$ be orthonormal in the following sense.
+%
+%
+\begin{equation}\label{fuzzy harmonics so(3) orthogonal condition}
+\tr[\hat{Y}^{m}_{\ell} (\hat{Y}^{m'}_{\ell'})^\dagger]
+=
+\delta_{\ell,\ell'} \delta_{m,m'}
+%
+\quad , \quad
+%
+(\hat{Y}^{m}_{\ell})^\dagger
+=
+(-1)^{m} \, \hat{Y}^{-m}_{\ell}
+\end{equation}
+%
+%
+If we now explicitly compute the above trace using (\ref{fuzzy harmonics matrix elements}), we find that it has the following value.
+%
+%
+\begin{equation*}
+\tr[\hat{Y}^{m}_{\ell} (\hat{Y}^{m'}_{\ell'})^\dagger]
+=
+\sum_{m_1,m_2}
+\bra{s, m_1} \hat{Y}^m_\ell \ketbra{s,m_2}{s,m_2} (\hat{Y}^{m'}_{\ell'})^\dagger \ket{s, m_1}
+\end{equation*}
+%
+%
+\begin{equation*}
+=
+R(\ell) \, R(\ell') \sum_{m_1,m_2} (-1)^{2 s - \ell - \ell' - m_1 - m_2 + m'}
+\left( \begin{array}{ccc}
+s & \ell & s \\
+m_2 & m & -m_1 \\
+\end{array} \right)
+\left( \begin{array}{ccc}
+s & \ell' & s \\
+m_1 & -m' & -m_2 \\
+\end{array} \right)
+\end{equation*}
+%
+%
+\begin{equation*}
+=
+R(\ell) \, R(\ell') \sum_{m_1,m_2} (-1)^{2 (s - m_2)}
+\left( \begin{array}{ccc}
+s & s & \ell \\
+m_2 & -m_1 & m \\
+\end{array} \right)
+\left( \begin{array}{ccc}
+s & s & \ell' \\
+m_2 & -m_1 & m' \\
+\end{array} \right)
+\end{equation*}
+%
+%
+\begin{equation}
+=
+\delta_{\ell, \ell'} \delta_{m,m'} \, 
+\frac{R(\ell) \, R(\ell')}{2 \ell + 1} \, \{ s, s, \ell \}
+\end{equation}
+%
+%
+To go from the second to the third line above, we made use of (\ref{3j column interchange},\ref{3j m sign flip}) together with the constraint $m_1 = m_2 + m'$. To from the third to the fourth line, we use the fact that $s - m_2$ must be an integer, as well as the completeness of the 3-j symbol. Furthermore, the object $\{ \ell_1, \ell_2, \ell \}$ is defined such that it equals $1$ if $|\ell_1 - \ell_2| \leq \ell \leq \ell_1 + \ell_2$ and $0$ otherwise. Thus, $\{ s, s, \ell \}$ is only non-zero if $0 \leq \ell \leq k-1$. We now see that for (\ref{fuzzy harmonics so(3) orthogonal condition}) to be satisfied, we must choose.
+%
+%
+\begin{equation}
+R(\ell) = \sqrt{2 \ell + 1}
+\end{equation}
+%
+%
+Using the properties of the 3-j symbols, we see that the matrix elements of $\hat{Y}^m_\ell$ are themselves proportional to $\{ s, s, \ell \}$, and are therefore only non-zero for $0 \leq \ell \leq k-1$. Thus means that the $\hat{Y}^m_\ell$ matrices constitute a set of
+%
+%
+\begin{equation}
+\sum_{\ell=0}^{k-1} (2 \ell + 1) = k^2
+\end{equation}
+%
+%
+Orthonormal $k \times k$ matrices, and they therefore form a basis on the space of $k \times k$ complex matrices. This means that the product of any two fuzzy harmonics must be able to be expressed as a weighted sum of fuzzy harmonics.
+%
+%
+\begin{equation}\label{fuzzy harmonic expansion}
+\hat{Y}^{m_1}_{\ell_1}
+\hat{Y}^{m_2}_{\ell_2}
+=
+\sum_{\ell_3 = 0}^{k-1}
+\sum_{m_3 = -\ell_3}^{\ell_3}
+F^{\ell_3, m_3}_{\ell_1, m_1; \ell_2, m_2}
+\hat{Y}^{m_3}_{\ell_3}
+\end{equation}
+%
+%
+The expansion coefficients $F^{\ell_3, m_3}_{\ell_1, m_1; \ell_2, m_2}$ can be determined in a similar manner to the reduced matrix elements $R(\ell)$. On one hand, we can use the orthonormality of the fuzzy harmonics $\hat{Y}^m_\ell$ to obtain the following.
+%
+%
+\begin{equation}
+\tr[
+\hat{Y}^{m_1}_{\ell_1}
+\hat{Y}^{m_2}_{\ell_2}
+(\hat{Y}^{m_3}_{\ell_3})^{\dagger}
+]
+=
+F^{\ell_3, m_3}_{\ell_1, m_1; \ell_2, m_2}
+\end{equation}
+%
+%
+On the other hand, we can also evaluate the above trace explicitly, and thereby obtain the following.
+%
+%
+\begin{equation*}
+\tr[
+\hat{Y}^{m_1}_{\ell_1}
+\hat{Y}^{m_2}_{\ell_2}
+(\hat{Y}^{m_3}_{\ell_3})^{\dagger}
+]
+=
+\sum_{m_i'}
+\bra{s, m_1'}
+\hat{Y}^{m_1}_{\ell_1}
+\ketbra{s,m_2'}{s,m_2'}
+\hat{Y}^{m_2}_{\ell_2}
+\ketbra{s,m_3'}{s,m_3'}
+(\hat{Y}^{m_3}_{\ell_3})^{\dagger}
+\ket{s,m_1'}
+\end{equation*}
+%
+%
+\begin{equation*}
+=
+(-1)^{\sum_{i=1}^3 \ell_i + m_3} \, \prod_{i=1}^3 R(\ell_i)
+\end{equation*}
+%
+%
+\begin{equation*}
+\times
+\sum_{m_i'}
+(-1)^{3s + \sum_{i=1}^3 m_i'}
+\left( \begin{array}{ccc}
+s & \ell_1 & s \\
+m_2' & m_1 & -m_1' \\
+\end{array} \right)
+\left( \begin{array}{ccc}
+s & \ell_2 & s \\
+m_3' & m_2 & -m_2' \\
+\end{array} \right)
+\left( \begin{array}{ccc}
+s & \ell_3 & s \\
+m_1' & -m_3 & -m_3' \\
+\end{array} \right)
+\end{equation*}
+%
+%
+\begin{equation}
+=
+(-1)^{\sum_{i=1}^3 \ell_i + m_3} \,
+\prod_{i=1}^3 \sqrt{2 \ell_i + 1} \,
+\left( \begin{array}{ccc}
+\ell_1 & \ell_2 & \ell_3 \\
+m_1 & m_2 & -m_3 \\
+\end{array} \right)
+\left\lbrace \begin{array}{ccc}
+\ell_1 & \ell_2 & \ell_3 \\
+s & s & s \\
+\end{array} \right\rbrace
+\end{equation}
+%
+%
+Where in going from the third to fourth line, we have introduced the \textit{Wigner 6-j symbol}. The 6-j symbols are related to the basis transformation coefficients one finds when coupling three angular momenta. They can be defined implicitly via 3-j symbols in the following way.
+%
+%
+\begin{equation*}
+\left( \begin{array}{ccc}
+\ell_1 & \ell_2 & \ell_3 \\
+m_1 & m_2 & m_3 \\
+\end{array} \right)
+\left\lbrace \begin{array}{ccc}
+\ell_1 & \ell_2 & \ell_3 \\
+j_1 & j_2 & j_3 \\
+\end{array} \right\rbrace
+=
+\sum_{m_i'}
+(-1)^{\sum_{i=1}^3 j_i + m_i'}
+\end{equation*}
+%
+%
+\begin{equation}
+\times
+\left( \begin{array}{ccc}
+\ell_1 & j_2 & j_3 \\
+m_1 & m_2' & -m_3' \\
+\end{array} \right)
+\left( \begin{array}{ccc}
+j_1 & \ell_2 & j_3 \\
+-m_1' & m_2 & m_3' \\
+\end{array} \right)
+\left( \begin{array}{ccc}
+j_1 & j_2 & \ell_3 \\
+m_1' & -m_2' & m_3 \\
+\end{array} \right)
+\end{equation}
+%
+%
+Thus, we find that the expansion coefficients $F^{\ell_3, m_3}_{\ell_1, m_1; \ell_2, m_2}$ for the fuzzy harmonics looks as follow.
+%
+%
+\begin{equation}\label{fuzzy harmonics expansion coefficients}
+F^{\ell_3, m_3}_{\ell_1, m_1; \ell_2, m_2}
+=
+(-1)^{\sum_{i=1}^3 \ell_i + m_3} \,
+\prod_{i=1}^3 \sqrt{2 \ell_i + 1} \,
+\left( \begin{array}{ccc}
+\ell_1 & \ell_2 & \ell_3 \\
+m_1 & m_2 & -m_3 \\
+\end{array} \right)
+\left\lbrace \begin{array}{ccc}
+\ell_1 & \ell_2 & \ell_3 \\
+s & s & s \\
+\end{array} \right\rbrace
+\end{equation}
+%
+%
+The expansion (\ref{fuzzy harmonic expansion}) together with the explicit expression for the expansion coefficients (\ref{fuzzy harmonics expansion coefficients}) turns out to be instrumantal in evaluating traces of the type $\tr[t_i^L \hat{Y}^m_\ell]$, which themselves are needed to evaluate the chiral primary two-point functions in section \ref{sec:CPO}. Further details on how to evalute these traces can be found in \cite{Two-point functions in D5-D3}.
+
+%%
+%%
+%\begin{equation}
+%1 \otimes 1 = 2 \oplus 1 \oplus 0
+%\end{equation}
+%%
+%%
+%
+%%
+%%
+%\begin{equation}
+%\left( \hat{Y}^{0}_{1} \right)^L
+%\sim
+%F^{2,0}_{1,0;1,0} \, F^{3,0}_{2,0;1,0} \cdots F^{L,0}_{L-1,0;1,0}
+%\, \hat{Y}^{0}_{L}
+%\end{equation}
+%%
+%%
+
+%\subsection[Fuzzy spherical harmonics on $\mathfrak{so}(5)$]{Fuzzy spherical harmonics on $\mathbf{\mathfrak{so}(5)}$}
+%We now move on to the case of the $SO(5)$ fuzzy spherical harmonics $\hat{Y}_{\mathbf{L}}$, which were first encountered in section \ref{sec:dCFT} during the process of diagonalizing the boson mass matrix for the $SO(5)$ symmetric vevs.
+%%
+%%
+%\begin{equation*}
+%\omega^{ij} L_{ij} \hat{Y}_{\mathbf{L}} \equiv [\omega^{ij} G_{ij},\hat{Y}_{\mathbf{L}}]
+%=
+%\end{equation*}
+%%
+%%
+%\begin{equation}\label{so(5) spherical tensor}
+%\sum_{\ell_1', \ell_2'} \sum_{m_1',m_2'}
+%\hat{Y}_{(L_1,L_2),\ell_1',\ell_2',m_1',m_2'}
+%\bra{(L_1,L_2),\ell_1',\ell_2',m_1',m_2'}
+%\omega^{ij} L_{ij}
+%\ket{(L_1,L_2),\ell_1,\ell_2,m_1,m_2}
+%\end{equation}
+%%
+%%
+%Where the sums in the above expression, run over the ranges dictated by the following inequalities.
+%%
+%%
+%\begin{equation}
+%-\ell_1' \leq m_1' \leq \ell_1'
+%%
+%\quad , \quad
+%%
+%-\ell_2' \leq m_2' \leq \ell_2'
+%\end{equation}
+%%
+%%
+%\begin{equation}
+%- L_1 + L_2 \leq \ell_1' - \ell_2' \leq L_1 - L_2 \leq \ell_1' + \ell_2' \leq L_1 + L_2 
+%\end{equation}
+%%
+%%
+%The transformation property (\ref{so(5) spherical tensor}) is exactly the generalization of the spherical tensor transformation property (\ref{fuzzy harmonics def}) to $\mathfrak{so}(5)$. Just as for the $\mathfrak{so}(3)$ spherical tensors $T_{\ell,m}$, the matrix elements of the $\mathfrak{so}(5)$ spherical tensors, which we denote $T_{\mathbf{L}}$, can also be expressed in terms of coupling-coefficients by use of the \textit{generalized Wigner-Eckart theorem}.
+%%
+%%
+%\begin{equation}
+%\bra{\mathbf{S}} T_{\mathbf{L}} \ket{\mathbf{S}'}
+%=
+%\delta_{S_1,S_1'} \delta_{S_2,S_2'}
+%R(S_1, S_2; L_1, L_2) \, 
+%\braket{\mathbf{S}';\mathbf{L}}{\mathbf{S}}
+%\end{equation}
+%%
+%%
+%The coupling-coefficients bewteen irreducible $\mathfrak{so}(5)$ representations, can conveniently be decomposed into $\mathfrak{so}(3)$ coupling-coefficients and so-called \textit{reduced coupling-coefficients} in the following simple way.
+%%
+%%
+%\begin{equation*}
+%\braket{(L_1,L_2), \ell_1, \ell_2, m_{\ell_1}, m_{\ell_2}; (S_1,S_2), s_1, s_2, m_{s_1}, m_{s_2}}{(J_1,J_2), j_1, j_2, m_{j_1}, m_{j_2}}
+%\end{equation*}
+%%
+%%
+%\begin{equation*}
+%=
+%\bra{(L_1,L_2), \ell_1, \ell_2;(S_1,S_2),s_1,s_2} \ket{(J_1,J_2),j_1,j_2}
+%\end{equation*}
+%%
+%%
+%\begin{equation}
+%\times
+%\braket{\ell_1, m_{\ell_1}; s_1, m_{s_1}}{j_1, m_{j_1}}
+%\braket{\ell_2, m_{\ell_2}; s_2, m_{s_2}}{j_2, m_{j_2}}
+%\end{equation}
+%%
+%%
+%In analogy to the Wigner 3-j symbols (\textit{or equivalently the $\mathfrak{so}(3)$ coupling-coefficients}), the reduced $\mathfrak{so}(5)$ coupling-coefficients also possess a number of useful symmetry properties. We will make use of the following of these symmetries.
+%%
+%%
+%\begin{subequations}
+%%
+%%
+%\begin{equation*}
+%\bra{(L_1,L_2), \ell_1, \ell_2;(S_1,S_2),s_1,s_2} \ket{(J_1,J_2),j_1,j_2}
+%=
+%(-1)^{\ell_1 + \ell_1 + s_1 + s_2 - j_1 - j_2}
+%\end{equation*}
+%%
+%%
+%\begin{equation}
+%\times
+%\bra{(S_1,S_2),s_1,s_2;(L_1,L_2), \ell_1, \ell_2} \ket{(J_1,J_2),j_1,j_2}
+%\end{equation}
+%%
+%%
+%
+%%
+%%
+%\begin{equation*}
+%\bra{(L_1,L_2), \ell_1, \ell_2;(S_1,S_2),s_1,s_2} \ket{(J_1,J_2),j_1,j_2}
+%=
+%(-1)^{j_1 + j_2 + s_1 + s_2 - \ell_1 - \ell_1}
+%\end{equation*}
+%%
+%%
+%\begin{equation}
+%\times
+%\sqrt{\frac{d_5(J_1,J_2) (2 \ell_1 + 1) (2 \ell_2 + 1)}{d_5(L_1,L_2) (2 j_1 + 1) (2 j_2 + 1)}}
+%\bra{(J_1,J_2),j_1,j_2; (S_1,S_2),s_1,s_2} \ket{(L_1,L_2), \ell_1, \ell_2}
+%\end{equation}
+%%
+%%
+%\end{subequations}
+%%
+%%
+%We can now employ the generalized Wigner-Eckart theorem, to express the matrix elements of the fuzzy harmonics $\hat{Y}_{\mathbf{L}}$ in terms of $\mathfrak{so}(5)$ coupling-coefficients and the isoscalar factor $R(S_1,S_2;L_1,L_2)$.
+%%
+%%
+%\begin{equation}\label{so(5) fuzzy harmonics matrix elements}
+%[\hat{Y}_{\mathbf{L}}]_{\mathbf{s}, \mathbf{s}'}
+%=
+%\bra{(S_1,S_2), \mathbf{s}} \hat{Y}_{\mathbf{L}} \ket{(S_1,S_2), \mathbf{s}'}
+%=
+%R'(S_1, S_2; L_1, L_2) \, 
+%\braket{(S_1,S_2), \mathbf{s}';\mathbf{L}}{(S_1,S_2), \mathbf{s}}
+%\end{equation}
+%%
+%%
+%Where $\mathbf{s}$ is shorthand for the $\mathfrak{so}(3) \times \mathfrak{so}(3)$ quantum numbers $(s_1, m_{s_1}; s_2, m_{s_2})$. To fix the isoscalar factor, we first demand that the fuzzy harmonics $\hat{Y}_{\mathbf{L}}$ obey the following orthogonality condition.
+%%
+%%
+%\begin{equation}
+%\tr[ \hat{Y}_{\mathbf{L}} (\hat{Y}_{\mathbf{L}'})^\dagger ]
+%=
+%\delta_{\mathbf{L},\mathbf{L}'}
+%%
+%\quad , \quad
+%%
+%\left( \hat{Y}^{(L_1,L_2)}_{\ell_1,\ell_1,m_1,m_2} \right)^\dagger
+%=
+%-(-1)^{L_1 - L_2 + \ell_1 + \ell_2 + m_{\ell_1} + m_{\ell_2}} \,
+%\hat{Y}^{(L_1,L_2)}_{\ell_1,\ell_1,-m_1,-m_2}
+%\end{equation}
+%%
+%%
+%Analogously to the the case of $\mathfrak{so}(3)$ fuzzy harmonics, the trace of $\mathfrak{so}(5)$ fuzzy harmonics written above can also be evaluated explicitly, in this case using the matrix elements (\ref{so(5) fuzzy harmonics matrix elements}).
+%%
+%%
+%\begin{equation*}
+%\tr[\hat{Y}_{\mathbf{L}} (\hat{Y}_{\mathbf{L}'})^\dagger]
+%=
+%R \, R' \,
+%\sum_{\mathbf{s},\mathbf{s}'}
+%\bra{(S_1,S_2), \mathbf{s}} \hat{Y}_{\mathbf{L}} \ketbra{(S_1,S_2),\mathbf{s}'}{(S_1,S_2),\mathbf{s}'} (\hat{Y}_{\mathbf{L}'})^\dagger \ket{(S_1,S_2),\mathbf{s}}
+%\end{equation*}
+%%
+%%
+%\begin{equation*}
+%= R \, R' \,
+%\sum_{\mathbf{s},\mathbf{s}'}
+%-(-1)^{L_1' - L_2' + \ell_1' + \ell_2' + m_{\ell_1}' + m_{\ell_2}'} \,
+%\end{equation*}
+%%
+%%
+%\begin{equation*}
+%\times
+%\bra{(S_1,S_2), s_1', s_2'; (L_1,L_2), \ell_1, \ell_2} \ket{(S_1,S_2), s_1, s_2}
+%\end{equation*}
+%%
+%%
+%\begin{equation*}
+%\times
+%\bra{(S_1,S_2), s_1, s_2; (L_1',L_2'), \ell_1', \ell_2'} \ket{(S_1,S_2), s_1', s_2'} 
+%\end{equation*}
+%%
+%%
+%\begin{equation*}
+%\times
+%\braket{s_1', m_{s_1}'; \ell_1, m_{\ell_1}}{s_1, m_{s_1}}
+%\braket{s_2', m_{s_2}'; \ell_2, m_{\ell_2}}{s_2, m_{s_2}}
+%\end{equation*}
+%%
+%%
+%\begin{equation}
+%\times
+%\braket{s_1, m_{s_1}; \ell_1', -m_{\ell_1}'}{s_1', m_{s_1}'}
+%\braket{s_2, m_{s_2}; \ell_2', -m_{\ell_2}'}{s_2', m_{s_2}'}
+%\end{equation}
+%%
+%%
+%Where we have defined $R \equiv R(S_1,S_2;L_1,L_2)$ and $R' \equiv R(S_1,S_2;L_1',L_2')$. We can now perform the sums over $m_{s_1}$, $m_{s_2}$ and $m_{s_1}'$, $m_{s_2}'$ by using the relation (\ref{coupling-coefficients 3j relation}) between $\mathfrak{so}(3)$ coupling-coefficients and the 3-j symbols, together with the symmetries (\ref{3j column interchange}) and (\ref{3j m sign flip}) of the 3-j symbols.
+%%
+%%
+%\begin{equation*}
+%\tr[\hat{Y}_{\mathbf{L}} (\hat{Y}_{\mathbf{L}'})^\dagger]
+%=
+%R \, R' \,
+%\sum_{s_1, s_2; s_1', s_2'}
+%-(-1)^{L_1' - L_2' + \ell_1' + \ell_2'} \,
+%\frac{\sqrt{(2 s_1 + 1) (2 s_1' + 1) (2 s_2 + 1) (2 s_2' + 1)}}{(2 \ell_1 + 1) (2 \ell_2 + 1)}
+%\end{equation*}
+%%
+%%
+%\begin{equation}
+%\times
+%\delta_{m_{\ell_1}, m_{\ell_1}'}
+%\delta_{m_{\ell_2}, m_{\ell_2}'}
+%\delta_{\ell_1, \ell_1'}
+%\delta_{\ell_2, \ell_2'}
+%\end{equation}
+%%
+%%
+%\begin{equation*}
+%\times
+%\bra{(S_1,S_2), s_1', s_2'; (L_1,L_2), \ell_1, \ell_2} \ket{(S_1,S_2), s_1, s_2}
+%\end{equation*}
+%%
+%%
+%\begin{equation*}
+%\times
+%\bra{(S_1,S_2), s_1, s_2; (L_1',L_2'), \ell_1, \ell_2} \ket{(S_1,S_2), s_1', s_2'} 
+%\end{equation*}
+%%
+%%
+%\begin{equation}
+%=
+%\delta_{\mathbf{L}, \mathbf{L}'} \,
+%\frac{R(S_1, S_2) \, R(S_1', S_2')}{S_1 (S_1 + 2) + S_2 (S_2 + 1)} \, \{ (S_1, S_2), (S_1, S_2), (L_1, L_2) \}
+%\end{equation}
+%%
+%%
+%Completeness relation for $\mathfrak{so}(5)$ coupling coefficients.
+%%
+%%
+%\begin{equation}
+%\sum_{\mathbf{s},\mathbf{s}'}
+%\expval{(L_1,L_2), \boldsymbol{\ell} | \mathbf{S}; \mathbf{S}'} 
+%\expval{\mathbf{S}; \mathbf{S}' | (L_1',L_2'), \boldsymbol{\ell}'} 
+%=
+%\delta_{L_1, L_1'} \delta_{L_2, L_2'} \delta_{\boldsymbol{\ell}, \boldsymbol{\ell}'}
+%\end{equation}
+%%
+%%
+%This implies the following Completeness relation for the reduced coupling coefficients.
+%%
+%%
+%\begin{equation*}
+%\sum_{s_1,s_2;s_1',s_2'}
+%\bra{(L_1,L_2), \ell_1, \ell_2} \ket{(S_1,S_2), s_1, s_2; (S_1',S_2'), s_1', s_2'} 
+%\end{equation*}
+%%
+%%
+%\begin{equation*}
+%\times
+%\bra{(S_1,S_2), s_1, s_2; (S_1',S_2'), s_1', s_2'} \ket{(L_1',L_2'), \ell_1', \ell_2'}
+%\end{equation*}
+%%
+%%
+%\begin{equation}
+%=
+%\delta_{L_1,L_1'} \delta_{L_2,L_2'} \delta_{\ell_1,\ell_1'} \delta_{\ell_2,\ell_2'}
+%\end{equation}
+%%
+%%
+%The relevant representation space, in which we wanna know the matrix elements.
+%%
+%%
+%\begin{equation}
+%(S_1,S_2) = \left( \tfrac{n}{2}, 0 \right)
+%%
+%\quad \Rightarrow \quad
+%%
+%-\tfrac{n}{2} \leq s_1 - s_2 \leq \tfrac{n}{2} \leq s_1 + s_2 \leq \tfrac{n}{2}
+%\end{equation}
+%%
+%%
+%Fussion algebra for the $\mathfrak{so}(5)$ fuzzy harmonics.
+%%
+%%
+%\begin{equation}
+%\hat{Y}_{\boldsymbol{L}_1}
+%\hat{Y}_{\boldsymbol{L}_2}
+%=
+%\sum_{\boldsymbol{L}_3}
+%F^{\boldsymbol{L}_3}_{\boldsymbol{L}_1; \boldsymbol{L}_2}
+%\hat{Y}_{\boldsymbol{L}_3}
+%\end{equation}
+%%
+%%
+%
+%%
+%%
+%\begin{equation}
+%\left( \frac{1}{2}, \frac{1}{2} \right)
+%\otimes
+%\left( \frac{1}{2}, \frac{1}{2} \right)
+%=
+%(1,1) \oplus (0,0) \oplus (1,0) \oplus (0,1)
+%\oplus \left( \frac{1}{2}, \frac{1}{2} \right)
+%\end{equation}
+%%
+%%
+%
+%
+%%
+%%
+%\begin{equation}
+%\left( \hat{Y}_{\left( \frac{1}{2}, \frac{1}{2} \right)} \right)^L
+%\sim
+%F^{(1,1)}_{\left( \frac{1}{2}, \frac{1}{2} \right),\left( \frac{1}{2}, \frac{1}{2} \right)} \,
+%F^{\left( \frac{3}{2}, \frac{3}{2} \right)}_{(1,1);\left( \frac{1}{2}, \frac{1}{2} \right)}
+%\cdots
+%F^{\left( \frac{L}{2}, \frac{L}{2} \right)}_{\left( \frac{L-1}{2}, \frac{L-1}{2} \right);\left( \frac{1}{2}, \frac{1}{2} \right)}
+%\, \hat{Y}_{\left( \frac{L}{2}, \frac{L}{2} \right)}
+%\end{equation}
+%%
+%%

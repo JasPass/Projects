@@ -1,0 +1,225 @@
+% \newgeometry{top=2cm,left=2cm,right=2cm,bottom=2cm} 
+%
+\section{Trace relations for Lie algebra generators}\label{app:trace_relations}
+In writing down the general expressions for the connected tree-level constributions to the chiral primary two-point functions of section \ref{sec:CPO}, the following results from \cite{Two-point functions in D5-D3} was of instrumental importance.
+%
+%
+\begin{equation}
+\tr[ t_3^L \hat{Y}^m_{\ell} ] = \alpha^L_\ell \, \delta^{m,0}
+\end{equation}
+%
+%
+\begin{equation}
+\tr[ t_1^L \hat{Y}^m_{\ell} ]
+=
+\frac{i^{\ell+m}}{2^\ell}
+\sqrt{\frac{\Gamma(\ell+m+1)}{\Gamma(\ell-m+1)}}
+\frac{\Gamma(\ell-m+1)}
+{
+\Gamma \left( \frac{\ell-m+2}{2} \right)
+\Gamma \left( \frac{\ell+m+2}{2} \right)
+} \,
+\alpha^L_\ell
+\end{equation}
+%
+%
+In this appendix, we will give a brief review of procedure used in \cite{Two-point functions in D5-D3}, to derive the above formulae. The strategy will be to first write the generator $t_3$ in terms of the fuzzy harmonics $\hat{Y}^m_{\ell}$, and subsequently use the fussion algebra for the $\mathfrak{so}(3)$ fuzzy harmonics to write the product $t_3^L$ as a sum $\mathfrak{so}(3)$ fuzzy harmonics.
+%
+%
+\begin{equation}
+t_3^L = \sum_{\ell=0}^L \alpha^L_\ell \, \hat{Y}^0_\ell
+\end{equation}
+%
+%
+We then make use of a clever recursion relation between the $\alpha^L_\ell$ coefficients to compute all of them from $\alpha^L_L$. We finally relate the $t_1^L$ trace to the $t_3^L$ trace, using an appropriate similarity transformation.
+
+
+\subsection[$\mathfrak{so}(3)$ trace relations]{$\mathbf{\mathfrak{so}(3)}$ trace relations}
+In order to compute the two-point functions, we need to know the following trace:
+%
+%
+\begin{equation}
+\tr[ t_3^L \hat{Y}_\ell^m ]
+\end{equation}
+%
+%
+A defining feature of the $\hat{Y}_\ell^m$ matrices is that they obey:
+%
+%
+\begin{equation}
+L_3 \hat{Y}_\ell^m = [t_3, \hat{Y}_\ell^m] = m \hat{Y}_\ell^m
+\end{equation}
+%
+%
+Let us now attempt to compute the following trace:
+%
+%
+\begin{equation}
+\tr[ t_3^L L_3 \hat{Y}_\ell^m ]
+=
+\tr[ t_3^L [t_3, \hat{Y}_\ell^m] ]
+=
+\tr[ [t_3^L, t_3] \hat{Y}_\ell^m ]
+=
+0
+\end{equation}
+%
+%
+But we also know that:
+%
+%
+\begin{equation}
+\tr[ t_3^L L_3 \hat{Y}_\ell^m ]
+=
+m \tr[ t_3^L \hat{Y}_\ell^m ]
+\end{equation}
+%
+%
+Thus, we conclude that:
+%
+%
+\begin{equation}
+\tr[ t_3^L \hat{Y}_\ell^m ] = 0
+%
+\quad \text{for} \quad
+%
+m \neq 0
+%
+\quad \Rightarrow \quad
+%
+t_3^L = \sum_{\ell=0}^{\infty} \alpha_{\ell}^L \, \hat{Y}_\ell^0
+\end{equation}
+%
+%
+Another defining feature of the $\hat{Y}_\ell^m$ matrices is that they obey:
+%
+%
+\begin{equation}
+L^2 \hat{Y}_l^m = [t_i, [t^i, \hat{Y}_\ell^m]] = \ell (\ell + 1) \hat{Y}_\ell^m
+\end{equation}
+%
+%
+It will be useful to split up $L^2$ in the following standard way:
+%
+%
+\begin{equation}
+L^2 = L_- L_+ + L_3^2 + L_3
+\end{equation}
+%
+%
+Let us now attempt to compute the following trace:
+%
+%
+\begin{equation}
+\tr[ t_3^L L^2 \hat{Y}_\ell^m ]
+\end{equation}
+%
+%
+We do this in steps using the split up:
+%
+%
+\begin{equation}
+\tr[ t_3^L L_3^2 \hat{Y}_\ell^m ]
+=
+\tr[ t_3^L [t_3, [t_3, \hat{Y}_\ell^m]] ]
+=
+\tr[ [t_3^L, t_3] [t_3, \hat{Y}_\ell^m] ]
+=
+0
+\end{equation}
+%
+%
+Now, the non trivial contribution:
+%
+%
+\begin{equation}
+\tr[ t_3^L L_- L_+ \hat{Y}_\ell^m ]
+=
+\tr[ t_3^L [t_-, [t_+, \hat{Y}_\ell^m]] ]
+=
+\tr[ [t_3^L, t_-] [t_+, \hat{Y}_\ell^m] ]
+=
+\tr[ [[t_3^L, t_-], t_+] \hat{Y}_\ell^m ]
+\end{equation}
+%
+%
+
+%
+%
+\begin{equation}
+\hat{Y}^{m}_{\ell}
+=
+\sum_{m_1=-\ell_1}^{\ell_1}
+\sum_{m_2=-\ell_2}^{\ell_2}
+C^{\ell,m}_{\ell_1,m_1;\ell_2,m_2}
+\hat{Y}^{m_1}_{\ell_1} \hat{Y}^{m_2}_{\ell_2}
+\end{equation}
+%
+%
+
+%
+%
+\begin{equation}
+\hat{Y}^{m_1}_{\ell_1} \hat{Y}^{m_2}_{\ell_2}
+=
+\sum_{\ell=0}^{k-1}
+\sum_{m=-\ell}^{\ell}
+F^{\ell,m}_{\ell_1,m_1;\ell_2,m_2}
+\hat{Y}^{m}_{\ell}
+\end{equation}
+%
+%
+
+%
+%
+\begin{equation}
+m_1 + m_2 = m
+%
+\quad , \quad
+%
+|\ell_2 - \ell_1| \leq \ell \leq \ell_1 + \ell_2
+\end{equation}
+%
+%
+
+%
+%
+\begin{equation}
+\left( \begin{array}{c}
+\hat{Y}^{0}_{2} \\
+\hat{Y}^{0}_{1} \\
+\hat{Y}^{0}_{0} \\
+\end{array}\right)
+=
+\left( \begin{array}{ccc}
+C^{2,0}_{1,1;1,-1} & C^{2,0}_{1,0;1,0} & C^{2,0}_{1,-1;1,1} \\
+C^{1,0}_{1,1;1,-1} & C^{1,0}_{1,0;1,0} & C^{1,0}_{1,-1;1,1} \\
+C^{0,0}_{1,1;1,-1} & C^{0,0}_{1,0;1,0} & C^{0,0}_{1,-1;1,1} \\
+\end{array}\right)
+\left( \begin{array}{c}
+\hat{Y}^{1}_{1} \hat{Y}^{-1}_{1} \\
+\hat{Y}^{0}_{1} \hat{Y}^{0}_{1} \\
+\hat{Y}^{-1}_{1} \hat{Y}^{1}_{1} \\
+\end{array}\right)
+\end{equation}
+%
+%
+
+%
+%
+\begin{equation}
+\hat{Y}^{0}_{1} \hat{Y}^{0}_{1}
+=
+F^{2,0}_{1,0;1,0} \hat{Y}^{0}_{2}
++
+F^{1,0}_{1,0;1,0} \hat{Y}^{0}_{1}
++
+F^{0,0}_{1,0;1,0} \hat{Y}^{0}_{0}
+\end{equation}
+%
+%
+Work in progress...
+
+\subsection[$\mathfrak{so}(5)$ trace relations]{$\mathbf{\mathfrak{so}(5)}$ trace relations}
+Work in progress...
+
