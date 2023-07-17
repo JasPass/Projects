@@ -1,0 +1,77 @@
+%We focus on the Green's functions for which $r = r'$ and $\phi = \phi'$ and we define $\Delta \tau = t - t'$. This simplifies (\ref{Green_pm_thermal}), so that:
+We will now proceed to show that the Green's functions defined by (\ref{Green_pm_thermal}) obey the KMS condition (\ref{KMScond}). We will do this by showing that each term in the sums (\ref{Green_pm_thermal}) obeys the KMS condtion separately.  
+%
+%
+%\begin{align}
+%G^+_1(x,x') & = \sum_{n=-\infty}^\infty \left[
+%\frac{r^2}{r_+^2} \cosh \left(
+%\frac{2 \pi n r_+}{\ell}
+%\right) - 1 - \frac{(r^2 - r_+^2)}{r_+^2} \cosh \left(
+%\frac{r_+ (\Delta \tau - i \epsilon)}{\ell^2}
+%\right)
+%\right]^{-\frac{1}{2}}
+%%
+%\notag\\
+%%
+%G^+_2(x,x') & = \sum_{n=-\infty}^\infty \left[
+%\frac{r^2}{r_+^2} \cosh \left(
+%\frac{2 \pi n r_+}{\ell}
+%\right) + 1 - \frac{(r^2 - r_+^2)}{r_+^2} \cosh \left(
+%\frac{r_+ (\Delta \tau - i \epsilon)}{\ell^2}
+%\right)
+%\right]^{-\frac{1}{2}} \label{KMS}
+%\end{align}
+%
+%
+For a typical term in the sum in (\ref{KMS}) there is a singularity if the square root vanishes, which is to say when:
+\begin{equation}
+0 = \frac{r \, r'}{r_+^2} \cosh \left(
+\frac{r_+ (\Delta \phi + 2 \pi n)}{\ell}
+\right) \pm 1 - \frac{\zeta(r,r')}{r_+^2} \cosh \left(
+\frac{r_+ (\Delta t - i \epsilon)}{\ell^2}
+\right)
+\end{equation}
+Assuming we can write $\Delta t$ on the form 
+$\Delta t = i \epsilon + i \, p \, \beta \pm \Delta t_n^0$ where $p$ is any integer:
+\begin{equation}
+\frac{\zeta(r, r')}{r_+^2} \cosh \left(
+\frac{r_+}{\ell^2} \left( i \, p \, \beta \pm \Delta \tau_n^0
+\right) \right) 
+=
+\frac{r \, r'}{r_+^2} \cosh \left(
+\frac{r_+ (\Delta \phi + 2 \pi n)}{\ell}
+\right) \pm 1
+\end{equation}
+%We can now use the addition identity for $\cosh$ together with the fact that $\cosh(i A) = \cos(A)$ giving us the following relation:
+%\begin{equation}
+%\cosh(i A \pm B) = \cosh(B) \cos(A) \pm \sinh(B) \sin(A)
+%\end{equation}
+%\begin{equation*}
+%\frac{\zeta(r, r')}{r_+^2}
+%\left(
+%\cosh \left(\frac{r_+ \Delta \tau_n^0}{\ell^2} \right)
+%\cos \left(\frac{r_+ p \, \beta}{\ell^2} \right)
+%\pm \sinh \left(\frac{r_+ \Delta \tau_n^0}{\ell^2} \right)
+%\sin \left(\frac{r_+ p \, \beta}{\ell^2} \right)
+%\right)
+%\end{equation*}
+%\begin{equation}
+%=
+%\frac{r \, r'}{r_+^2} \cosh \left(
+%\frac{r_+ (\Delta \phi + 2 \pi n)}{\ell}
+%\right) \pm 1
+%\end{equation}
+We know that $\cosh$ is periodic with period $2 \pi i$, so we see that if we choose $\beta^{-1} = \frac{r_+}{2 \pi \ell^2}$, we get:
+\begin{equation}
+\frac{\zeta(r, r')}{r_+^2}
+\cosh \left(\frac{r_+ \Delta \tau_n^0}{\ell^2} \right)
+=
+\frac{r \, r'}{r_+^2} \cosh \left(
+\frac{r_+ (\Delta \phi + 2 \pi n)}{\ell}
+\right) \pm 1
+\end{equation}
+Which serves as a definition of $\Delta \tau_n^0$ that ensures that all points such that $\Delta \tau = i \epsilon + \frac{i}{T} p \pm \Delta \tau_n^0$ are singular and we therefore make branch cuts $(\Delta \tau_n^0 + i \epsilon + \frac{i}{T} p \longrightarrow \infty + i \epsilon + \frac{i}{T} p)$ and $(-\Delta \tau_n^0 + i \epsilon + \frac{i}{T} p \longrightarrow -\infty + i \epsilon + \frac{i}{T} p)$. We now see that
+\begin{equation}
+g(\Delta \tau - \frac{i}{T_0}) = g(- \Delta \tau)
+\end{equation}
+(that should obviously be explained some more) which is exactly the KMS condition (eq \ref{KMScond}) with the temperature of the black hole equal to $T_0$.

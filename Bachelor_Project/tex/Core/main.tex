@@ -1,0 +1,147 @@
+% import packeges
+\documentclass[a4paper,12pt]{article}
+\usepackage[eng]{nbi}
+\usepackage{paralist}
+\usepackage[danish,english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{wrapfig}
+\usepackage{eso-pic}
+\usepackage{mathtools}
+\usepackage{datetime}
+\usepackage{nameref}
+\usepackage{lastpage}
+\usepackage{amsfonts}
+\usepackage{appendix}
+\usepackage{fancyheadings}
+\usepackage{lipsum}
+\usepackage{braket}
+
+% definition environment
+\usepackage{amsthm}
+ 
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+\theoremstyle{theorem}
+\newtheorem{theorem}{Theorem}[section]
+
+% number equations by section
+\numberwithin{equation}{section}
+
+% set font type
+\usepackage{times}
+
+% redefinition of the plain style
+\makeatletter
+\newcommand*{\currentname}{\@currentlabelname}
+\makeatother
+
+% redefinition of the plain style
+\fancypagestyle{plain}{
+\lhead{Analysis of the BTZ Black Hole}
+\rhead{\currentname}
+\renewcommand{\footrulewidth}{0.5pt}
+\cfoot{Page \thepage{} of 25}}
+
+% create the front pages
+\supervisor{Poul Henrik Damgaard and Subodh Patil}
+\project{Bachelor project in physics}
+\author{Christain Schiøtt and Rasmus Nielsen}
+\title{Analysis of the BTZ Black Hole}
+\subtitle{Properties of a (2+1) dimensional black hole solution}
+\institute{Niels Bohr Institutet}
+\department{Niels Bohr International Academy}
+\email{bcn852@alumni.ku.dk and jbz701@alumni.ku.dk}
+\handindate{13.06.2018}
+\defencedate{To be decided}
+
+\begin{document}
+
+\maketitle
+
+% The abstracts
+\input{../abs/abstracts}
+
+\newpage
+
+% The table of contents
+\tableofcontents
+\thispagestyle{empty}
+\setcounter{page}{0}
+
+\newpage
+\pagestyle{plain}
+
+% section 1: Introduction
+\input{../Intro/Introduction}
+
+% section 2: The Metric
+\input{../metric/metric}
+
+% section 3: Properties
+\input{../prop/properties}
+
+% section 4: Quantum
+\input{../QBTZ/quantum_BTZ}
+
+% chapter 5: The conclusion
+\input{../conclusion/conclusion}
+
+\section*{Bibliographical notes}
+This thesis is the product of a 4 month reading course on General Relativity following the textbook by Sean Carroll \cite{GR} and going through:
+\begin{itemize}
+\item Chapter 1: Special Relativity and Flat Spacetime
+\item Chapter 2: Manifolds
+\item Chapter 3: Curvature
+\item Chapter 4: Gravitation
+\item Chapter 5: The Schwarzschild Solution
+\item Chapter 6: More General Black Holes 
+\item Chapter 9: Quantum Field Theory in Curved Spacetime
+\end{itemize}
+In the end of the course, we touched upon different aspect of Quantum Field Theory on curved spacetimes, specifically on the (2+1)-dimensional black hole, following the articles:
+\begin{itemize}
+\item Black Hole Thermodynamics \cite{BH thermo}
+\item The (2+1)-Dimensional Black Hole \cite{2+1 black hole}
+\item Scalar Field Quantization on the 2+1 Dimensional Black Hole Background \cite{Green}
+\end{itemize}
+
+
+\begin{thebibliography}{9}
+%\thispagestyle{empty}
+
+\bibitem{GR}
+S. Caroll.
+\textit{Spacetime and Geometry: an introduction to general relativity}. 
+ISBN: 0-8053-8732-3
+
+\bibitem{BH thermo}
+Simon F. Ross
+\textit{Black hole thermodynamics}.
+http://arXiv.org/abs/hep-th/0502195v2
+
+\bibitem{2+1 black hole}
+S. Carlip
+\textit{The (2+1)-Dimensional Black Hole}. 
+http://arXiv.org/abs/gr-qc/9506079v1
+
+\bibitem{Green}
+G. Lifschytz and M. Ortiz
+\textit{Scalar Field Quantization on the 2+1 Dimensional Black Hole Background}. 
+http://arXiv.org/abs/gr-qc/9310008
+
+\bibitem{Wald}
+Robert M. Wald
+\textit{General Relativity}. 
+ISBN: 0-226-87033-2
+
+
+\end{thebibliography}
+
+\clearpage
+
+% appendices
+\input{../app/appendices}
+
+\end{document}

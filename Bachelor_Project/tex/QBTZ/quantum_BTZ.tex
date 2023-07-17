@@ -1,0 +1,704 @@
+\newgeometry{top=2cm,left=2cm,right=2cm,bottom=2cm} 
+%
+\section{Quantum fields on fixed BTZ background}
+In thse previous section, we found that the causal structure of the static BTZ spacetime is very similar to that of the Schwarzschild spacetime (\textit{see figures (\ref{fig:conformal_SW}) and (\ref{fig:pen_btz_static}) in sections 1 and 3, for comparison}). This leads us to suspect that quantum fields defined on the right patch of the maximally extended BTZ spacetime, might be at non-zero temperature. This turns out to be the case which we will show in this section, by analysing the BTZ \textbf{Green's functions} defined on the right patch, following closely the derivation found in appendix A of \cite{Green}. We shall use a \textbf{conformally coupled} scalar field, as this will make the computation of the Green's functions considerably easier. Furthermore, we will in this discussion ignore any effects of \textbf{back-reaction} on the geometry, induced by the energy-momentum tensor of the scalar field. For an extensive discussion of these effects, see \cite{Green}.
+%%%%%%%%%%%%%%%%%%%%% I don't get the argument %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Some of the consequences of considering the back-reaction are:
+%\begin{itemize}
+%  \item The spacetime develops an actual curvature singularity at $r=0$.
+%  \item The $M = 0$ solution is not stable and is therefore not a good guess for the end-point of the evaporation of the black hole.
+%\end{itemize}
+%Because of this second point, we will not go through any discussions of the evaporation of the BTZ black hole. Doing so without considering the back-reaction would be misleading at best.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{KMS condition and the two-point function}
+% V1.0 stuff for this section
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%We will use the following form of the metric:
+%%
+%%
+%\begin{equation}
+%ds^2 = \frac{l^2}{z^2} \, (
+%-\mathrm{d}y^2
+%+\mathrm{d}x^2
+%+ \mathrm{d}z^2
+%)
+%\end{equation}
+%%
+%%
+%\begin{equation}
+%{\omega^0}_1 = 0
+%\quad , \quad
+%{\omega^0}_2 = -\frac{1}{z} \, \mathrm{d}y
+%\quad , \quad
+%{\omega^1}_2 = -\frac{1}{z} \, \mathrm{d}x
+%\end{equation}
+%%
+%%
+%\begin{equation}
+%\Box = g^{\mu\nu} \, \nabla_{\mu} \, \nabla_{\nu} = \frac{z^2}{l^2} \, \big(
+%- \partial_y^2
+%+ \partial_x^2
+%+ \partial_z^2
+%\big)
+%\end{equation}
+%%
+%%
+%\begin{equation}
+%(\Box - m^2) \, G(x, x') = \delta(x - x')
+%\end{equation}
+%%
+%%
+%\begin{equation}
+%G(x, x') = \int \frac{1}{(2 \pi)^{\frac{3}{2}}}
+%\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Before we compute the Green's functions on the BTZ spacetime, let us first briefly discuss how to identify a quantum state at non-zero temperature. From quantum statistical mechanics, we know that the expectation value of an operator $A$ with respect to the thermal equilibrium state, is given by:
+%
+%
+\begin{equation}\label{thermal_expval}
+\braket{A}_{\beta} = \frac{1}{Z} \, \mathrm{Tr}[e^{-\beta \, H} \, A]
+\quad , \quad
+Z = \mathrm{Tr}[e^{-\beta \, H}]
+\end{equation}
+%
+%
+Where $H$ is the Hamiltonian operator of the quantum system, and $\beta$ is its inverse temperature. The Hamiltonian is also responsible for defining the time-evolution of any operator $A$ (\textit{we are evidently working in the \textbf{Heisenberg picture}}):
+%
+\begin{equation}\label{time-evolution}
+A_{t} = e^{i \, t \, H} \, A \, e^{-i \, t \, H}
+\end{equation}
+%
+%
+The expression (\ref{thermal_expval}) for thermal expectation is well defined for systems with finite number of degrees of freedom. However, for systems with a continuous spectrum, such as free scalar fields, the partition function $Z$ tends to diverge, rendering (\ref{thermal_expval}) practically unusable. To work around this inconvenience, we can combine the expressions (\ref{thermal_expval}) and (\ref{time-evolution}) to form what is known as the \textbf{KMS condition}:
+%
+%
+\begin{equation}\label{KMS}
+\braket{A_{t - i \, \beta} \, B}_{\beta}
+= \frac{1}{Z} \, \mathrm{Tr}[e^{-\beta \, H} \, (e^{\beta \, H} \, A_t \, e^{-\beta \, H}) \, B]
+= \frac{1}{Z} \, \mathrm{Tr}[e^{-\beta \, H} \, B \, A_t]
+= \braket{B \, A_t}_{\beta}
+\end{equation}
+%
+%
+A state that satisfies the KMS condition for all operators $A$ and $B$, is then said to be a thermal KMS state. I can be shown, that the KMS condition (\ref{KMS}) is equivalent to (\ref{thermal_expval}) for systems with finite degress of freedom. To further aid us identify thermal states of free scalar fields, we need to investigate how the KMS condition affects the properties of certain objects defined from the field operators $\phi(x)$. To do so, we first introduce the two \textbf{Wightman functions}, defined as follow:
+%
+%
+\begin{equation}
+G^+(x, x') = \bra{0} \phi(x) \, \phi(x') \ket{0}
+\quad , \quad
+G^-(x, x') = \bra{0} \phi(x') \, \phi(x) \ket{0}
+\end{equation}
+%
+%
+Now, in order for any notion of thermal equilibrium to exists, the spacetime on which the the scalar field theory is defined, must be static. Thus, it must admit a time-like Killing vector $\partial_t$, with an associated foliation of the spacetime $(t, \mathbf{x})$. The existence of the Killing vector $\partial_t$ also implies that the Wightman functions only depend on time differences $\Delta t$. We can now use the KMS condition to relate the two Wightman functions. The result is the following:
+%
+%
+\begin{equation}
+G^+_{\beta}(\Delta t - i \, \beta; \mathbf{x}, \mathbf{x'})
+= \braket{\phi_{t - i \, \beta}(\mathbf{x}) \, \phi_{t'}(\mathbf{x'}}_{\beta}
+= \braket{\phi_{t'}(\mathbf{x'}) \, \phi_{t}(\mathbf{x})}_{\beta}
+= G^-_{\beta}(\Delta t; \mathbf{x}, \mathbf{x'})
+\end{equation}
+%
+%
+We can slightly rewrite the above, by noting that $G^-(x, x') = G^+(x', x)$. Written in terms of the foliation $(t, \mathbf{x})$, this becomes $G^-_{\beta}(\Delta t; \mathbf{x}, \mathbf{x'}) = G^+_{\beta}(-\Delta t; \mathbf{x'}, \mathbf{x})$. We thus arrive at the following relation:
+%Or, equivalently, if defining $g_\beta(\Delta t) = G^+_\beta(t - t'; \mathbf{x}, \mathbf{x'})$ such that $g_\beta(- \Delta \tau) = G^-_\beta(t - t'; \mathbf{x}, \mathbf{x'})$:
+%
+%
+%\begin{equation}\label{period_imag}
+%\boxed{
+%g_\beta(\Delta t - i \beta) = g_\beta( -\Delta t)
+%}
+%\end{equation}
+%
+%
+\begin{equation}\label{KMScond}
+\boxed{
+G^+_{\beta}(\Delta t - i \, \beta; \mathbf{x}, \mathbf{x'})
+= G^+_{\beta}(-\Delta t; \mathbf{x'}, \mathbf{x})
+}
+\end{equation}
+%
+%
+This relation is the one that will finally reveal, that observers at fixed distance from the event horizon of the static BTZ black hole experience a non-zero temperature, once we have computed $G^+(x,x')$.
+
+\subsubsection{Computing the AdS Green's functions}
+In order to compute the Wightman function $G^+(x, x')$ on $AdS_3$ we will now make use of the fact that a coordinate system can be chosen on $AdS_3$, such that the metric takes the following simple form:
+%
+%
+\begin{equation}\label{AdS3_ESU}
+ds^2_A = \Omega^2 \, ds^2_E
+\quad , \quad
+ds^2_E =
+- \mathrm{d}\lambda^2
++ \mathrm{d}\chi^2
++ \sin^2\chi \, \mathrm{d}\theta^2
+\quad , \quad
+\Omega = \frac{\ell}{\cos\chi}
+\end{equation}
+%
+\begin{equation*}
+\lambda \in (-\infty, \infty)
+\quad , \quad
+\chi \in \left( 0, \frac{\pi}{2} \right)
+\quad , \quad
+\theta \in (0, 2 \pi)
+\end{equation*}
+%
+%
+These are the same coordinates (\ref{ads_parameterized}) as we used back in section 2.3 to derive a conformal digram for $AdS_3$. We see that the metric $ds^2_A$ is conformally related to the metric $ds^2_E$, which is the metric of a spacetime known as the \textbf{Einstein static universe}. In what follows, all we need to know about the $ESU$ is that the metrics $ds^2_E$ and $ds^2_A$, are related by the conformal factor $\Omega$. We now introduce conformally coupled scalar fields $\phi_E$ and $\phi_A$ on the $ESU$ and $AdS_3$ respectively. The action for a conformally coupled field is given by:
+%
+%
+\begin{equation}\label{conf_action}
+\mathcal{A} = \int_{\mathcal{M}} \sqrt{-g} \, \left(
+- \frac{1}{2} \, g^{\mu\nu} \, \nabla_{\mu} \phi \, \nabla_{\nu} \phi
+- \frac{1}{2} \, \xi \, R \, \phi^2
+\right)
+\end{equation}
+%
+%
+Where $\xi = \frac{(n - 2)}{4 \, (n - 1)}$. For $n=3$, the equation of motion associated with the above action is given by:
+%
+%
+\begin{equation}\label{scalar_EOM}
+\left( \Box - \frac{1}{8} \, R \right) \phi
+= \left( g^{\mu \nu} \, \nabla_{\mu} \, \nabla_{\nu} - \frac{1}{8} \, R \right) \phi
+= 0
+\end{equation}
+%
+%
+It can be shown, that under the conformal transformation $ds^2_E \to ds^2_A = \Omega^2 \, ds^2_E$, the field equation (\ref{scalar_EOM}) transforms in the following way, due to $\phi$ being a conformally coupled field:
+%
+%
+\begin{equation}\label{conf_relation}
+\left( \Box_E - \frac{1}{8} \, R_E \right) \phi_E = 0
+\quad \to \quad
+\left( \Box_A - \frac{1}{8} \, R_A \right) \phi_A = 0
+\quad , \quad
+\phi_A = \Omega^{-\frac{1}{2}} \, \phi_E
+\end{equation}
+%
+%
+Where $R_E = 2$ is the Ricci scalar of the $ESU$, $R_A = 6 \, \ell^{-2}$ is the Ricci scalar of $AdS_3$. Thus, any solution to the field equation (\ref{scalar_EOM}) on the $ESU$, will be related to a solution of (\ref{scalar_EOM}) on $AdS_3$ by the factor $\Omega^{-\frac{1}{2}}$. We now proceed to look for a complete set of modes $\psi_E$, of equation (\ref{scalar_EOM}) on the $ESU$:
+%
+%
+%\begin{equation}
+%\left( \Box_E - \frac{1}{8} \, R_E \right) \phi_E
+%=
+%\left( \Box_A - \frac{1}{8} \, R_A \right) \phi_A
+%\quad , \quad
+%\phi_A = \sqrt{\frac{\cos(\chi)}{\ell}} \, \phi_E
+%\end{equation}
+%
+%
+%%%%%%%
+%The relation (\ref{AdS3_ESU}) between the metrics of $ESU$ and %$AdS_3$, al
+%
+%
+%
+%to go to the Einstein Static Universe, utilising that AdS3 and %ESU are related by a conformal factor. The metric for %\textbf{Einstein static universe} is:
+%
+%
+%\begin{equation}
+%ds_E^2 =
+%- \mathrm{d}\lambda^2
+%+ \mathrm{d}\chi^2
+%+ \sin^2 \chi \, \mathrm{d}\theta^2
+%\end{equation}
+%
+%
+%Where $\lambda \in (-\infty, \infty)$, $\chi \in (0, \pi)$ and $\theta \in (0, 2 \pi)$.
+%%%%%
+%The \textbf{d'Alembert operator} for the Einstein static universe:
+%
+%
+\begin{equation}\label{EOM_ESU}
+\left( \Box_E - \frac{1}{4} \right) \psi_E
+= \left(
+-\partial^2_{\lambda}
++ \partial^2_{\chi} 
++ \frac{\cos \chi}{\sin \chi} \, \partial_{\chi}
++ \frac{1}{\sin^2 \chi} \, \partial^2_{\theta}
+- \frac{1}{4}
+\right) \psi_E
+\end{equation}
+%
+%
+%%%%%
+%Action for \textbf{conformally coupled scalar field} on a
+%$n$ dimensional spacetime:
+%Where $\xi = \frac{(n - 2)}{4 \, (n - 1)}$, which becomes
+%$\frac{1}{8}$ for $n=3$. The associated equation of motion in 
+%3 dimensions are thus:
+%
+%
+%\begin{equation}
+%\left(\Box_E - \frac{1}{8} \, R_E \right) \phi = 0
+%\end{equation}
+%
+%
+%where $R_E = 2$ for the Einstein static universe.
+%%%%%
+To solve the above equation of motion, we propose the following separable ansatz for the modes $\psi_E$:
+%
+%
+\begin{equation}
+\phi_E(\lambda, \chi, \theta) = e^{-i \, \omega \, \lambda} \, f(\chi, \theta)
+\end{equation}
+%
+%
+Using the above ansatz, the field equation (\ref{EOM_ESU}) now takes the following form:
+%
+%
+\begin{equation}
+\omega^2 \, f(\chi, \theta)
++ \partial^2_{\chi} \, f(\chi, \theta)
++ \frac{\cos \chi}{\sin \chi} \, \partial_{\chi} \, f(\chi, \theta)
++ \frac{1}{\sin^2 \chi} \, \partial^2_{\theta} \, f(\chi, \theta)
+- \frac{1}{4} \, f(\chi, \theta)
+= 0
+\end{equation}
+%
+%
+Further algebraic manipulations yields, that the above expression can be brought to the form:
+%
+%
+\begin{equation}\label{sh_equation}
+\left(
+\sin\chi \, \partial_{\chi} \left( \sin \chi \, \partial_{\chi} \right)
++ \partial^2_{\theta}
+\right) \, f(\chi, \theta)
+=
+\left( \frac{1}{4} - \omega^2 \right) \sin^2 \chi \, f(\chi, \theta)
+\end{equation}
+%
+%
+We notice that the above equation is exactly the one defining the \textbf{spherical harmonics} $Y_l^m(\chi, \theta)$, if we require that the following relation between $l$ and $\omega$ holds true:
+%
+%
+\begin{equation}
+\frac{1}{4} - \omega^2 = -l \, (l + 1)
+\quad \Rightarrow \quad
+\omega^2 = l^2 + l^2 + \frac{1}{4} = \left( l + \frac{1}{2} \right)^2
+\quad \Rightarrow \quad
+\omega = l + \frac{1}{2}
+\end{equation}
+%
+%
+Thus, we see that the functions $f(\chi, \theta) = Y_l^m(\chi, \theta)$ solve (\ref{sh_equation}), and the modes $\psi_E$ take the form:
+%
+%
+\begin{equation}\label{Modes_ESU}
+\psi_E(\lambda, \chi, \theta) = N_{lm} \, e^{-i \, \left( l + \frac{1}{2} \right) \, \lambda} \, Y_l^m(\chi, \theta)
+\end{equation}
+%
+%
+% I think this makes sense in the beginning, otherwise it seems a bit weird to just start doing ESU stuff
+%The metric for $AdS_3$ is conformally related to the metric of %the Einstain static universe, by the following conformal %factor:
+%
+%
+%\begin{equation}
+%ds_A^2 = \Omega^2 \, ds_E^2
+%\quad , \quad
+%\Omega^2 = \frac{\ell^2}{\cos^2 \chi}
+%\end{equation}
+%
+%
+%Where $\ell$ is the radius of the $AdS_3$. Note that $\chi \in %\left( 0, \frac{\pi}{2} \right)$ for $AdS_3$. Because the %action (\ref{conf_action}) for $\phi$ is invariant under %conformal transformations, the equation of motion for the %conformally transformed scalar field
+%$\bar{\phi} = \Omega^{-\frac{1}{2}} \, \phi$ becomes:
+%
+%
+%\begin{equation}
+%\left( \Box_A - \frac{1}{8} \, R_A \right) \bar{\phi} = 0
+%\end{equation}
+%
+%
+%Where $R_A = -6 \, \ell^{-2}$.
+Where $N_{lm}$ is just any constant. Using the relation (\ref{conf_relation}), we find that the corresponding modes $\psi_A$ on $AdS_3$ are given by the following:
+%
+\begin{equation}\label{Modes_AdS}
+\psi_A(\lambda, \chi, \theta)
+= \sqrt{\frac{\cos \chi}{\ell}} \, N_{lm} \, e^{-i \, \left( l + \frac{1}{2} \right) \, \lambda} \, Y_l^m(\chi, \theta)
+\end{equation}
+%
+%
+We can now define a hypersurface-invariant inner product on the space of sulutions of (\ref{scalar_EOM}), such that:
+%
+%
+\begin{equation}
+(f,g) = -i \, \int_{\Sigma} d^2x \sqrt{\gamma} \, \left( f \, \nabla_{\mu} \, g^* - g^* \, \nabla_{\mu} \, f \right) \, n^{\mu}
+\end{equation}
+%
+%
+Where $n^{\mu}$ is the unit normal vector of $\Sigma$, and $\gamma_{ij}$ is the induced metric on $\Sigma$. With respect to this inner product, we find that the modes (\ref{Modes_ESU}) and their complex conjugates, are an orthonormal set of modes, if we require that $N_{lm} = (2 \, l + 1)^{-\frac{1}{2}}$:
+%
+%
+\begin{equation}
+(\psi_{lm}, \psi^*_{l'm'}) = 0
+\quad , \quad
+(\psi_{lm}, \psi_{l'm'}) = \delta_{mm'} \, \delta_{ll'} \, N_l
+\quad , \quad
+(\psi^*_{lm}, \psi^*_{l'm'}) = -\delta_{mm'} \, \delta_{ll'} \, N_l
+\end{equation}
+%
+%
+We can expand the field operator $\phi_E(x)$ in these positive and negative frequence modes, such that:
+%
+%
+\begin{equation}
+\phi_E(x) = \sum_{m, l} \psi_{lm}(x) \, a_{lm} +  \psi^*_{lm}(x) \, a^{\dagger}_{lm}
+\end{equation}
+%
+%
+Where $a^{\dagger}_{lm}$ and $a_{lm}$ are the creation and annihilation operators, associated with the modes $\psi_{lm}$. The Green's function $G_E^+(x, x')$ can now be rewritten in terms of the above mode expansion for $\phi_E$:
+%
+%
+\begin{equation}\label{Greens}
+G_E^+(x,x') = {\braket{0 | \phi(x) \phi(x') | 0}} = \sum_{m,l} \psi^E_{l m}(x) {\psi^*}^E_{l m}(x')
+\end{equation}
+%
+%
+Where as usual, we define the ground state $\ket{0}$ such that $a_{lm} \, \ket{0} = 0$, $\forall l,m$. We now insert the expression for the $ESU$ modes (eq \ref{Modes_ESU}), into the Green's function expansion (eq \ref{Greens}). Making use of the following identities for the spherical harmonics $Y^l_m$:
+%
+%
+\begin{equation}
+(Y^l_m)^* = (-1)^m \, Y^l_{-m}
+\end{equation}
+%
+\begin{equation}
+\sum_{m = -l}^l  (-1)^m \, Y^l_m(\chi, \theta) \, Y^l_m(\chi', \theta') = \frac{2 \, l + 1}{4 \pi} \, P_l( \cos \alpha )
+\end{equation}
+%
+\begin{equation}
+\cos \alpha = \cos \chi  \cos \chi'  + \sin \chi  \sin \chi'  \cos (\Delta \theta)
+\end{equation}
+%
+%
+%$(Y^l_m)^* = (-1)^m Y^l_{-m} $ and $\sum_{m = -l}^l  (-1)^m Y^l_m(x) Y^l_m(x') = \frac{2 l + 1}{4 \pi} P(\cos \alpha )$, where
+%
+%
+%\begin{align}
+%\cos \alpha  & = \cos \theta  \cos \theta'  \sin \chi  \sin \chi'  + \sin \theta  \sin \theta'  \sin \chi  \sin \chi'  + \cos \chi  \cos \chi'
+%\notag\\
+%& = \cos \chi  \cos \chi'  + \sin \chi  \sin \chi'  \cos (\theta - \theta')
+%\end{align}
+%
+%
+Where $P_l$ are the \textbf{Legendre polynomials}, and $\alpha$ is the angle between $(\chi, \theta)$ and $(\chi', \theta')$. This all leads to the following expression for the Green's Function $G_E^+(x, x')$:
+%
+%
+\begin{equation}
+%
+%
+G_E^+ = \frac{1}{4 \pi} \,
+e^{-\frac{i}{2} \, \Delta \lambda} \, \sum_{l = 0}^\infty
+e^{-i \, l \, \Delta \lambda} \, P_l(\cos \alpha)
+\end{equation}
+%
+%
+Now, we use the following property of the Legendre polynomials $P_l$ to evaluate the infinite sum: 
+%
+%
+\begin{equation}
+\sum_{n=0}^\infty P_n(y) \, z^n = (1 - 2 \, y \, z + z^2)^{-\frac{1}{2}}
+\end{equation}
+%
+%
+Where in our case, $z = e^{- i \, (\Delta \lambda - i \, \epsilon)}$ and $y = \cos \alpha$. We also add a small negative imaginary part to $\Delta \lambda$ to ensure that the above sum does not diverge. Now, we can make use of the fact that the modes on the $ESU$ and $AdS_3$ are related by (\ref{conf_relation}), to arrive at an expression for the Green's function $G_A^+(x,x')$:
+%
+\newpage
+%
+%
+\begin{align}
+G_A^+(x, x') & = \frac{\sqrt{\cos \chi  \cos \chi'}}{4 \pi \, \ell} \, 
+e^{-\frac{i}{2} \, (\Delta \lambda - i \, \epsilon)} \,
+\left(
+1 - 2 \, \cos \alpha  \, e^{- i \, (\Delta \lambda - i \, \epsilon)} + e^{- 2 \, i \, (\Delta \lambda - i \, \epsilon)}
+\right)^{-\frac{1}{2}}
+%
+\notag\\
+%
+& = \frac{1}{4 \pi \, \ell} \,
+\left(
+e^{i \, (\Delta \lambda - i \, \epsilon)} - 2 \, \cos \alpha + e^{-i \, (\Delta \lambda - i \, \epsilon)}
+\right)^{-\frac{1}{2}}
+= \frac{1}{4 \sqrt{2} \pi \, \ell} \,
+\left(
+\cos (\Delta \lambda - i \, \epsilon) - \cos \alpha
+\right)^{-\frac{1}{2}}
+%
+\notag\\
+%
+& = \frac{1}{4 \sqrt{2} \pi \, \ell} \,
+\left(
+\cos (\Delta \lambda - i \, \epsilon) \sec \chi  \sec \chi' - 1 - \tan \chi  \tan \chi'  \cos \Delta \theta
+\right)^{-\frac{1}{2}}
+\end{align}
+%
+%
+If we now call the above Green's function $G^+_{1, A}$, we can define another Green's function on $AdS_3$ as $G^+_{2,A}(x,x') = G^+_{1,A}(\bar{x}, x)$, where $\bar{x}= (\lambda, \pi - \chi, \theta)$. The two Green's functions will then be given by:
+%
+%
+\begin{align}
+G^+_{1,A}(x,x') & = \frac{1}{4 \sqrt{2} \pi \, \ell} \, 
+\left(
+\cos (\Delta \lambda - i \, \epsilon) \sec \chi  \sec \chi'  - 1 - \tan \chi  \tan \chi'  \cos \Delta \theta
+\right)^{-\frac{1}{2}}
+%
+\notag\\
+%
+G^+_{2,A}(x,x') & = \frac{1}{4 \sqrt{2} \pi \, \ell} \,
+\left(
+\cos (\Delta \lambda - i \, \epsilon) \sec \chi  \sec \chi'  + 1 - \tan \chi  \tan \chi'  \cos \Delta \theta
+\right)^{-\frac{1}{2}} \label{Greens_functions}
+\end{align}
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%% we don't use this, so I removed it to get space %%%%%%%%%%%%%%%%%
+%These expressions can be simplified if we note that they are functions of the distance in the embedding space $\sigma(x,x') = \frac{1}{2} \left[
+%- (x_0 - x_0')^2 - (x_1 - x_1')^2 + (x_2 - x_2')^2 + (x_3 - x_3')^2 \right]$. In the $(\lambda, \chi, \phi)$ coordinates, this distance is given by $\sigma(x,x') = a^2 \left[ \sec \chi  \sec \chi'  - 1 - \tan \chi  \tan \chi'  \cos(\theta - \theta') \right]$, which means we can write the Green's functions as simply:
+%
+%
+%\begin{align*}
+%G^+_{1,A} &= \frac{1}{4 \sqrt{2} \pi}
+%\sigma(x,x')^{-\frac{1}{2}} \\
+%G^+_{2,A} &= \frac{1}{4 \sqrt{2} \pi}
+%\left( \sigma(x,x') + 2 \, \ell^2 \right)^{-\frac{1}{2}}
+%\end{align*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+Since $AdS_3$ is globally non-hyperbolic, it is necessary to impose boundary conditions on the field operators $\phi_A(x)$ at infinity ($\chi = \frac{\pi}{2}$), to insure a well behaved quantum field theory on $AdS_3$. For a discussion of this procedure, see \cite{Green}. It turns out that imposing the appropriated boundary conditions on $\phi_A(x)$, in turn leads to the following Greens's functions:
+%
+%
+\begin{equation}
+G_{A_{\pm}}^+ = G^+_{1,A} \pm G^+_{2,A}
+\quad , \quad
+G_{A_{-}}^+ \left( \chi = \frac{\pi}{2} \right) = 0
+\quad , \quad
+\partial_{\chi} \, G_{A_{+}}^+ \left( \chi = \frac{\pi}{2} \right) = 0
+\end{equation}
+%
+%
+Thus, $G_{A_{-}}^+$ have \textbf{Neumann boundary conditions}, while $G_{A_{+}}^+$ have \textbf{Dirichlet boundary conditions}.
+
+\subsubsection{Computing the BTZ Green's functions}
+Back in section 2.3, we found that it is possible to cover a portion of $AdS_3$ with a set of coordinates $(t,r,\phi)$ defined by (\ref{patch1}), (\ref{patch2}) and (\ref{patch3}). In the case of the static BTZ spacetime, we let $r_- \to 0$, and use only (\ref{patch1}) and (\ref{patch2}). As we are only interested in investigating the properties of the Green's functions for observers outside the event horizon, we will only use the coordinates given by (\ref{patch1}). The Green's functions (\ref{Greens_functions}) in coordinates $(t,r,\phi)$ are then given by:
+%
+%
+\begin{align}
+G^+_{1,A}(x,x') = \frac{1}{4 \sqrt{2} \pi \ell} \, \Bigg[
+&\frac{r \, r'}{r_+^2} \, \cosh \left(
+\frac{r_+ \, \Delta \phi}{\ell}
+\right) - 1 - \frac{\zeta(r,r')}{r_+^2} \, \cosh \left(
+\frac{r_+ \, (\Delta t - i \, \epsilon)}{\ell^2}
+\right)
+\Bigg]^{-\frac{1}{2}}
+%
+\notag\\
+%
+G^+_{2,A}(x,x') = \frac{1}{4 \sqrt{2} \pi \ell} \, \Bigg[
+&\frac{r \, r'}{r_+^2} \, \cosh \left(
+\frac{r_+ \, \Delta \phi}{\ell}
+\right) + 1 - \frac{\zeta(r,r')}{r_+^2} \, \cosh \left(
+\frac{r_+ \, (\Delta t - i \, \epsilon)}{\ell^2}
+\right)
+\Bigg]^{-\frac{1}{2}} \label{Green_pm}
+\end{align}
+%
+\begin{equation*}
+\zeta(r,r') = (r^2 - r_+^2)^\frac{1}{2} \, (r'^2 - r_+^2)^\frac{1}{2}
+\end{equation*}
+%
+%
+We can now use the method of images to derive the Green's Functions on the BTZ spacetime from the Green's Functions on AdS$_3$. Because BTZ can be constructed from AdS$_3$ by making the identification $\phi = \phi + 2 \, \pi \, n$, we must require that the Green's functions on BTZ are periodic in $\phi$. To achieve this, we construct them as:
+%
+\begin{align}
+G^+_1(x,x') = \frac{1}{4 \sqrt{2} \pi \ell} \, \sum_{n=-\infty}^\infty \Bigg[
+&\frac{r \, r'}{r_+^2} \cosh \, \left(
+\frac{r_+ \, (\Delta \phi + 2 \pi n)}{\ell}
+\right) - 1 - \frac{\zeta(r,r')}{r_+^2} \, \cosh \left(
+\frac{r_+ \, (\Delta t - i \, \epsilon)}{\ell^2}
+\right)
+\Bigg]^{-\frac{1}{2}}
+\notag\\
+G^+_2(x,x') = \frac{1}{4 \sqrt{2} \pi \ell} \, \sum_{n=-\infty}^\infty \Bigg[
+&\frac{r \, r'}{r_+^2} \, \cosh \left(
+\frac{r_+ \, (\Delta \phi + 2 \pi n)}{\ell}
+\right) + 1 - \frac{\zeta(r,r')}{r_+^2} \, \cosh \left(
+\frac{r_+ \, (\Delta t - i \, \epsilon)}{\ell^2}
+\right)
+\Bigg]^{-\frac{1}{2}} \label{Green_pm_thermal}
+\end{align}
+%
+
+\subsubsection{The KMS condition}
+We will now proceed to show that the Green's functions defined by (\ref{Green_pm_thermal}) obey the KMS condition (\ref{KMScond}). We will do this by showing that each term in the sums (\ref{Green_pm_thermal}) obeys the KMS condtion separately.  
+%
+%
+For a typical term in the sum in (\ref{KMS}) there is a singularity where the square root vanishes, which is to say when:
+%
+%
+\begin{equation}
+0 = \frac{r \, r'}{r_+^2} \cosh \left(
+\frac{r_+ (\Delta \phi + 2 \pi n)}{\ell}
+\right) \pm 1 - \frac{\zeta(r,r')}{r_+^2} \cosh \left(
+\frac{r_+ (\Delta t - i \epsilon)}{\ell^2}
+\right)
+\end{equation}
+%
+%
+Assuming that $\Delta t$ takes on the form 
+$\Delta t = i \epsilon + i \, p \, \beta \pm \Delta t_n^0$ where $p$ is any integer:
+%
+%
+\begin{equation}
+\frac{\zeta(r, r')}{r_+^2} \cosh \left(
+\frac{r_+}{\ell^2} \left( i \, p \, \beta \pm \Delta \tau_n^0
+\right) \right) 
+=
+\frac{r \, r'}{r_+^2} \cosh \left(
+\frac{r_+ (\Delta \phi + 2 \pi n)}{\ell}
+\right) \pm 1
+\end{equation}
+%
+%
+We know that $\cosh$ is periodic with period $2 \pi \, i$, so we see that if we choose $\beta^{-1} = \frac{r_+}{2 \pi \ell^2}$, we get:
+\begin{equation}
+\frac{\zeta(r, r')}{r_+^2}
+\cosh \left(\frac{r_+ \Delta \tau_n^0}{\ell^2} \right)
+=
+\frac{r \, r'}{r_+^2} \cosh \left(
+\frac{r_+ (\Delta \phi + 2 \pi n)}{\ell}
+\right) \pm 1
+\end{equation}
+%
+%
+Which serves as a definition of $\Delta \tau_n^0$ that ensures that all points such that $\Delta \tau = i \epsilon + \frac{i}{T} p \pm \Delta \tau_n^0$ are singular and we therefore make the square root branch cuts $(\Delta \tau_n^0 + i \epsilon + \frac{i}{T} p \longrightarrow \infty + i \epsilon + \frac{i}{T} p)$ and $(-\Delta \tau_n^0 + i \epsilon + \frac{i}{T} p \longrightarrow -\infty + i \epsilon + \frac{i}{T} p)$.
+%
+%
+In the regions without any branch cuts, it is easy to see that:
+\begin{equation}
+G^+(\Delta t - i \, \beta; \mathbf{x}, \mathbf{x'}) = G^+(\Delta t; \mathbf{x}, \mathbf{x'}) = G^+(- \Delta t: \mathbf{x'}, \mathbf{x})
+\end{equation}
+%
+%
+If however we are in a region with a branch cut, we must be a little more careful. Going through a branch cut gives a minus, so we see that:
+%
+%
+\begin{equation}
+G^+(\Delta t - i \, \beta; \mathbf{x}, \mathbf{x'}) = - G^+(\Delta t; \mathbf{x}, \mathbf{x'})
+\end{equation}
+%
+%
+It is shown in \cite{Green} that $-G^+(- \Delta t; \mathbf{x}, \mathbf{x'}) = G^+(\Delta t; \mathbf{x}, \mathbf{x'})$, which we can use to see that
+%
+%
+\begin{equation}
+G^+(\Delta t - i \, \beta; \mathbf{x}, \mathbf{x'}) = G^+(- \Delta t; \mathbf{x'}, \mathbf{x})
+\end{equation}
+Which is exactly the KMS condition (\ref{KMScond}). This leads us to conclude that the Green's functions are thermal and that we can associate a the following temperature with the static BTZ black hole:
+%
+%
+\begin{equation}
+\boxed{
+T = \beta^{-1}
+=  \frac{r_+}{2 \pi \ell^2}
+}
+\end{equation}
+%
+%
+
+%\subsection{The euclidean BTZ spacetime}
+%We take as our starting point, the static BTZ metric in Schwarzschild coordinates:
+%%
+%%
+%\begin{equation}
+%ds^2 = -f^2(r) \, \mathrm{d}t^2
+%+ f(r)^{-2} \, \mathrm{d}r^2
+%+ r^2 \, \mathrm{d}\phi^2
+%\end{equation}
+%%
+%%
+%Where:
+%%
+%%
+%\begin{equation}
+%f^2(r) = \frac{r^2 - r_+^2}{l^2}
+%\quad , \quad
+%r_+^2 = M \, l^2
+%\end{equation}
+%%
+%%
+%We now analytically continue the above metric, be performing i Wick-rotation:
+%%
+%%
+%\begin{equation}
+%t \to i \, \tau
+%\end{equation}
+%%
+%%
+%The Euclidean BTZ metric is then:
+%\begin{equation}\label{E_btz_metric}
+%ds_E^2 = f^2(r) \, \mathrm{d}\tau^2
+%+ f^{-2}(r) \, \mathrm{d}r^2
+%+ r^2 \, \mathrm{d}\phi^2
+%\end{equation}
+%%
+%%
+%We now define a new radial coordinate $\chi$, such that:
+%%
+%%
+%\begin{equation}
+%\chi = l \, \cosh^{-1} \left( \frac{r}{r_+} \right)
+%\quad \Rightarrow \quad
+%\mathrm{d}\chi = \frac{l^2}{\sqrt{r^2 - r_+^2}} \, \mathrm{d}r
+%\end{equation}
+%%
+%%
+%Note that $\chi = 0$ when $r = r_+$. We can now express $r^2$ and $f^2$ in terms of our new coordinate $\chi$:
+%%
+%%
+%\begin{equation}
+%r^2 = r_+^2 \, \cosh^2 \left( \frac{\chi}{l} \right)
+%\quad , \quad
+%f^2(r) = \frac{r^2 - r_+^2}{l^2}
+%= \frac{r_+^2}{l^2} \, \sinh^2 \left( \frac{\chi}{l} \right)
+%\end{equation}
+%%
+%%
+%In terms of the new radial coordinate $\chi$, the metric (\ref{E_btz_metric}) takes the form:
+%%
+%%
+%\begin{equation}
+%ds_E^2 = \frac{r_+^2}{l^2} \, \sinh^2 \left( \frac{\chi}{l} \right) \, \mathrm{d}\tau^2
+%+ \mathrm{d}\chi^2
+%+ r_+^2 \, \cosh^2 \left( \frac{\chi}{l} \right) \, \mathrm{d}\phi^2
+%\end{equation}
+%%
+%%
+%Close to the horizon $\chi = 0$, the metric components take the approximate form:
+%%
+%%
+%\begin{equation}
+%g_{\tau\tau} \approx \kappa^2 \, \chi^2
+%\quad , \quad
+%g_{\phi\phi} \approx r_+^2
+%\end{equation}
+%%
+%%
+%Where $\kappa := \frac{\sqrt{M}}{l}$, is the surface gravity at the horizon, as has already been shown earlier in this section. The Euclidean metric then takes the following approximate form near the horizon:
+%%
+%%
+%\begin{equation}
+%ds_E^2 \approx \mathrm{d}\tilde{\tau}^2
+%+ \mathrm{d}\chi^2
+%+ r_+^2 \, \mathrm{d}\phi^2
+%\quad , \quad
+%\tilde{\tau} := \frac{\tau}{\kappa}
+%\end{equation}
+%%
+%%
+%We now clearly see, that the Euclidean spacetime near the horizon is of the form $\mathbb{R}^2 \times S^1$, and that it possess a conical singularity, unless $\tilde{\tau} \sim \tilde{\tau} + 2 \pi$.
+

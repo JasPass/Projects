@@ -1,0 +1,37 @@
+\babel@toc {english}{}
+\babel@toc {english}{}
+\babel@toc {danish}{}
+\babel@toc {english}{}
+\contentsline {section}{\numberline {1}Introduction}{1}%
+\contentsline {subsection}{\numberline {1.1}Black hole solutions}{1}%
+\contentsline {subsubsection}{\numberline {1.1.1}The Schwarzschild Black Hole}{1}%
+\contentsline {subsubsection}{\numberline {1.1.2}No-hair Theorem and the Information Paradox}{3}%
+\contentsline {subsubsection}{\numberline {1.1.3}The Kerr Black Hole}{3}%
+\contentsline {subsection}{\numberline {1.2}Aspects of QFT on curved backgrounds}{5}%
+\contentsline {subsubsection}{\numberline {1.2.1}The Unruh Effect}{5}%
+\contentsline {subsection}{\numberline {1.3}Gravity in (2+1) dimensions}{6}%
+\contentsline {section}{\numberline {2}Derivation of the BTZ metric}{8}%
+\contentsline {subsection}{\numberline {2.1}An ansatz for the Einstein Equations}{8}%
+\contentsline {subsection}{\numberline {2.2}Solving the Einstein Equations}{8}%
+\contentsline {subsection}{\numberline {2.3}Connection to anti-de Sitter space}{12}%
+\contentsline {subsubsection}{\numberline {2.3.1}Anti-de Sitter space}{12}%
+\contentsline {subsubsection}{\numberline {2.3.2}Constructing the BTZ spacetime}{13}%
+\contentsline {section}{\numberline {3}Classical properties of the BTZ spacetime}{14}%
+\contentsline {subsection}{\numberline {3.1}Causal structure of the spacetime}{14}%
+\contentsline {subsection}{\numberline {3.2}Singularities}{19}%
+\contentsline {section}{\numberline {4}Quantum fields on fixed BTZ background}{20}%
+\contentsline {subsection}{\numberline {4.1}KMS condition and the two-point function}{20}%
+\contentsline {subsubsection}{\numberline {4.1.1}Computing the AdS Green's functions}{21}%
+\contentsline {subsubsection}{\numberline {4.1.2}Computing the BTZ Green's functions}{23}%
+\contentsline {subsubsection}{\numberline {4.1.3}The KMS condition}{24}%
+\contentsline {section}{\numberline {5}Conclusion}{25}%
+\contentsline {section}{\numberline {A}The basics of General Relativity}{26}%
+\contentsline {subsection}{\numberline {A.1}Differential Forms}{26}%
+\contentsline {subsection}{\numberline {A.2}The metric}{26}%
+\contentsline {subsection}{\numberline {A.3}Covariant Derivatives and Connections}{26}%
+\contentsline {subsection}{\numberline {A.4}Curvature of the spacetime}{27}%
+\contentsline {subsection}{\numberline {A.5}Geodesics}{27}%
+\contentsline {subsection}{\numberline {A.6}Einstein's Equation}{27}%
+\contentsline {subsection}{\numberline {A.7}Killing vectors and symmetries}{28}%
+\contentsline {subsection}{\numberline {A.8}Kruskal and Penrose Diagrams}{28}%
+\contentsline {section}{\numberline {B}BTZ parameterization of AdS3}{29}%

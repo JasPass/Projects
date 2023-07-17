@@ -1,0 +1,119 @@
+\newgeometry{top=2cm,left=2cm,right=2cm,bottom=2cm} 
+%
+\section{The basics of General Relativity}
+
+In this appendix we provide a short review some of the basic aspects of general relativity. It is structured as a set of definitions as they are given in \cite{GR}; readers new to the subject should consult a text book on the subject such as \cite{GR}. We shall assume that the reader is familiar with the concept of tensors and understands that spacetime is a manifold.
+
+
+\subsection{Differential Forms}
+\thispagestyle{empty}
+A differential p-form is an antisymmetric (0,p)-tensor. It is easy to show that at any point on a n-dimensional manifold there are
+\begin{equation}
+\frac{n!}{p! (n-p)!}
+\end{equation}
+linearly independent p-forms. It is possible to define a wedge product between two manifolds $A$ and $B$. If $A$ is a p-form and $B$ a q-form, then the wedge product between them will be a (p+q)-form given by:
+\begin{equation}
+(A \wedge B)_{\mu_1 ... \mu_{p + q}} = \frac{p! \, q!}{(p + q)!} B_{[\mu_1 ... \mu_q} A_{\mu_{q + 1} ... \mu_{q + p}]} 
+\end{equation}
+The usefulness of differential forms and the reason they have their own name is that there exists a sensible concept of differentiation called the exterior derivative, which makes a (p+1)-form field out of a p-form field:
+\begin{equation}
+(\mathrm{d}A)_{\mu_1 ... \mu_{p+1}} = \partial_{[\mu_1} A_{\mu_2 ... \mu_{p + 1}]}
+\end{equation}
+
+
+\subsection{The metric}
+\thispagestyle{empty}
+The metric tensor is a symmetric (0,2) tensor usually denoted $g_{\mu \nu}$. It is nondegenerate, meaning that the determinant does not vanish, which allows us to define the inverse metric $g^{\mu \nu} g_{\nu \sigma} = g_{\mu \rho} g^{\rho \sigma} = \delta_\sigma^\mu$. The metric is generally what we use to lower or raise indices, e.g. for a tensor ${A^{\mu}}_{\nu \sigma}$ we define ${A^{\mu \nu}}_{\sigma} = g^{\nu \rho} \, {A^\mu}_{\rho \sigma}$. Furthermore, the metric is used to measure path lengths through the line element $ds^2 = g_{\mu \nu} \mathrm{d}x^\mu \mathrm{d}x^\nu$. Because $\mathrm{d}x^\mu$ is just a basis dual vector, we shall use $g_{\mu \nu}$ and $ds^2$ interchangeably. An example of a metric is the classic 3-dimensional Euclidean space with coordinates $(x,y,z)$ on which the metric is written:
+\begin{equation}
+ds^2 = \mathrm{d}x^2 + \mathrm{d}y^2 + \mathrm{d}z^2
+\end{equation}
+
+
+\subsection{Covariant Derivatives and Connections}
+\thispagestyle{empty}
+In general the partial derivative of a tensor is not itself a tensor. Therefore we would like an operator that reduces to the partial derivative on a flat spacetime, but which itself is a proper tensor. It can be shown that we can define the covariant derivative of a vector (a similar defintion can be given for any tensor) by
+\begin{equation}
+\nabla_\mu V^\nu = \partial_\mu V^\nu + \Gamma^\nu_{\mu \sigma} V^\sigma
+\end{equation} 
+where $\Gamma^\nu_{\mu \sigma}$ is called a connection and is just a matrix that makes sure the covariant derivative is indeed covariant. The connection will not itself transform like a tensor, but that is to be expected, since it is defined such that it together with the partial derivative forms a tensor. We can require of the connection that it is
+%
+%
+\begin{align}
+& \text{Torsion free:} \qquad \quad \; \; \Gamma^\nu_{\mu \sigma} = \Gamma^\nu_{(\mu \sigma)}
+\\
+& \text{Metric compatible:} \quad \nabla_\sigma g_{\mu \nu} = 0
+\end{align}
+%
+%
+Given a metric, it can be shown that this defines a unique connection which we call a Christoffel symbol. This is usually the only connection physicists we are interested in when they do general relativity. The Christoffel symbol can be calculated when the metric is known from the following relation:
+\begin{equation}
+\Gamma^\sigma_{\mu \nu} = \frac{1}{2} g^{\sigma \rho} (
+\partial_\mu g_{\nu \rho} + \partial_\nu g_{\rho \mu} - \partial_\rho g_{\mu \nu} )
+\end{equation}
+
+
+\subsection{Curvature of the spacetime}
+\thispagestyle{empty}
+All information about the curvature of a spacetime is contained in the (1,3) tensor ${R^\rho}_{\sigma \mu \nu}$ called the Riemann tensor. This means that if the Riemann tensor vanishes, there exists a set of coordinates in which the metric components are constant (and the opposite is also true). The Riemann tensor is defined from the connections coefficients as:
+\begin{equation}
+{R^\rho}_{\sigma \mu \nu} = \partial_\mu \Gamma^\rho_{\nu \sigma} - \partial_\nu \Gamma^\rho_{\mu \sigma} +
+\Gamma^\rho_{\mu \lambda} \Gamma^\lambda_{\nu \sigma} -
+\Gamma^\rho_{\nu \lambda} \Gamma^\lambda_{\mu \sigma} 
+\end{equation}
+It is easy to see that the Riemann tensor will be anti-symmetric in its last two indices. If the connection coefficients are the Christoffel symbols (which we shall assume from now on), we can also show that the Riemann tensor with all lower indices $R_{\rho \sigma \mu \nu}$ is anti-symmetric in the first two indices, symmetric under the swap of the first two indices with the last two and that the anti-symmetric part of the last three indices vanish:
+%
+\begin{equation}
+R_{\rho \sigma \mu \nu} = -R_{\rho \sigma \nu \mu} \quad, \quad
+R_{\rho \sigma \mu \nu} = -R_{\sigma \rho \mu \nu} \quad, \quad
+R_{\rho \sigma \mu \nu} = R_{\mu \nu \rho \sigma} \quad, \quad
+R_{\rho [\sigma \mu \nu]} = 0
+\end{equation}
+%
+From the Riemann tensor we can define the Ricci tensor (which will be symmetric) by contracting two indices:
+\begin{equation}
+R_{\mu \nu} = {R^\lambda}_{\mu \lambda \nu}
+\end{equation}
+And from the Ricci tensor we can define the Ricci scalar (also known as curvature scalar) by taking the trace:
+\begin{equation}
+R = R^\sigma_\sigma
+\end{equation}
+A slightly different and less computationally intensive method is described in \cite{Wald}.
+
+
+\subsection{Geodesics}
+\thispagestyle{empty}
+A geodesic is a path defined as either a path parallel transporting its own tangent vector or a path of minimum distance (/proper time). Geodesics can be found by solving the geodesic equation:
+%
+\begin{equation}
+\frac{d^2 x^\mu}{d\lambda^2} + \Gamma^\mu_{\rho \sigma}
+\frac{dx^\rho}{d \lambda} \frac{dx^\sigma}{d\lambda} = 0
+\end{equation}
+%
+Geodesics are important because they are the paths followed by unaccelerated particles.
+%
+% Maybe something about solving the EOM
+
+\subsection{Einstein's Equation}
+\thispagestyle{empty}
+Einstein's Equation is a relation between matter and the spacetime and forms the very foundation of general relativity. It is given as:
+\begin{equation}
+R_{\mu \nu} - \frac{1}{2} R g_{\mu \nu} + \Lambda g_{\mu \nu} = 8 \pi G T_{\mu \nu}
+\end{equation}
+where $\Lambda$ is the cosmological constant.
+
+\thispagestyle{empty}
+\subsection{Killing vectors and symmetries}
+\thispagestyle{empty}
+Finding solutions to Einstein's Equation can be difficult, so physicists often turn to symmetries for help. In general such a symmetry can be characterized by a Killing vector obeying Killing's equation:
+\begin{equation}
+p^\mu \nabla_\mu(K_\nu p^\nu) = 0
+\end{equation}
+%
+% Maybe something about Killing Horizons?
+\thispagestyle{empty}
+
+
+\subsection{Kruskal and Penrose Diagrams}
+\thispagestyle{empty}
+When investigating the causal properties of a spacetime, it is often useful to turn to the Kruskal or Penrose (also known as conformal) diagrams. The Kruskal diagram is simply the maximally extended spacetime shown in Kruskal coordinates, while the Penrose diagram is the same spacetime in a set of compact coordinates, meaning that all of the spacetime can be displayed on a finite area. The Penrose diagram is especially useful for illustrating the properties of the spacetime at the various infinities.
+\thispagestyle{empty}
